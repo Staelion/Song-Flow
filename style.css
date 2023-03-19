@@ -1,0 +1,116 @@
+body {
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(96,50,13,1) 69%, rgba(239,124,32,1) 100%);100%) no-repeat cover;
+  color: white;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+background-color: #000000;
+height: 85px;
+position: sticky;
+top: 0;
+align-items: center;
+}
+
+.entete {
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+
+li a {
+text-decoration: none;
+}
+
+h1 {
+        color: #EF7C20;
+        font-size: 2.25em;
+        font-family: 'Oswald', sans-serif;
+        text-shadow: 4px 0px 10px #60320D;
+        text-decoration: none;
+        order: 2;
+}
+
+.element2 li  {
+    display: inline-block;
+}
+
+.element2 li a{
+font-family: 'PT sans', sans-serif;
+    font-size: 1.5em;
+    color: #EF7C20;
+    text-decoration: none;
+  }
+
+.element2 li a:hover {
+    color: #7C20EF;
+}
+
+.moncompte {
+text-decoration: none;
+        font-size: 1.5em;
+        color: #000000;
+        border: 1.5px #7C20EF solid;
+        background-color: #7C20EF;
+        border-radius: 20px;
+        padding: 10px;
+        box-shadow: 0px 4px 10px #320D60, inset 0px -4px 10px #7C20EF;
+}
+
+h2 {
+       margin: 200px;
+       width: 30%;
+       font-size 2.25em;
+}
+
+
+.logo {
+        display: flex;
+
+        order: 1;
+
+
+}
+
+.title {
+        text-decoration: none;
+}
+
+h2 {
+        font-size: 3em;
+        font-family: 'Oswald', sans-serif;
+}
+
+.mix-personnalisé {
+        color: #EF7C20;
+        text-decoration: underline;
+}
+
+.Spotify {
+        text-decoration: none;
+        font-size: 1.5em;
+}
+
+
+.je_me_lance {
+        text-decoration: none;
+        font-size: 2.25em;
+        color: #000000;
+        border: 1.5px #7C20EF solid;
+        background-color: #7C20EF;
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0px 4px 10px #320D60, inset 0px -4px 10px #7C20EF;
+
+}
+
+.je_me_lance:hover {
+        text-decoration: underline;
+}
+
+.P2 {
+font-family: "PT Sans";
+font-size: 3em;
+}
