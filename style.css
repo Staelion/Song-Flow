@@ -216,9 +216,13 @@ tr, th, td {
     border: 2px solid black;
 }
 
-tbody tr {
-    display: flex;
-    flex-direction: column;
+td {
+    text-align: left;
+    vertical-align: inherit;
+}
+
+.featureslist {
+    padding: 0;
 }
 
 
