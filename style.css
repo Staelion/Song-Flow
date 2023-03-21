@@ -17,8 +17,8 @@ body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    background: rgb(239,124,32);
-    background: linear-gradient(180deg, rgba(239,124,32,1) 0%, rgba(93,48,12,1) 40%, rgba(0,0,0,1) 80%);
+    background: rgb(239, 124, 32);
+    background: linear-gradient(180deg, rgba(239, 124, 32, 1) 0%, rgba(93, 48, 12, 1) 40%, rgba(0, 0, 0, 1) 80%);
     color: white;
 }
 
@@ -33,10 +33,11 @@ body {
     margin: 0 0 0 1200px;
     animation: rotate 1s linear infinite;
     animation-play-state: paused;
+    /* todo : souligner en rouge = regarder l'erreur */
     animation-delay: calc(var(--scroll) * -1s);
-
     animation-iteration-count: 1;
     animation-fill-mode: both;
+
 }
 
 @keyframes rotate {
@@ -265,29 +266,63 @@ td {
 }
 
 .featurelisttext {
-    padding: 60px;
+    /*padding: 60px;*/
     font-size: 1.875em;
+}
 
+/* Grid containers */
+.container_grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 30vw;
 }
 
 .featurestable {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: 1px solid white;
+}
 
+.featurestable > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.featurestable > *:nth-child(-n+3){
+    border: 1px solid white;
+}
+
+.featureslist > * > h3, .featureslist > * > h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: normal;
 }
 
 .casqueaudio {
-    height: 150px;
-    padding: 10px;
+    height: 100px;
+    width: 100px;
+
 }
 
-.casqueaudiofree {
-    filter: invert(13%) sepia(78%) saturate(7463%) hue-rotate(270deg) brightness(97%) contrast(93%);
+.casqueaudiofree * {
+    /*filter: invert(13%) sepia(78%) saturate(7463%) hue-rotate(270deg) brightness(97%) contrast(93%);*/
+    fill: #7C20EF;
 }
 
 .casqueaudiopremium {
-    filter: invert(68%) sepia(46%) saturate(5770%) hue-rotate(350deg) brightness(99%) contrast(89%);
+    /*filter: invert(68%) sepia(46%) saturate(5770%) hue-rotate(350deg) brightness(99%) contrast(89%);*/
+    fill: #EF7C20;
 }
 
 .buttoncta {
@@ -317,7 +352,55 @@ td {
     transition: all .2s ease-in-out;
 }
 
+
+.div1 {
+    grid-area: 1 / 1 / 2 / 2;
 }
+
+.div2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.div3 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.div4 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.div5 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.div6 {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.div7 {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.div8 {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.div9 {
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+.div10 {
+    grid-area: 4 / 1 / 5 / 2;
+}
+
+.div11 {
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+.div12 {
+    grid-area: 4 / 3 / 5 / 4;
+}
+
 
 .Spotify {
     text-decoration: none;
