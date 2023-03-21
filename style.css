@@ -61,6 +61,7 @@ header {
     align-items: center;
     padding: 0 2.5vw;
     position: sticky;
+
 }
 
 .entete {
@@ -69,6 +70,7 @@ header {
     align-items: center;
     gap: 1vw;
     top: 0;
+
 }
 
 header nav {
@@ -207,24 +209,63 @@ h2 {
 }
 
 .featuretable {
-    font-family: "PT Sans";
-    padding: 15px;
-    border-collapse: collapse;
+    position: relative;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: white;
+    color: black;
+    margin: 0 auto;
+    z-index: -1;
+    border-radius: 20px;
 }
 
 tr, th, td {
-    border: 2px solid black;
+    border: 5px solid;
+    border-color: #404040;
+    padding: 20px;
+    border-spacing: 0;
+    border-collapse: separate;
+    border-radius: 10px;
+
+}
+
+thead {
+    font-size: 2.25em;
+    text-decoration: underline;
 }
 
 td {
     text-align: left;
-    vertical-align: inherit;
+    vertical-align: top;
 }
 
 .featureslist {
     padding: 0;
 }
 
+.featurelisttext {
+    padding: 60px;
+    font-size: 1.875em;
+
+}
+.featurestable {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+.casqueaudio {
+    height: 150px;
+    padding: 10px;
+}
+
+.casqueaudiofree {
+    filter: invert(13%) sepia(78%) saturate(7463%) hue-rotate(270deg) brightness(97%) contrast(93%);
+}
+
+.casqueaudiopremium {
+    filter: invert(68%) sepia(46%) saturate(5770%) hue-rotate(350deg) brightness(99%) contrast(89%);
+}
 
 .Spotify {
     text-decoration: none;
