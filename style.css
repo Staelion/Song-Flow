@@ -12,7 +12,7 @@ body {
     display: inline-block;
     width: 100vw;
     max-width: 100vw;
-    min-height: 500vh;
+    min-height: 300vh;
     clear: both;
     overflow-x: hidden;
     margin: 0;
@@ -241,42 +241,28 @@ h2 {
     color: black;
     margin: 0 auto;
     z-index: -1;
-
-}
-
-tr, th, td {
-    border: 5px solid;
-    border-color: #404040;
-    padding: 20px;
-
-}
-
-thead {
-    font-size: 2.25em;
-    text-decoration: underline;
-}
-
-td {
-    text-align: left;
-    vertical-align: top;
 }
 
 .featureslist {
     padding: 0;
+    text-decoration: underline;
+    font-size: 1.875em;
 }
 
 .featurelisttext {
     /*padding: 60px;*/
-    font-size: 1.875em;
+    font-size: 1.5em;
 }
 
 /* Grid containers */
-.container_grid{
+.container_grid {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     width: 100%;
     padding: 0 30vw;
+
 }
 
 .featurestable {
@@ -288,7 +274,8 @@ td {
     width: 100%;
     padding: 0;
     margin: 0;
-    border: 1px solid white;
+    border: 3px groove white;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .featurestable > * {
@@ -297,11 +284,12 @@ td {
     align-items: center;
 }
 
-.featurestable > *:nth-child(-n+3){
-    border: 1px solid white;
+.featurestable > *:nth-child(-n+3) {
+    border: 3px groove white;
+
 }
 
-.featureslist > * > h3, .featureslist > * > h4{
+.featureslist > * > h3, .featureslist > * > h4 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -401,7 +389,41 @@ td {
     grid-area: 4 / 3 / 5 / 4;
 }
 
+.div13 {
+    grid-area: 5 / 1 / 6 / 2 ;
+}
 
+.div14 {
+    grid-area: 5 / 2 / 6 / 3  ;
+}
+
+.div15 {
+    grid-area: 5 / 3 / 6 / 4;
+}
+
+.div16 {
+    grid-area: 6 / 1 / 7/ 2;
+}
+
+.div17 {
+    grid-area: 6 / 3 / 7 / 4;
+}
+
+.div18 {
+    grid-area: 7 / 1 / 8 / 2;
+}
+
+.div19 {
+    grid-area: 7 / 3 / 8 / 4;
+}
+
+.div20 {
+    grid-area: 8 / 1 / 9 / 2;
+}
+
+.div21 {
+    grid-area: 8 / 3 / 9 / 4;
+}
 .Spotify {
     text-decoration: none;
     font-size: 1.5em;
