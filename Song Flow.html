@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <title>Song Flow</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
           rel="stylesheet">
+
     <script src="index.js" defer async></script>
+    <script src="swiper-bundle.min.js" ></script>
+
 </head>
 <body>
 <header>
@@ -180,28 +185,32 @@
         </div>
     </div>
 
-        <div class="slide-container">
-            <div class="slide-content">
-                <div class="card-wrapper">
-                    <div class="card">
-                        <div class="image-content">
-                            
-                            <div class="card-image">
-                                <img src="images/album_cover_1.jpg" alt="album cover" class="card-img">
-                            </div>
+    <div class="slide-container swiper">
+        <div class="slide-content">
+            <div class="card-wrapper swiper-wrapper">
+                <div class="card swiper-slide">
+                    <div class="image-content">
 
+                        <div class="card-image">
+                            <img src="images/album_cover_1.jpg" alt="album cover" class="card-img">
                         </div>
-                        <div class="card-content">
-                            <h4 class="cardtitle">Importez vos donnees d’écoutes spotify</h4>
-                            <p class="description">Afin que nous puissions vous créer une playlist 100 personnalisée,
-                                importez facilement vos donnés d’écoutes récentes !</p>
 
-                            <button class="cardbutton">En Savoir Plus</button>
-                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="cardtitle">Importez vos donnees d’écoutes spotify</h4>
+                        <p class="description">Afin que nous puissions vous créer une playlist 100 personnalisée,
+                            importez facilement vos donnés d’écoutes récentes !</p>
+
+                        <button class="cardbutton">En Savoir Plus</button>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
 
     <h2 class="titlefeatures">Nos fonctionnalités :</h2>
 

@@ -225,7 +225,6 @@ h2 {
 
 
 
-
 .slide-content{
     margin: 0 40vw;
 }
@@ -240,7 +239,6 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     padding: 10px 14px;
 }
 .image-content{
