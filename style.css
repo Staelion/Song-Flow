@@ -88,7 +88,7 @@ header {
     align-items: center;
     padding: 0 2.5vw;
     position: sticky;
-    z-index: 1;
+    z-index: 10;
 }
 
 .entete {
@@ -224,14 +224,19 @@ h2 {
 
 
 
-
+.everythingflashcard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .slide-content{
-    margin: 0 40vw;
+    margin: 0 40px;
 }
 
 .slide-container{
     background-color: #404040;
-    width: 100vw;
+    max-width: 1120px;
+    width: 100%;
     padding: 40px 0;
 }
 
@@ -253,7 +258,7 @@ h2 {
     background: linear-gradient(180deg, rgba(124,32,239,1) 0%, rgba(50,13,96,1) 80%);
 }
 .card-image{
-    position: inherit;
+    position: relative;
     height: 200px;
     width: 200px;
     border-radius: 50%;
@@ -293,8 +298,11 @@ h4{
     transition: all .2s ease-in-out;
     flex-wrap: nowrap;
 }
+.cardbutton a{
+    text-decoration: none;
+    color: #ffffff;
+}
 .cardbutton:hover{
-    text-decoration: underline;
     background-color: #EF7C20;
 }
 
