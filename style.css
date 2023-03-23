@@ -286,8 +286,8 @@ h4{
     padding: 10px 25px;
     margin: 20px auto;
     border-radius: 20px;
-    background-color: #60320d;
-    border: 2px solid #60320d;
+    background-color: transparent;
+    border: 2px solid transparent;
     color: #fff;
     font-size: 0.875em;
     font-weight: 600;
@@ -298,7 +298,6 @@ h4{
 .cardbutton:hover{
     text-decoration: underline;
     background-color: #EF7C20;
-    border: 2px solid #EF7C20;
 }
 
 
