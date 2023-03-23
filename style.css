@@ -1,4 +1,6 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
@@ -86,7 +88,7 @@ header {
     align-items: center;
     padding: 0 2.5vw;
     position: sticky;
-
+    z-index: 1;
 }
 
 .entete {
@@ -219,6 +221,89 @@ h2 {
     border-radius: 20px;
     border: 2px solid #7c20ef;
 }
+
+
+
+
+
+.slide-content{
+    margin: 0 40vw;
+}
+
+.slide-container{
+    background-color: #404040;
+    width: 100vw;
+    padding: 40px 0;
+}
+
+.image-content, .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 10px 14px;
+}
+.image-content{
+    position: relative;
+    row-gap: 5px;
+}
+.card{
+    width: 20vw;
+    height: 600px;
+    border-radius: 25px;
+    background: rgb(124,32,239);
+    background: linear-gradient(180deg, rgba(124,32,239,1) 0%, rgba(50,13,96,1) 80%);
+}
+.card-image{
+    position: inherit;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    padding: 3px;
+}
+.card-image .card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #404040;
+}
+h4{
+    font-size: 1.875em;
+  font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+.description{
+    font-size: 1.5em;
+    text-align: center;
+}
+.cardbutton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 25px;
+    margin: 20px auto;
+    border-radius: 20px;
+    background-color: #60320d;
+    border: 2px solid #60320d;
+    color: #fff;
+    font-size: 0.875em;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+    flex-wrap: nowrap;
+}
+.cardbutton:hover{
+    text-decoration: underline;
+    background-color: #EF7C20;
+    border: 2px solid #EF7C20;
+}
+
+
+
+
 
 .featurepres {
     text-align: center;
