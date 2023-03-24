@@ -171,21 +171,6 @@ h2 {
     flex-wrap: nowrap;
 }
 
-
-.container-links {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    gap: 30px;
-    margin-bottom: 150px;
-    padding: 0 100px;
-}
-
-.container-links a:nth-child(1) {
-    filter: invert(1);
-}
-
 .button {
     display: flex;
     flex-direction: row;
@@ -223,47 +208,51 @@ h2 {
 }
 
 
-
-.everythingflashcard{
+.everythingflashcard {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.slide-content{
+
+.slide-content {
     margin: 0 40px;
 }
 
-.slide-container{
+.slide-container {
     background-color: #404040;
     max-width: 1120px;
     width: 100%;
     padding: 40px 0;
 }
 
-.image-content, .card-content{
+.image-content, .card-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px 14px;
 }
-.image-content{
+
+.image-content {
     position: relative;
     row-gap: 5px;
 }
-.card{
+
+.card {
     width: 20vw;
     height: 600px;
     border-radius: 25px;
-    background: rgb(124,32,239);
-    background: linear-gradient(180deg, rgba(124,32,239,1) 0%, rgba(50,13,96,1) 80%);
+    background: rgb(124, 32, 239);
+    background: linear-gradient(180deg, rgba(124, 32, 239, 1) 0%, rgba(50, 13, 96, 1) 80%);
 }
-.card-image{
+
+.card-image {
     position: relative;
     height: 200px;
     width: 200px;
     border-radius: 50%;
     padding: 3px;
 }
+
 .card-image .card-img {
     height: 100%;
     width: 100%;
@@ -271,17 +260,20 @@ h2 {
     border-radius: 50%;
     border: 6px solid #404040;
 }
-h4{
+
+h4 {
     font-size: 1.5em;
-  font-weight: bold;
+    font-weight: bold;
     text-align: center;
     padding: 10px;
 }
-.description{
+
+.description {
     font-size: 1.5em;
     text-align: center;
 }
-.cardbutton{
+
+.cardbutton {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -298,16 +290,15 @@ h4{
     transition: all .2s ease-in-out;
     flex-wrap: nowrap;
 }
-.cardbutton a{
+
+.cardbutton a {
     text-decoration: none;
     color: #ffffff;
 }
-.cardbutton:hover{
+
+.cardbutton:hover {
     background-color: #EF7C20;
 }
-
-
-
 
 
 .featurepres {
@@ -481,11 +472,11 @@ h4{
 }
 
 .div13 {
-    grid-area: 5 / 1 / 6 / 2 ;
+    grid-area: 5 / 1 / 6 / 2;
 }
 
 .div14 {
-    grid-area: 5 / 2 / 6 / 3  ;
+    grid-area: 5 / 2 / 6 / 3;
 }
 
 .div15 {
@@ -515,7 +506,94 @@ h4{
 .div21 {
     grid-area: 8 / 3 / 9 / 4;
 }
-.Spotify {
+
+
+.footer {
+    margin-top: 200px;
+    padding: 70px 0;
+    border-top: 5px solid #EF7C20;
+}
+
+.footercontainer {
+    max-width: 1500px;
+    margin: auto;
+
+}
+
+.row {
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: space-evenly;
+    gap: 50px;
+}
+
+.ul {
+    list-style: none;
+}
+
+.foot-col {
+    width: 30%;
+}
+
+.foot-col h4 {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.foot-col h4::after{
+    position: absolute;
+    content:'';
+    top:50%;
+    left:50%;
+    height: 5px;
+    width: 20%;
+    background-color: #EF7C20;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    margin-top: 25px;
+
+
+}
+
+.foot-col ul{
+
+}
+.social-links a img {
+    width: 30px;
+    height: 30px;
+    align-items: center;
+}
+
+.foot-col ul li:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.foot-col ul li a {
     text-decoration: none;
     font-size: 1.5em;
+    color: white;
+    display: block;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.foot-col .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.foot-col ul li a:hover {
+    color: #7C20EF;
 }
