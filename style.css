@@ -261,7 +261,7 @@ h2 {
 }
 
 .card {
-    width: 20vw;
+    width: 30vw;
     height: 600px;
     border-radius: 25px;
     background: rgb(124, 32, 239);
@@ -297,15 +297,11 @@ h4 {
 }
 
 .cardbutton {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
     padding: 10px 25px;
-    margin: 20px auto;
+    margin: 50px auto;
     border-radius: 20px;
     background-color: transparent;
-    border: 2px solid transparent;
+    border: 2px solid #EF7C20;
     color: #fff;
     font-size: 0.875em;
     font-weight: 600;
