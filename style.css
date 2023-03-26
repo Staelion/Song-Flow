@@ -1,3 +1,5 @@
+/* tout */
+
 * {
     margin: 0;
     padding: 0;
@@ -24,6 +26,18 @@ body {
     color: white;
 }
 
+h1, h1 *, h2, h2 *, h3, h3 *, h4, h4 *, h5, h5 *, h6, h6 *, nav * {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+}
+
+html {
+    max-width: 100vw;
+    scroll-behavior: smooth;
+}
+
+/* logo terre rotatif landing page */
+
 .logoterre {
     display: flex;
     height: 800px;
@@ -48,10 +62,8 @@ body {
     }
 }
 
-html {
-    max-width: 100vw;
-    scroll-behavior: smooth;
-}
+
+/* scroll bar */
 
 @media screen and (min-width: 768px) {
     ::-webkit-scrollbar {
@@ -68,10 +80,7 @@ html {
     }
 }
 
-h1, h1 *, h2, h2 *, h3, h3 *, h4, h4 *, h5, h5 *, h6, h6 *, nav * {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 400;
-}
+/* en-tête commun */
 
 header * {
     margin: 0;
@@ -150,6 +159,8 @@ h1 {
     height: 60px;
 }
 
+/* catchphrase landing page */
+
 h2 {
     font-size: 3em;
 }
@@ -207,6 +218,7 @@ h2 {
     border: 2px solid #7c20ef;
 }
 
+/* flashcard défilantes de présentation */
 
 .everythingflashcard {
     display: flex;
@@ -300,6 +312,7 @@ h4 {
     background-color: #EF7C20;
 }
 
+/* tableau des features avec titre et texte de présentation */
 
 .featurepres {
     text-align: center;
@@ -336,7 +349,6 @@ h4 {
     font-size: 1.5em;
 }
 
-/* Grid containers */
 .container_grid {
     display: flex;
     justify-content: center;
@@ -507,6 +519,7 @@ h4 {
     grid-area: 8 / 3 / 9 / 4;
 }
 
+/* footer landing page */
 
 .footer {
     margin-top: 200px;
@@ -597,3 +610,5 @@ h4 {
 .foot-col ul li a:hover {
     color: #7C20EF;
 }
+
+/* formulaire de création de compte */

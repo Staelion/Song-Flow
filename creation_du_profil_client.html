@@ -7,12 +7,39 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+          rel="stylesheet">
     <script src="index.js" defer async></script>
 </head>
 <body>
 <main>
-    <h3> Je m'enregistre !</h3>
+    <div class="register-group">
+        <div class="register-formbox">
+            <div class="loginheader">
+                <h2>Inscrit toi ou connecte toi ici</h2>
+            </div>
+
+            <form class="register-form" method="post" action="">
+                <div class="register-inputfield">
+                    <input type="text" class="register-input" placeholder="Addresse e-mail" required>
+                        <img src="images/user.svg"><br>
+
+                    <input type="text" class="register-input" placeholder="Mot de passe" required>
+                        <img src="images/lock.svg">
+                </div>
+            </form>
+            <form>
+                <input class="rememberme" type="checkbox" id="rememberme">
+                <label for="rememberme">Se souvenir de moi</label>
+            </form>
+            <div class="forgotpassword">
+                <label><a href="forgot_password.html">J'ai oublié mon mot de passe</a></label>
+            </div>
+
+            <input type="submit" value="Connexion">
+
+        </div>
+    </div>
 </main>
 </body>
 </html>
