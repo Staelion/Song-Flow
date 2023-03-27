@@ -621,15 +621,59 @@ h4 {
 
 /* formulaire de création de compte */
 
-
 .register-group{
-    background-color: red;
-    margin: 50px ;
+
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: red;
+    width: 60vw;
+    height: 80vh;
+    border-radius: 20px;
+    margin: 50px 20vw;
 }
 
-.loginheader h2 {
-    padding: 30px;
+.register-formbox {
+    background-color: #404040;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40vw;
+    height: 60vh;
+}
+
+.register-formbox h2 {
+}
+.register-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 15px;
+    height: 100%;
+    gap: 20px;
+}
+
+.register-inputfield input {
+    height: 40px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #7C20EF;
+    border: none;
+    outline: none;
+    opacity: 0.5;
+
+}
+
+.useful {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+/*
+.forgotpassword {
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
 }
