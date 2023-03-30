@@ -626,20 +626,20 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
     width: 60vw;
     height: 80vh;
     border-radius: 20px;
-    margin: 50px 20vw;
+    margin: 40px 20vw;
 }
 
 .register-formbox {
-    background-color: #404040;
+    background-color: rgba(0,0,0, 80%)  ;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 40vw;
+    width: 60vw;
     height: 60vh;
+    border-radius: 20px;
 }
 
 .register-formbox h2 {
@@ -657,11 +657,12 @@ h4 {
     height: 40px;
     width: 100%;
     border-radius: 20px;
-    background-color: #7C20EF;
+    background-color: #EF7C20;
     border: none;
     outline: none;
-    opacity: 0.5;
-
+    font-size: 1.5em;
+    color: white;
+    padding-left: 45px;
 }
 
 .useful {
@@ -670,6 +671,40 @@ h4 {
     justify-content: space-between;
     gap: 10px;
 }
+
+.register-inputfield img {
+    height: 25px;
+    position: relative;
+    top: -32px;
+    right: -12px;
+}
+
+.login {
+    height: 40px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #EF7C20;
+    border: none;
+    outline: none;
+    font-size: 1.125em;
+    color: white;
+    opacity: 50%;
+}
+
+.login:hover {
+    opacity: 100%;
+    text-decoration: underline;
+}
+
+.forgotpassword a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.forgotpassword a:hover {
+    text-decoration: underline;
+}
+
 /*
 .forgotpassword {
 
