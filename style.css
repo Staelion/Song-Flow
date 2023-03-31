@@ -29,7 +29,7 @@ body {
     color: white;
 }
 
-h1, h1 *, h2, h2 *, h3, h3 *, h4, h4 *, h5, h5 *, h6, h6 *, nav * {
+h1, h1 *, h1, h1 *, h3, h3 *, h4, h4 *, h5, h5 *, h6, h6 *, nav * {
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
 }
@@ -149,7 +149,7 @@ li a {
     color: #7C20EF;
 }
 
-h1 {
+.entete p {
     color: #EF7C20;
     font-size: 2.25em;
     font-family: 'Oswald', sans-serif;
@@ -164,7 +164,7 @@ h1 {
 
 /* catchphrase landing page */
 
-h2 {
+h1 {
     font-size: 3em;
 }
 
@@ -642,7 +642,7 @@ h4 {
     border-radius: 20px;
 }
 
-.register-formbox h2 {
+.register-formbox h1 {
 }
 .register-form {
     display: flex;
