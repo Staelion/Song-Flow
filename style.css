@@ -252,7 +252,7 @@ h1 {
     row-gap: 5px;
 }
 
-.card-container{
+.card-container {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -318,7 +318,6 @@ h4 {
 .cardbutton:hover {
     background-color: #EF7C20;
 }
-
 
 
 /* tableau des features avec titre et texte de présentation */
@@ -561,11 +560,11 @@ h4 {
     position: relative;
 }
 
-.foot-col h4::after{
+.foot-col h4::after {
     position: absolute;
-    content:'';
-    top:50%;
-    left:50%;
+    content: '';
+    top: 50%;
+    left: 50%;
     height: 5px;
     width: 20%;
     background-color: #EF7C20;
@@ -576,9 +575,10 @@ h4 {
 
 }
 
-.foot-col ul{
+.foot-col ul {
 
 }
+
 .social-links a img {
     width: 30px;
     height: 30px;
@@ -621,7 +621,7 @@ h4 {
 
 /* formulaire de création de compte */
 
-.register-group{
+.register-group {
 
     display: flex;
     justify-content: center;
@@ -633,7 +633,7 @@ h4 {
 }
 
 .register-formbox {
-    background-color: rgba(0,0,0, 80%)  ;
+    background-color: rgba(0, 0, 0, 80%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -644,6 +644,7 @@ h4 {
 
 .register-formbox h1 {
 }
+
 .register-form {
     display: flex;
     flex-direction: column;
@@ -711,4 +712,74 @@ h4 {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
+}
+ */
+
+/* page creation de playlist gratuite */
+
+.playlistfreeh1 {
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.introplaylistfree {
+    font-size: 1.5em;
+    width: 50vw;
+    text-align: justify;
+    margin: 20px 25vw;
+}
+
+.basefreeplaylist {
+    width: 800px;
+    height: 50px;
+    background-color: black;
+    color: #EF7C20;
+    font-size: 1.5em;
+    text-align: center;
+    border-radius: 20px;
+    border: 3px solid #EF7C20;
+    margin: 30px 30vw;
+}
+
+.popupposition {
+    position: relative;
+    top: -90px;
+    left: 1370px;
+}
+
+.tooltiptext {
+    position: absolute;
+    top: 60px;
+    text-decoration: none;
+    color: white;
+    background-color: #7C20EF;
+    width: 200px;
+    text-align: justify;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid black;
+    opacity: 1;
+    transition: all .2s ease-in-out;
+}
+
+
+.helpbutton {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #7C20EF;
+    border: 1px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+
+}
+
+.popuphelp:hover .tooltiptext {
+    opacity: 1;
+    top: +130%;
 }

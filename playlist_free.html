@@ -20,7 +20,7 @@
 <body>
 <header>
     <div class="entete">
-        <p>Song Flow</p>
+        <a href="index.html"><p>Song Flow</p></a>
         <img class="logo" src="images/logo_matheo_music.png" alt="logo du site">
     </div>
     <nav>
@@ -38,11 +38,27 @@
     </nav>
 </header>
 
-<h1> Crée ta playlist gratuitement ici !</h1>
+<h1 class="playlistfreeh1"> Crée ta playlist gratuitement ici !</h1>
 <br>
 
-<p>Tu souhaite tester notre application où simplement obtenir rapidement une nouvelle playlist pour ta soirée ? Tu est
+<p class="introplaylistfree">Tu souhaite tester notre application où simplement obtenir rapidement une nouvelle playlist
+    pour ta soirée ? Tu est
     au bon endroit ! Rentre un artiste ou un genre musical que tu apprécie et laisse nous faire le reste.</p>
+
+
+<input type="text" class="basefreeplaylist" placeholder="Choisis un artiste ou un genre que tu aime ici" required>
+
+<div class="popupposition">
+    <div class="popuphelp">
+        <span class="helpbutton">?</span>
+    </div>
+    <span class="tooltiptext">A partir du genre ou de l’artiste que tu choisi, l’algorithme se charge de rechercher pour toi 40 titres similaires.</span>
+</div>
+<br>
+
+
+<input type="button" class="startfreeplaylist" value="C'est parti !">
+
 <footer class="footer">
     <div class="footercontainer">
         <div class="row">
