@@ -746,8 +746,8 @@ h4 {
 
 .popupposition {
     position: relative;
-    top: -90px;
-    left: 1370px;
+    top: -185px;
+    left: 1400px;
 }
 
 .tooltiptext {
@@ -782,4 +782,22 @@ h4 {
 .popuphelp:hover .tooltiptext {
     opacity: 1;
     top: +130%;
+}
+
+.startfreeplaylist {
+    width: 10vw;
+    height: 35px;
+    background-color: forestgreen;
+    color: black;
+    border-radius: 20px;
+    border: 2px dashed black;
+    margin: 30px 45vw;
+    font-size: 1.5em;
+    opacity: 50%;
+}
+.startfreeplaylist:hover {
+    text-decoration: underline;
+    box-shadow: inset 0 -4px 10px darkgreen;
+    border: 2px solid black;
+    opacity: 100%;
 }
