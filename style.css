@@ -801,3 +801,13 @@ h4 {
     border: 2px solid black;
     opacity: 100%;
 }
+
+/* playlist premium paramètres */
+
+.titleplaylistform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+    margin: 40px;
+}
