@@ -811,3 +811,13 @@ h4 {
     text-decoration: underline;
     margin: 40px;
 }
+
+
+/* bpm slider */
+
+.bpmslider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}

@@ -1,30 +1,40 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Choisis tes paramètres</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="swiper-bundle.min.css">
+    <meta charset="UTF-8">
+    <title>Choisis tes paramètres</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="swiper-bundle.min.css">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-  <script src="index.js" defer async></script>
+    <script src="index.js" defer async></script>
 </head>
 
 <body>
 
 <h1 class="titleplaylistform"> Choisi tes options </h1>
 
-<form class="optionsplaylistform" >
-
-
+<form class="optionsplaylistform" method="post" action="">
 </form>
+
+<div class="bpmslider">
+    <span id="rangevalue">0</span>
+    <input type="range" name="BPM" value="0" min="20" max="200" onchange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)">
+</div>
+
+<script type="text/javascript">
+    function rangeSlide(value) {
+        document.getElementById('rangevalue').innerHTML = value;
+    }
+
+</script>
 </body>
 </html>
