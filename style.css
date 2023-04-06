@@ -820,4 +820,35 @@ h4 {
     justify-content: center;
     align-items: center;
     margin-top: 200px;
+    position: relative;
+}
+
+#rangevalue {
+    position: absolute;
+    top: -80px;
+    display: block;
+    text-align: center;
+    font-size: 3.75em;
+
+}
+
+.range {
+    width: 80vw;
+    height: 40px;
+    -webkit-appearance: none;
+    background-color: black;
+    border-radius: 20px;
+    outline: none;
+    overflow: hidden;
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #7C20EF;
+    cursor: pointer;
+    border: 6px solid #404040;
+    box-shadow: -620px 0 0 600px #7C20EF;
 }
