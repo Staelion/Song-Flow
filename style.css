@@ -812,6 +812,23 @@ h4 {
     margin: 40px;
 }
 
+/* grid des options a selectionner */
+
+.optionsplaylistform {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* premiere option artiste / genre */
+
+
 
 /* bpm slider */
 
