@@ -20,15 +20,72 @@
 
 <body>
 
+<header>
+    <div class="entete">
+        <p>Song Flow</p>
+        <img class="logo" src="images/logo_matheo_music.png" alt="logo du site">
+    </div>
+    <nav>
+        <ul class="linknav">
+            <li>
+                <a href="qui_sommes_nous.html">Qui somme-nous ?</a>
+            </li>
+            <li>
+                <a href="faq.html">FAQ</a>
+            </li>
+            <li>
+                <a href="mon_compte.html">Mon compte</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
 <h1 class="titleplaylistform"> Choisi tes options </h1>
 
+
 <form class="optionsplaylistform" method="post" action="">
+
+
+    <h2>Type de découverte</h2>
+
+    <div class="select-box">
+    <div class="selected">Choisi ce que tu veux découvrir :</div>
+        <div class="optioncontainer">
+            <div class="option">
+                <input class="radio" type="radio" id="artistes" name="decouverte"/>
+                <label for="artistes">Des nouveaux artistes</label>
+
+                <div class="option">
+                    <input class="radio" type="radio" id="genres" name="decouverte"/>
+                    <label for="genres">Des nouveaux genres musicaux</label>
+
+                    <div class="option">
+                        <input class="radio" type="radio" id="both" name="decouverte"/>
+                        <label for="both">Les deux à la fois</label>
+            </div>
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+    <div class="bpmslider">
+        <span id="rangevalue">0</span>
+        <input class="range" type="range" name="BPM" value="140" min="20" max="200" onchange="rangeSlide(this.value)"
+               onmousemove="rangeSlide(this.value)"/>
+    </div>
+
+
+            
+    <input class="cestparti" type="submit" value="C'est parti !">
 </form>
 
-<div class="bpmslider">
-    <span  id="rangevalue">0</span>
-    <input class="range" type="range" name="BPM" value="0" min="20" max="200" onchange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)">
-</div>
 
 <script type="text/javascript">
     function rangeSlide(value) {
@@ -36,5 +93,60 @@
     }
 
 </script>
+
+
+<footer class="footer">
+    <div class="footercontainer">
+        <div class="row">
+            <div class="foot-col">
+                <h4>l'entreprise</h4>
+                <ul>
+                    <li>
+                        <a href="">A propos de nous</a>
+                    </li>
+                    <li>
+                        <a href="">Nos services</a>
+                    </li>
+                    <li>
+                        <a href="">Politique de confidentialité</a>
+                    </li>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="foot-col">
+                <h4>Obtenir de l'aide</h4>
+                <ul>
+                    <li>
+                        <a href="faq.html">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="">Options de paiment</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="foot-col">
+                <h4>Suivez-nous</h4>
+                <div class="social-links">
+                    <a target="_blank" href="https://www.facebook.com/Song_Flow">
+                        <img src="images/facebook.svg" alt="logo facebook">
+
+                    </a>
+                    <a target="_blank" href="https://www.instagram.com/Song_Flow">
+                        <img src="images/instagram.svg" alt="logo instagram">
+                    </a>
+
+                    <a target="_blank" href="https://www.twitter.com/Song_Flow">
+                        <img src="images/twitter.svg" alt="logo twitter">
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
