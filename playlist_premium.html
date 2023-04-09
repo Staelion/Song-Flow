@@ -14,8 +14,9 @@
           href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
     <script src="index.js" defer async></script>
+
+
 </head>
 
 <body>
@@ -49,23 +50,30 @@
     <h2>Type de découverte</h2>
 
     <div class="select-box">
-        <div class="selected">Choisi ce que tu veux découvrir :</div>
-        <div class="optioncontainer">
+
+        <div class="option-container ">
+
+
             <div class="option">
                 <input class="radio" type="radio" id="artistes" name="decouverte"/>
                 <label for="artistes">Des nouveaux artistes</label>
+            </div>
 
-                <div class="option">
-                    <input class="radio" type="radio" id="genres" name="decouverte"/>
-                    <label for="genres">Des nouveaux genres musicaux</label>
+            <div class="option">
+                <input class="radio" type="radio" id="genres" name="decouverte"/>
+                <label for="genres">Des nouveaux genres musicaux</label>
+            </div>
 
-                    <div class="option">
-                        <input class="radio" type="radio" id="both" name="decouverte"/>
-                        <label for="both">Les deux à la fois</label>
-                    </div>
-                </div>
+            <div class="option">
+                <input class="radio" type="radio" id="both" name="decouverte"/>
+                <label for="both">Les deux à la fois</label>
+            </div>
+        </div>
 
-
+        <div class="selected">
+            Choisi ce que tu veux découvrir :
+            <div class="flechebox">
+            <img class="fleche " src="images/ouvrir.svg" alt="fleche">
             </div>
         </div>
     </div>
@@ -77,10 +85,8 @@
                onmousemove="rangeSlide(this.value)"/>
     </div>
 
-
     <input class="cestparti" type="submit" value="C'est parti !">
 </form>
-
 
 <script type="text/javascript">
     function rangeSlide(value) {

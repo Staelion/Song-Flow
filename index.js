@@ -1,3 +1,4 @@
+/* script scroll bar */
 window.addEventListener(
     "scroll",
     ()=>{
@@ -27,4 +28,16 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 
-/* script range bpm  */
+/* script menu d'options déroulant */
+
+const selected = document.querySelector(".selected");
+const optionsContainer = document.querySelector(".option-container")
+
+const optionsList = document.querySelectorAll(".option")
+const fleche = document.querySelector(".fleche")
+selected.addEventListener("click", () => {
+    optionsContainer.classList.toggle("active")
+    fleche.classList.toggle("active")
+
+
+})
