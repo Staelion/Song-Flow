@@ -91,11 +91,18 @@
 
 
     <div class="bpmslider">
-        <span id="rangevalue">#</span>
-        <input id="range" class="range" type="range" name="BPM" value="140" min="20" max="200" onchange="rangeSlide(this.value)"
-               onmousemove="rangeSlide(this.value)"/>
+        <div class="bpmslider_container">
+            <!--            premier enfant -->
+            <div>
+                <div id="rangevalue">0</div>
+            </div>
+            <!--            deuxième enfant -->
+            <div>
+                <input id="range" class="range" type="range" name="BPM" value="140" min="20" max="200" onchange="rangeSlide(this.value)"
+                       onmousemove="rangeSlide(this.value)"/>
+            </div>
+        </div>
     </div>
-
     <input class="cestparti" type="submit" value="C'est parti !">
 </form>
 

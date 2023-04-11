@@ -843,10 +843,22 @@ h4 {
     grid-area: 4/ 2 / 5/ 5;
 }
 
+.bpmslider{
+    background: #000;
+}
+
+.bpmslider_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
 #rangevalue {
-    position: absolute;
-    top: -80px;
-    display: block;
+    /*position: absolute;*/
+    /*top: -80px;*/
+    /*display: block;*/
     text-align: center;
     font-size: 3.75em;
 
