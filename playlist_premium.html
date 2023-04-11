@@ -16,6 +16,17 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="index.js" defer async></script>
 
+    <script defer async>
+        function rangeSlide(value) {
+            document.getElementById('rangevalue').innerHTML = value;
+        }
+
+        //     On load of the page trigger the rangeSlide function
+        //     with the value of the range input
+        window.onload = function () {
+            rangeSlide(document.getElementById('range').value);
+        }
+    </script>
 
 </head>
 
@@ -87,20 +98,13 @@
             </div>
             <!--            deuxième enfant -->
             <div>
-                <input class="range" type="range" name="BPM" value="140" min="20" max="200" onchange="rangeSlide(this.value)"
+                <input id="range" class="range" type="range" name="BPM" value="140" min="20" max="200" onchange="rangeSlide(this.value)"
                        onmousemove="rangeSlide(this.value)"/>
             </div>
         </div>
     </div>
     <input class="cestparti" type="submit" value="C'est parti !">
 </form>
-
-<script type="text/javascript">
-    function rangeSlide(value) {
-        document.getElementById('rangevalue').innerHTML = value;
-    }
-</script>
-
 
 <footer class="footer">
     <div class="footercontainer">
