@@ -813,91 +813,19 @@ h4 {
     margin: 40px;
 }
 
-/* grid des options a selectionner */
-
-.optionsplaylistform {
-    width: 100vw;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    height: 200vh;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-}
-
 
 /* premiere option artiste / genre */
 
-
-/* bpm slider */
-
-
-.bpmslider {
+.select_bow_wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    grid-area: 4/ 2 / 5/ 5;
-}
-
-.bpmslider{
-    background: #000;
-}
-
-.bpmslider_container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-}
-
-#rangevalue {
-    /*position: absolute;*/
-    /*top: -80px;*/
-    /*display: block;*/
-    text-align: center;
-    font-size: 3.75em;
-
-}
-
-.range {
-    width: 60vw;
-    height: 40px;
-    -webkit-appearance: none;
-    background-color: black;
-    border-radius: 20px;
-    outline: none;
-    overflow: hidden;
-}
-
-.range::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    background-color: #7C20EF;
-    cursor: pointer;
-    border: 6px solid #404040;
-    box-shadow: -620px 0 0 600px #7C20EF;
-}
-
-.cestparti {
-    grid-area: 5 / 1 / 6 / 2;
-}
-
-h2 {
-    grid-area: 1 / 2 / 2 / 3;
 }
 
 .select-box {
     display: flex;
     flex-direction: column;
-    grid-area: 2 / 3 / 3 / 4;
-    width: 45vw;
+    width: 30vw;
 }
 
 .selected {
@@ -966,4 +894,143 @@ h2 {
 
 .fleche.active {
     transform: rotateX(180deg);
+}
+
+
+/* Multi slider d'options comme MAGIC PLAYLIST */
+
+.audiofeaturesbox {
+    background-color: red;
+}
+
+.audiofeaturesbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 50vh;
+}
+
+.audiofeatures {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: grey;
+}
+
+.audiofeatures_labelcontainer_left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 20px;
+}
+
+
+.audiofeatures_slidercontainer {
+    background-color: blue;
+    flex-direction: column;
+    color: #7C20EF;
+}
+
+/*UN SLIDER */
+
+.rc-slider-rail {
+    width: 100%;
+    background-color: #f3f3f5;
+}
+.rc-slider-rail, .rc-slider-track {
+    position: absolute;
+    height: 6px;
+    border-radius: 6px;
+}
+
+.rc-slider, .rc-slider * {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: #11113f;
+}
+
+.rc-slider-mark {
+    position: absolute;
+    top: 18px;
+    left: 0;
+    width: 100%;
+    font-size: 12px;
+}
+
+
+.audiofeatures_labelcontainer_right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+}
+
+/* bpm slider */
+
+
+.bpmslider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 50px auto;
+}
+
+
+.bpmslider_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#rangevalue {
+    /*position: absolute;*/
+    /*top: -80px;*/
+    /*display: block;*/
+    text-align: center;
+    font-size: 3.75em;
+
+}
+
+.range {
+    width: 60vw;
+    height: 40px;
+    -webkit-appearance: none;
+    background-color: black;
+    border-radius: 20px;
+    outline: none;
+    overflow: hidden;
+
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #7C20EF;
+    cursor: pointer;
+    border: 6px solid #404040;
+    box-shadow: -620px 0 0 600px #7C20EF;
+}
+
+.cestparti {
+
+}
+
+.cestparti_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+h2 {
+    display: flex;
+    justify-content: flex-start;
+    margin: 50px;
 }

@@ -52,59 +52,113 @@
     </nav>
 </header>
 
-<h1 class="titleplaylistform"> Choisi tes options </h1>
+<main>
+
+    <h1 class="titleplaylistform"> Choisi tes options </h1>
 
 
-<form class="optionsplaylistform" method="post" action="">
+    <form class="optionsplaylistform" method="post" action="">
 
 
-    <h2>Type de découverte</h2>
+        <h2>Type de découverte</h2>
 
-    <div class="select-box">
+        <div class="select_bow_wrapper">
+            <div class="select-box">
 
-        <div class="option-container ">
+                <div class="option-container ">
 
 
-            <div class="option">
-                <input class="radio" type="radio" id="artistes" name="decouverte"/>
-                <label for="artistes">Des nouveaux artistes</label>
+                    <div class="option">
+                        <input class="radio" type="radio" id="artistes" name="decouverte"/>
+                        <label for="artistes">Des nouveaux artistes</label>
+                    </div>
+
+                    <div class="option">
+                        <input class="radio" type="radio" id="genres" name="decouverte"/>
+                        <label for="genres">Des nouveaux genres musicaux</label>
+                    </div>
+
+                    <div class="option">
+                        <input class="radio" type="radio" id="both" name="decouverte"/>
+                        <label for="both">Les deux à la fois</label>
+                    </div>
+                </div>
+
+                <div class="selected">
+                    Choisi ce que tu veux découvrir :
+                    <div class="flechebox">
+                        <img class="fleche" src="images/down-chevron.svg" alt="fleche">
+                    </div>
+                </div>
             </div>
+        </div>
 
-            <div class="option">
-                <input class="radio" type="radio" id="genres" name="decouverte"/>
-                <label for="genres">Des nouveaux genres musicaux</label>
-            </div>
+        <!-- test slider d'options MAGIC PLAYLIST -->
 
-            <div class="option">
-                <input class="radio" type="radio" id="both" name="decouverte"/>
-                <label for="both">Les deux à la fois</label>
+        <div class="audiofeaturesbox">
+            <div class="audiofeatures">
+
+                <div class="audiofeatures_labelcontainer_left">
+                    <h4 class="audiofeatures_featuretitle">Indépendant</h4>
+                    <h4 class="audiofeatures_featuretitle">Calme</h4>
+                    <h4 class="audiofeatures_featuretitle">Vocal</h4>
+                    <h4 class="audiofeatures_featuretitle">Studio</h4>
+                </div>
+
+                <div class="audiofeatures_slidercontainer">
+
+                    <div class="rc-slider magic_slider audiofeatures_featureslider">
+                       <input type="range" class="audiofeatures_mainrange" name="Popularité" value="50" step="1" max="100" min="0">
+                    </div>
+<div class="rc-slider-mark"></div>
+                    <div class="rc"
+
+                    <div class="audiofeatures_mainslider">
+                       <input type="range" class="audiofeatures_mainrange" name="Popularité" value="50" step="1" max="100" min="0">
+                    </div>
+                    <div class="audiofeatures_mainslider">
+                       <input type="range" class="audiofeatures_mainrange" name="Popularité" value="50" step="1" max="100" min="0">
+                    </div>
+                    <div class="audiofeatures_mainslider">
+                       <input type="range" class="audiofeatures_mainrange" name="Popularité" value="50" step="1" max="100" min="0">
+                    </div>
+
+                </div>
+
+                <div class="audiofeatures_labelcontainer_right">
+                    <h4 class="audiofeatures_featuretitle">Populaire</h4>
+                    <h4 class="audiofeatures_featuretitle">Energétique</h4>
+                    <h4 class="audiofeatures_featuretitle">Instrumental</h4>
+                    <h4 class="audiofeatures_featuretitle">Live</h4>
+                </div>
+
             </div>
         </div>
 
-        <div class="selected">
-            Choisi ce que tu veux découvrir :
-            <div class="flechebox">
-                <img class="fleche " src="images/ouvrir.svg" alt="fleche">
+
+        <!-- BPM SLIDER -->
+
+        <div class="bpmslider">
+            <div class="bpmslider_container">
+                <!--            premier enfant -->
+                <div>
+                    <div id="rangevalue">140</div>
+                </div>
+                <!--            deuxième enfant -->
+                <div>
+                    <input id="range" class="range" type="range" name="BPM" value="140" min="20" max="200"
+                           onchange="rangeSlide(this.value)"
+                           onmousemove="rangeSlide(this.value)"/>
+                </div>
             </div>
         </div>
-    </div>
-
-
-    <div class="bpmslider">
-        <div class="bpmslider_container">
-            <!--            premier enfant -->
-            <div>
-                <div id="rangevalue">0</div>
-            </div>
-            <!--            deuxième enfant -->
-            <div>
-                <input id="range" class="range" type="range" name="BPM" value="140" min="20" max="200" onchange="rangeSlide(this.value)"
-                       onmousemove="rangeSlide(this.value)"/>
-            </div>
+        <div class="cestparti_wrapper">
+            <input class="cestparti" type="button" value="C'est parti !">
         </div>
-    </div>
-    <input class="cestparti" type="submit" value="C'est parti !">
-</form>
+
+    </form>
+
+</main>
 
 <footer class="footer">
     <div class="footercontainer">
