@@ -9,7 +9,6 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    transition: opacity, z-index, color ease-in-out .3s;
     font-family: 'PT Sans', sans-serif;
     font-weight: 400;
 }
@@ -795,9 +794,250 @@ h4 {
     font-size: 1.5em;
     opacity: 50%;
 }
+
 .startfreeplaylist:hover {
     text-decoration: underline;
     box-shadow: inset 0 -4px 10px darkgreen;
     border: 2px solid black;
     opacity: 100%;
+}
+
+/* playlist premium paramètres */
+
+.titleplaylistform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+    margin: 40px;
+}
+
+
+/* premiere option artiste / genre */
+
+.select_bow_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.select-box {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+}
+
+.selected {
+    padding: 10px;
+}
+
+.select-box .option-container {
+    color: white;
+    background-color: #320d60;
+    border-radius: 10px;
+    transition: all ease-in-out .4s;
+    width: 100%;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    order: 1;
+}
+
+.selected {
+    background-color: #320d60;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: white;
+    position: relative;
+    order: 0;
+}
+
+.select-box .option,
+.selected {
+    padding: 10px 30px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.option:hover {
+    background-color: #7C20EF;
+    border-radius: 10px;
+}
+
+.radio {
+    display: none;
+}
+
+.select-box .option-container.active {
+    max-height: 200px;
+    opacity: 1;
+}
+
+
+.flechebox {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 10px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease-in-out .4s;
+}
+
+.fleche {
+    width: 30px;
+    transition: all ease-in-out .4s;
+}
+
+.fleche.active {
+    transform: rotateX(180deg);
+}
+
+
+/* Multi slider d'options comme MAGIC PLAYLIST */
+
+
+.audiofeaturesbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 50vh;
+}
+
+.audiofeatures {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+.audiofeatures > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.audiofeatures_labelcontainer_left {
+    align-items: flex-end;
+    padding-right: 20px;
+}
+
+/* SLIDERS */
+
+/*.audiofeatures_slidercontainer {*/
+/*    flex-direction: column;*/
+/*    width: fit-content;*/
+/*    display: flex;*/
+/*    justify-content: space-around;*/
+/*}*/
+
+.audiofeatures_mainrange {
+    width: 800px;
+    height: 20px;
+    -webkit-appearance: none;
+    background: #111;
+    outline: none;
+    border-radius: 15px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+    z-index: 10;
+    overflow: visible;
+}
+
+.audiofeatures_mainrange::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #00fd0a;
+    cursor: grab;
+    border: 4px solid #333;
+}
+
+.audiofeatures_labelcontainer_right {
+    align-items: flex-start;
+    padding-left: 20px;
+}
+
+/* bpm slider */
+
+
+.bpmslider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 50px auto;
+}
+
+
+.bpmslider_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#rangevalue {
+    /*position: absolute;*/
+    /*top: -80px;*/
+    /*display: block;*/
+    text-align: center;
+    font-size: 3.75em;
+
+}
+
+.rangeBPM {
+    width: 60vw;
+    height: 40px;
+    -webkit-appearance: none;
+    background-color: black;
+    border-radius: 20px;
+    outline: none;
+    overflow: hidden;
+
+}
+
+.rangeBPM::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #7C20EF;
+    cursor: grab;
+    border: 6px solid #404040;
+    box-shadow: -620px 0 0 600px #7C20EF;
+}
+
+.cestparti {
+    height: 40px;
+    width: 20vw;
+    border-radius: 20px;
+    background-color: #EF7C20;
+    border: none;
+    outline: none;
+    font-size: 1.125em;
+    color: white;
+    opacity: 50%;
+}
+.cestparti:hover {
+    opacity: 100%;
+    text-decoration: underline;
+}
+.cestparti_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+h2 {
+    display: flex;
+    justify-content: flex-start;
+    margin: 50px;
 }
