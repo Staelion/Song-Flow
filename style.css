@@ -1015,9 +1015,20 @@ h4 {
 }
 
 .cestparti {
-
+    height: 40px;
+    width: 20vw;
+    border-radius: 20px;
+    background-color: #EF7C20;
+    border: none;
+    outline: none;
+    font-size: 1.125em;
+    color: white;
+    opacity: 50%;
 }
-
+.cestparti:hover {
+    opacity: 100%;
+    text-decoration: underline;
+}
 .cestparti_wrapper {
     display: flex;
     justify-content: center;

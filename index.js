@@ -1,7 +1,7 @@
 /* script scroll bar */
 window.addEventListener(
     "scroll",
-    ()=>{
+    () => {
         document.body.style.setProperty(
             "--scroll",
             window.scrollY / (document.body.offsetHeight - window.innerHeight)
@@ -9,7 +9,6 @@ window.addEventListener(
     },
     false
 );
-
 
 
 /* script swiper */
@@ -38,6 +37,11 @@ const fleche = document.querySelector(".fleche")
 selected.addEventListener("click", () => {
     optionsContainer.classList.toggle("active")
     fleche.classList.toggle("active")
-
-
 })
+
+optionsList.forEach(o => {
+    o.addEventListener("click", () => {
+        selected.innerHTML = o.querySelector("label").innerHTML;
+        optionsContainer.classList.remove("active");
+    });
+});
