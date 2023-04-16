@@ -24,7 +24,7 @@ function Nav(props) {
 			<div className={'flex w-1/5'}>
 				<p
 					className={
-						'flex items-center justify-start p-3.5 text-2xl font-semibold text-orange-500'
+						'flex items-center justify-start p-3.5 text-4xl font-semibold text-orange-500'
 					}
 				>
 					Song Flow
