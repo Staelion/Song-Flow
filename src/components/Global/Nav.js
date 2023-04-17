@@ -31,7 +31,7 @@ function Nav(props) {
 				</p>
 			</div>
 
-			<div className={'flex w-4/5 items-center justify-end gap-10 p-3.5'}>
+			<div className="flex w-4/5 items-center justify-end gap-10 p-3.5">
 				{menu.map((item, index) => {
 					return (
 						<Link
