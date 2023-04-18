@@ -1,14 +1,11 @@
-import React from 'react';
+import React from 'react'
 
 function Footer(props) {
-    return (
-
-        <>
-
-            Footer yolo
-
-        </>
-    );
+	return (
+		<>
+			<p className={'text-slate-50'}>Footer yolo</p>
+		</>
+	)
 }
 
-export default Footer;
+export default Footer
