@@ -26,7 +26,7 @@ function Hero(props) {
 
 						<button
 							className={
-								'flex items-center rounded-2xl border-2 border-solid border-mainaccent-700/0 bg-mainaccent-700/0 px-12 py-4 text-2xl text-white transition delay-100 ease-in-out hover:border-mainaccent-700 hover:bg-mainaccent-700'
+								'flex items-center rounded-2xl border-2 border-solid border-mainaccent-700/0  px-12 py-4 text-2xl text-white transition delay-100 ease-in-out hover:border-mainaccent-700 '
 							}
 						>
 							Esssayer gratuitement
