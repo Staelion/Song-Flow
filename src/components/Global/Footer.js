@@ -15,10 +15,21 @@ function Footer(props) {
 								<Link
 									href={'/qui_sommes_nous'}
 									className={
-										'pb-1("&0 pt-5 text-2xl font-semibold text-white hover:text-mainaccent-700'
+										'pb-5 pt-3 text-2xl font-semibold text-white hover:text-mainaccent-700'
 									}
 								>
 									Qui sommes-nous
+								</Link>
+							</div>
+
+							<div className="flex justify-center">
+								<Link
+									href={'/nos_services'}
+									className={
+										'pb-5 pt-3 text-2xl font-semibold text-white hover:text-mainaccent-700'
+									}
+								>
+									Nos services
 								</Link>
 							</div>
 						</div>

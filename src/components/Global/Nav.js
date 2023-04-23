@@ -22,11 +22,7 @@ function Nav(props) {
 	return (
 		<div className={'sticky flex h-[80px] w-screen bg-black'}>
 			<div className={'flex w-1/5'}>
-				<p
-					className={
-						'flex items-center justify-start p-3.5 text-4xl font-semibold text-orange-500'
-					}
-				>
+				<p className="flex items-center justify-start p-3.5 text-4xl font-semibold text-mainorange-500">
 					Song Flow
 				</p>
 			</div>
@@ -38,7 +34,7 @@ function Nav(props) {
 							key={index}
 							href={item.href}
 							className={
-								'text-xl font-semibold text-orange-500 hover:text-purple-600 '
+								'text-xl font-semibold text-mainorange-500 hover:text-mainaccent-700 '
 							}
 						>
 							{item.name}
