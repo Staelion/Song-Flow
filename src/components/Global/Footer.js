@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 function Footer(props) {
 	return (
@@ -8,12 +9,23 @@ function Footer(props) {
 					<div className={'flex max-w-full justify-between font-oswald'}>
 						<div>
 							<h4 className="mb-4 p-3.5 text-4xl font-semibold text-white ">
-								l'entreprise
+								l{"'"}entreprise
 							</h4>
+							<div className="flex justify-center">
+								<Link
+									href={'/qui_sommes_nous'}
+									className={
+										'pb-1("&0 pt-5 text-2xl font-semibold text-white hover:text-mainaccent-700'
+									}
+								>
+									Qui sommes-nous
+								</Link>
+							</div>
 						</div>
+
 						<div>
 							<h4 className={'mb-4 p-3.5 text-4xl font-semibold text-white '}>
-								Obtenir de l'aide
+								Obtenir de l{"'"}aide
 							</h4>
 						</div>
 						<div>

@@ -35,6 +35,7 @@ function Nav(props) {
 				{menu.map((item, index) => {
 					return (
 						<Link
+							key={index}
 							href={item.href}
 							className={
 								'text-xl font-semibold text-orange-500 hover:text-purple-600 '
