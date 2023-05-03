@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 function Footer(props) {
 	return (
@@ -72,20 +73,59 @@ function Footer(props) {
 						</div>
 					</div>
 
-					<div>
+					<div className={'flex flex-col'}>
 						<h4 className={'mb-4 p-3.5 text-4xl font-semibold text-white '}>
 							Suivez-nous
 						</h4>
 
-						<div className="flex justify-center">
+						{/*<div className="flex  justify-center justify-between rounded-full">*/}
+						<div className={'flex justify-center justify-between '}>
 							<Link
 								href={'https://www.instagram.com/Song_Flow'}
 								target={'_blank'}
-								className={'flex justify-center rounded-full bg-white'}
+								className={
+									'flex h-[65px] w-[65px] justify-center rounded-full bg-white '
+								}
 							>
-								<svg className={'flex h-1/5 w-1/5 justify-center bg-black'}>
-									src={'/instagram'}
-								</svg>
+								<Image
+									className={'flex justify-center '}
+									src={'/images/instagram.svg'}
+									alt={'instagram'}
+									height={'40'}
+									width={'40'}
+								></Image>
+							</Link>
+
+							<Link
+								href={'https://www.facebook.com/Song_Flow'}
+								target={'_blank'}
+								className={
+									'flex h-[65px] w-[65px] justify-center rounded-full bg-white'
+								}
+							>
+								<Image
+									className={'flex justify-center p-4'}
+									src={'/images/facebook.svg'}
+									alt={'instagram'}
+									height={'80'}
+									width={'80'}
+								></Image>
+							</Link>
+
+							<Link
+								href={'https://www.twitter.com/Song_Flow'}
+								target={'_blank'}
+								className={
+									'flex h-[65px] w-[65px] justify-center rounded-full bg-white'
+								}
+							>
+								<Image
+									className={'flex justify-center'}
+									src={'/images/twitter.svg'}
+									alt={'instagram'}
+									height={'35'}
+									width={'35'}
+								></Image>
 							</Link>
 						</div>
 					</div>
