@@ -68,10 +68,13 @@ export default function Features() {
 										</p>
 										<ul
 											role="list"
-											className="mt-10 space-y-4 text-sm leading-6 text-gray-600"
+											className="mt-10 space-y-4 text-lg text-lg leading-6 text-gray-600"
 										>
 											{tier.features.map(feature => (
-												<li key={feature} className="flex gap-x-3">
+												<li
+													key={feature}
+													className="flex gap-x-3 font-bold text-mainorange-500"
+												>
 													<Image
 														src={'Images/casque-de-musique.svg'}
 														alt={'logo'}
