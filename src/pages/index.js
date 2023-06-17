@@ -7,6 +7,7 @@ import Footer from '@/components/Global/Footer'
 import Backgroundtemplate from '@/components/Global/Backgroundtemplate'
 import Hero from '@/components/Global/Hero'
 import Features from '@/components/Global/Features'
+import Flashcard from '@/components/Global/Flashcard'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,6 +17,7 @@ export default function Home() {
 			<Nav />
 			<Backgroundtemplate />
 			<Hero />
+			<Flashcard />
 			<Features />
 			<Footer />
 		</>
