@@ -68,7 +68,7 @@ function Footer(props) {
 									'pt-3 text-xl font-semibold text-white hover:text-mainaccent-700'
 								}
 							>
-								Options de paiment
+								Options de paiement
 							</Link>
 						</div>
 					</div>
