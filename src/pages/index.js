@@ -9,6 +9,7 @@ import Hero from '@/components/Global/Hero'
 import Features from '@/components/Global/Features'
 import Flashcard from '@/components/Global/Flashcard'
 import Logoterre from '@/components/Global/Logoterre'
+import ScriptTerre from '@/components/Global/ScriptTerre'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,6 +18,7 @@ export default function Home() {
 		<>
 			<Nav />
 			<Logoterre />
+			<ScriptTerre />
 			<Backgroundtemplate />
 			<Hero />
 			<Flashcard />
