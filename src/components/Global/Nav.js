@@ -13,8 +13,8 @@ const menu = [
 		href: '/faq',
 	},
 	{
-		name: 'Mon compte',
-		href: '/mon_compte',
+		name: 'Se connecter',
+		href: '/login',
 	},
 ]
 
