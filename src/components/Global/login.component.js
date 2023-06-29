@@ -1,23 +1,22 @@
 import React from 'react'
 
-function Login(props) {
+function LoginComponent(props) {
 	return (
 		<>
 			<div className="flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8">
 				<div className="sm:mx-auto sm:w-full sm:max-w-md">
-
-					<h2 className="mt-6 text-center text-3xl font-bold leading-9 tracking-tight text-black">
+					<h2 className="mt-6 text-center text-3xl font-bold leading-9 tracking-tight text-white">
 						Connecte toi à ton compte !
 					</h2>
 				</div>
 
-				<div className="mt-10 sm:mx-auto sm:w-full sm:max-w-[480px]">
-					<div className="bg-mainblue-400 w-full px-6 py-12 shadow sm:rounded-lg sm:px-12">
+				<div className="mt-10 sm:mx-auto sm:w-full sm:max-w-[680px]">
+					<div className="w-full bg-mainorange-500 px-6 py-12 shadow sm:rounded-lg sm:px-12">
 						<form className="space-y-6" action="#" method="POST">
 							<div>
 								<label
 									htmlFor="email"
-									className="block text-lg font-bold leading-6 text-black font-sans"
+									className="block font-sans text-lg font-bold leading-6 text-black"
 								>
 									Adresse Email
 								</label>
@@ -36,7 +35,7 @@ function Login(props) {
 							<div>
 								<label
 									htmlFor="password"
-									className="block text-lg font-bold leading-6 text-black font-sans"
+									className="block font-sans text-lg font-bold leading-6 text-black"
 								>
 									Mot de passe
 								</label>
@@ -62,7 +61,7 @@ function Login(props) {
 									/>
 									<label
 										htmlFor="remember-me"
-										className="ml-3 block text-sm leading-6 text-black font-oswald"
+										className="ml-3 block font-oswald text-sm leading-6 text-black"
 									>
 										Se souvenir de moi
 									</label>
@@ -71,7 +70,7 @@ function Login(props) {
 								<div className="text-sm leading-6">
 									<a
 										href="#"
-										className="font-semibold text-indigo-600 hover:text-indigo-500"
+										className="font-semibold text-mainorange-900 hover:text-white"
 									>
 										Mot de passe oublié ?
 									</a>
@@ -81,9 +80,9 @@ function Login(props) {
 							<div>
 								<button
 									type="submit"
-									className="flex w-full justify-center rounded-md bg-mainorange-900 px-3 py-1.5 text-lg font-bold leading-6 text-black shadow-sm hover:bg-mainorange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+									className="flex w-full justify-center rounded-md bg-mainorange-900 px-3 py-1.5 text-lg font-bold leading-6 text-black shadow-sm hover:bg-mainaccent-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
 								>
-									Sign in
+									S'enregistrer
 								</button>
 							</div>
 						</form>
@@ -106,7 +105,7 @@ function Login(props) {
 							<div className="mt-6 grid grid-cols-2 gap-4">
 								<a
 									href="#"
-									className="flex w-full items-center justify-center gap-3 rounded-md bg-[#1D9BF0] px-3 py-1.5 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1D9BF0]"
+									className="flex w-full items-center justify-center gap-3 rounded-md bg-[#1ED760] px-3 py-1.5 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1D9BF0]"
 								>
 									<svg
 										className="h-5 w-5"
@@ -117,7 +116,7 @@ function Login(props) {
 										<path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
 									</svg>
 									<span className="text-sm font-semibold leading-6">
-										Twitter
+										Spotify
 									</span>
 								</a>
 
@@ -145,13 +144,13 @@ function Login(props) {
 						</div>
 					</div>
 
-					<p className="mt-10 text-center text-sm text-gray-500">
-						Not a member?{' '}
+					<p className="mt-10 text-center text-lg text-white">
+						Pas encore inscrit ?{' '}
 						<a
 							href="#"
-							className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
+							className="font-semibold leading-6 text-mainorange-900 hover:text-mainorange-500"
 						>
-							Start a 14 day free trial
+							Essaye gratuitement
 						</a>
 					</p>
 				</div>
@@ -160,4 +159,4 @@ function Login(props) {
 	)
 }
 
-export default Login
+export default LoginComponent

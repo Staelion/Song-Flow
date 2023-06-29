@@ -2,19 +2,19 @@ import React from 'react'
 import { Head } from 'next/document'
 import Nav from '@/components/Global/Nav'
 import Footer from '@/components/Global/Footer'
-import Login from '@/components/Global/Login'
+import LoginComponent from '@/components/Global/login.component'
 
-function Indexlogin(props) {
+function Login(props) {
 	return (
 		<>
-			<main>
+			<main className={'h-full w-full bg-black bg-opacity-90'}>
 				{/* alt + entrée -> import */}
 				<Nav />
-				<Login />
+				<LoginComponent />
 				<Footer />
 			</main>
 		</>
 	)
 }
 
-export default Indexlogin
+export default Login

@@ -17,7 +17,7 @@ function Hero(props) {
 					</p>
 
 					<div className={'flex gap-4'}>
-						<Link href="/indexlogin">
+						<Link href="/login">
 							<button
 								className={
 									'shadow-inner-[0_-4px_5px_#7c20ef] flex items-center rounded-2xl border-2 border-mainaccent-700/0 bg-mainaccent-700/100 px-12 py-4 text-2xl text-white shadow-[0_4px_5px_#31066f] transition delay-100 ease-in-out hover:border-mainaccent-700 hover:bg-mainaccent-700/0 hover:text-mainaccent-700  hover:shadow-none'
