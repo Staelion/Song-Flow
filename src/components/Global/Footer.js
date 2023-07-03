@@ -9,7 +9,7 @@ function Footer(props) {
 				<div className={'flex max-w-full justify-around font-oswald'}>
 					<div className={'flex flex-col justify-center'}>
 						<h4 className="mb-4 px-3.5 py-0 text-2xl font-semibold text-white ">
-							L{"'"}entreprise
+							L\'entreprise
 						</h4>
 						<div className="flex justify-center">
 							<Link
