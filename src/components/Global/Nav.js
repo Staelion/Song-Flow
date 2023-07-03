@@ -22,9 +22,11 @@ function Nav(props) {
 	return (
 		<div className={'sticky flex h-[80px] w-screen bg-black'}>
 			<div className={'flex w-1/5'}>
-				<p className="flex items-center justify-start p-3.5 text-4xl font-semibold text-mainorange-500">
-					Song Flow
-				</p>
+				<Link href={'pages/index'}>
+					<p className="flex items-center justify-start p-3.5 text-4xl font-semibold text-mainorange-500">
+						Song Flow
+					</p>
+				</Link>
 			</div>
 
 			<div className="flex w-4/5 items-center justify-end gap-10 p-3.5">
