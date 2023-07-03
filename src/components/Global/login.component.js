@@ -10,7 +10,7 @@ function LoginComponent(props) {
 					</h2>
 				</div>
 
-				<div className="mt-10 sm:mx-auto sm:w-full sm:max-w-[680px]">
+				<div className="mt-10 sm:mx-auto sm:w-full sm:max-w-[575px]">
 					<div className="w-full bg-mainorange-500 px-6 py-12 shadow sm:rounded-lg sm:px-12">
 						<form className="space-y-6" action="#" method="POST">
 							<div>
@@ -97,7 +97,7 @@ function LoginComponent(props) {
 								</div>
 								<div className="relative flex justify-center text-sm font-medium leading-6">
 									<span className="bg-white px-6 text-black">
-										Or continue with
+										Ou connecte toi avec
 									</span>
 								</div>
 							</div>
