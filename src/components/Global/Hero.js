@@ -17,6 +17,7 @@ function Hero(props) {
 					</p>
 
 					<div className={'flex gap-4'}>
+         
 						<Link href="/login">
 							<button
 								className={
