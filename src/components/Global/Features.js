@@ -63,12 +63,12 @@ export default function Features() {
 										<div>
 											<h3
 												id={tier.id}
-												className="flex justify-center text-3xl font-semibold leading-7 text-black"
+												className="flex justify-center text-3xl font-semibold leading-7 text-black font-oswald"
 											>
 												{tier.name}
 											</h3>
 
-											<p className="mt-6 text-center text-xl leading-7 text-black">
+											<p className="mt-6 text-center text-xl leading-7 text-black font-oswald">
 												{tier.description}
 											</p>
 											<ul
