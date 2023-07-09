@@ -22,7 +22,7 @@ function Nav(props) {
 	return (
 		<div className={'sticky flex h-[80px] w-screen bg-black'}>
 			<div className={'flex w-1/5'}>
-				<Link href={'pages/index'}>
+				<Link href={'/'}>
 					<p className="flex items-center justify-start p-3.5 text-4xl font-semibold text-mainorange-500">
 						Song Flow
 					</p>
