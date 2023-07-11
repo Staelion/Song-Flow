@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-function Logoterre(props) {
+function LogoterreComponent(props) {
 	return (
 		<>
 			<div className="bottom-30 fixed -right-72 -z-10 flex h-[800px] w-[800px] ">
@@ -17,4 +17,4 @@ function Logoterre(props) {
 	)
 }
 
-export default Logoterre
+export default LogoterreComponent

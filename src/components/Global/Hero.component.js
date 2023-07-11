@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-function Hero(props) {
+function HeroComponent(props) {
 	return (
 		<>
 			{/* container */}
@@ -41,4 +41,4 @@ function Hero(props) {
 	)
 }
 
-export default Hero
+export default HeroComponent

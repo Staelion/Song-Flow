@@ -18,7 +18,7 @@ const menu = [
 	},
 ]
 
-function Nav(props) {
+function NavComponent(props) {
 	return (
 		<div className={'sticky flex h-[80px] w-screen bg-black'}>
 			<div className={'flex w-1/5'}>
@@ -48,4 +48,4 @@ function Nav(props) {
 	)
 }
 
-export default Nav
+export default NavComponent

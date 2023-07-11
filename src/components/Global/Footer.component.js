@@ -2,14 +2,14 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-function Footer(props) {
+function FooterComponent(props) {
 	return (
 		<div className={'mt-60 border-t-8 border-mainorange-500 pt-5'}>
 			<div className="m-auto max-w-screen-2xl">
 				<div className={'flex max-w-full justify-around font-oswald'}>
 					<div className={'flex flex-col justify-center'}>
 						<h4 className="mb-4 px-3.5 py-0 text-2xl font-semibold text-white ">
-							L\'entreprise
+							L{"'"}entreprise
 						</h4>
 						<div className="flex justify-center">
 							<Link
@@ -139,4 +139,4 @@ function Footer(props) {
 	)
 }
 
-export default Footer
+export default FooterComponent

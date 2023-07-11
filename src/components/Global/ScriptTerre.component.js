@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 
-function ScriptTerre(props) {
+function ScriptTerreComponent(props) {
 	useEffect(() => {
 		window.addEventListener(
 			'scroll',
@@ -17,4 +17,4 @@ function ScriptTerre(props) {
 	return <></>
 }
 
-export default ScriptTerre
+export default ScriptTerreComponent

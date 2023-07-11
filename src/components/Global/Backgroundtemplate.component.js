@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Backgroundtemplate(props) {
+function BackgroundtemplateComponent(props) {
 	return (
 		<>
 			<div
@@ -12,4 +12,4 @@ function Backgroundtemplate(props) {
 	)
 }
 
-export default Backgroundtemplate
+export default BackgroundtemplateComponent

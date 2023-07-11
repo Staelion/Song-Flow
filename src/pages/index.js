@@ -1,29 +1,29 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 // import {Head} from "next/document";
-import Nav from '@/components/Global/Nav'
+import NavComponent from '@/components/Global/Nav.component'
 import React from 'react'
-import Footer from '@/components/Global/Footer'
-import Backgroundtemplate from '@/components/Global/Backgroundtemplate'
-import Hero from '@/components/Global/Hero'
-import Features from '@/components/Global/Features'
-import Flashcard from '@/components/Global/Flashcard'
-import Logoterre from '@/components/Global/Logoterre'
-import ScriptTerre from '@/components/Global/ScriptTerre'
+import FooterComponent from '@/components/Global/Footer.component'
+import BackgroundtemplateComponent from '@/components/Global/Backgroundtemplate.component'
+import HeroComponent from '@/components/Global/Hero.component'
+import FeaturesComponent from '@/components/Global/Features.component'
+import FlashcardComponent from '@/components/Global/Flashcard.component'
+import LogoterreComponent from '@/components/Global/Logoterre.component'
+import ScriptTerreComponent from '@/components/Global/ScriptTerre.component'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
 	return (
 		<>
-			<Nav />
-			<Logoterre />
-			<ScriptTerre />
-			<Backgroundtemplate />
-			<Hero />
-			<Flashcard />
-			<Features />
-			<Footer />
+			<NavComponent />
+			<LogoterreComponent />
+			<ScriptTerreComponent />
+			<BackgroundtemplateComponent />
+			<HeroComponent />
+			<FlashcardComponent />
+			<FeaturesComponent />
+			<FooterComponent />
 		</>
 	)
 }

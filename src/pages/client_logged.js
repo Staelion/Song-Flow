@@ -1,20 +1,18 @@
 import React from 'react'
-import { Head } from 'next/document'
 import NavComponent from '@/components/Global/Nav.component'
 import FooterComponent from '@/components/Global/Footer.component'
-import LoginComponent from '@/components/Global/login.component'
+import LoggeddashboardComponent from '@/components/Global/Loggeddashboard.component'
 
-function Login(props) {
+function Client_logged(props) {
 	return (
 		<>
 			<main className={'h-full w-full bg-black bg-opacity-90'}>
-				{/* alt + entrée -> import */}
 				<NavComponent />
-				<LoginComponent />
+				<LoggeddashboardComponent />
 				<FooterComponent />
 			</main>
 		</>
 	)
 }
 
-export default Login
+export default Client_logged

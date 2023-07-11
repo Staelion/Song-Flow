@@ -36,7 +36,7 @@ const tiers = [
 	},
 ]
 
-export default function Features() {
+export default function FeaturesComponent() {
 	return (
 		<>
 			<div className="isolate overflow-hidden ">
@@ -63,12 +63,12 @@ export default function Features() {
 										<div>
 											<h3
 												id={tier.id}
-												className="flex justify-center text-3xl font-semibold leading-7 text-black font-oswald"
+												className="flex justify-center font-oswald text-3xl font-semibold leading-7 text-black"
 											>
 												{tier.name}
 											</h3>
 
-											<p className="mt-6 text-center text-xl leading-7 text-black font-oswald">
+											<p className="mt-6 text-center font-oswald text-xl leading-7 text-black">
 												{tier.description}
 											</p>
 											<ul

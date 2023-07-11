@@ -57,7 +57,7 @@ const flashcard_data = [
 		linkBtn: '/link',
 	},
 ]
-function Flashcard(props) {
+function FlashcardComponent(props) {
 	return (
 		<div className={'relative w-auto '}>
 			<Swiper
@@ -112,4 +112,4 @@ function Flashcard(props) {
 	)
 }
 
-export default Flashcard
+export default FlashcardComponent

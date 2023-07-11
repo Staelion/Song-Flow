@@ -1,10 +1,10 @@
 import React from 'react'
-import Nav from '@/components/Global/Nav'
+import NavComponent from '@/components/Global/Nav.component'
 
 function QuiSommesNous(props) {
 	return (
 		<>
-			<Nav />
+			<NavComponent />
 		</>
 	)
 }
