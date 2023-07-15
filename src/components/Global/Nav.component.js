@@ -18,9 +18,13 @@ const menu = [
 	},
 ]
 
-function NavComponent(props) {
+function NavComponent({ stickyMode = true }) {
 	return (
-		<div className={'sticky flex h-[80px] w-screen bg-black'}>
+		<div
+			className={`${
+				stickyMode ? 'sticky' : 'fixed'
+			} z-50 flex h-[80px] w-screen bg-black`}
+		>
 			<div className={'flex w-1/5'}>
 				<Link href={'/'}>
 					<p className="flex items-center justify-start p-3.5 text-4xl font-semibold text-mainorange-500">
