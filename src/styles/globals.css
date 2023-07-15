@@ -62,7 +62,6 @@ a {
 	text-align: center;
 	font-size: 18px;
 
-
 	/* Center slide text vertically */
 	display: flex;
 	justify-content: center;
@@ -80,12 +79,6 @@ a {
 	margin-left: auto;
 	margin-right: auto;
 }
-
-
-
-
-
-
 
 .everythingflashcard {
 	display: flex;
@@ -131,11 +124,7 @@ a {
 	min-height: 600px;
 	border-radius: 25px;
 	background: #7c20ef;
-	background: linear-gradient(
-			180deg,
-			#7c20ef,
-			#31066f
-	);
+	background: linear-gradient(180deg, #7c20ef, #31066f);
 }
 
 .card-image {
@@ -190,14 +179,13 @@ h4 {
 	color: #ef7c20;
 }
 
-.cardbutton:hover a{
+.cardbutton:hover a {
 	color: #ef7c20;
 }
 
 :root {
 	--swiper-theme-color: black !important;
 }
-
 
 /* logo terre rotatif landing page */
 
@@ -208,7 +196,6 @@ h4 {
 	animation-iteration-count: 1;
 	animation-fill-mode: both;
 }
-
 
 @keyframes rotate {
 	to {
