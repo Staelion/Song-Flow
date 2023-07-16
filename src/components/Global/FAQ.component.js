@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
+
 import Link from 'next/link'
 
 const navigation = [
@@ -7,7 +8,7 @@ const navigation = [
 		name: 'Profil',
 		href: '/profil',
 		icon: <i className="fi fi-br-user"></i>,
-		current: true,
+		current: false,
 	},
 	{
 		name: 'Abonnement',
@@ -25,7 +26,7 @@ const navigation = [
 		name: 'FAQ',
 		href: '/FAQ',
 		icon: <i className="fi fi-br-bookmark"></i>,
-		current: false,
+		current: true,
 	},
 	{
 		name: 'Se déconnecter',

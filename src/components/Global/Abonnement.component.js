@@ -1,26 +1,37 @@
 import React, { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import {
-	Bars3Icon,
-	CalendarIcon,
-	ChartPieIcon,
-	DocumentDuplicateIcon,
-	FolderIcon,
-	HomeIcon,
-	UsersIcon,
-	XMarkIcon,
-} from '@heroicons/react/24/outline'
+
 import Link from 'next/link'
 
 const navigation = [
-	{ name: 'Profil', href: '#', icon: HomeIcon, current: false },
-	{ name: 'Abonnement', href: '#', icon: UsersIcon, current: true },
-	{ name: 'Paiment', href: '#', icon: FolderIcon, current: false },
-	{ name: 'FAQ', href: '#', icon: CalendarIcon, current: false },
+	{
+		name: 'Profil',
+		href: '/profil',
+		icon: <i className="fi fi-br-user"></i>,
+		current: false,
+	},
+	{
+		name: 'Abonnement',
+		href: '/abonnement',
+		icon: <i className="fi fi-br-star"></i>,
+		current: true,
+	},
+	{
+		name: 'paiement',
+		href: '/paiement',
+		icon: <i className="fi fi-br-wallet"></i>,
+		current: false,
+	},
+	{
+		name: 'FAQ',
+		href: '/FAQ',
+		icon: <i className="fi fi-br-bookmark"></i>,
+		current: false,
+	},
 	{
 		name: 'Se déconnecter',
 		href: '#',
-		icon: DocumentDuplicateIcon,
+		icon: <i className="fi fi-br-arrow-right-to-bracket"></i>,
 		current: false,
 	},
 ]
@@ -45,7 +56,7 @@ function ProfilComponent(props) {
 									<ul role="list" className="-mx-2 space-y-3">
 										{navigation.map(item => (
 											<li key={item.name}>
-												<a
+												<Link
 													href={item.href}
 													className={classNames(
 														item.current
@@ -54,24 +65,22 @@ function ProfilComponent(props) {
 														'group flex gap-x-3 rounded-md p-2 font-sans text-lg font-semibold leading-6'
 													)}
 												>
-													<item.icon
-														className={classNames(
-															item.current
-																? 'text-black'
-																: 'text-black group-hover:text-black',
-															'h-6 w-6 shrink-0'
-														)}
-														aria-hidden="true"
-													/>
-													{item.name}
-												</a>
+													<p
+														className={
+															'flex items-center gap-2  text-xl text-black'
+														}
+													>
+														{item.icon}
+													</p>
+													<span>{item.name}</span>
+												</Link>
 											</li>
 										))}
 									</ul>
 								</li>
 
 								<li className="-mx-6 mt-auto">
-									<a
+									<Link
 										href="#"
 										className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50"
 									>
@@ -82,7 +91,7 @@ function ProfilComponent(props) {
 										{/*/>*/}
 										<span className="sr-only">Your profile</span>
 										<span aria-hidden="true">Mathéo le boss</span>
-									</a>
+									</Link>
 								</li>
 							</ul>
 						</nav>

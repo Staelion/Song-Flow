@@ -7,7 +7,7 @@ const navigation = [
 		name: 'Profil',
 		href: '/profil',
 		icon: <i className="fi fi-br-user"></i>,
-		current: true,
+		current: false,
 	},
 	{
 		name: 'Abonnement',
@@ -19,7 +19,7 @@ const navigation = [
 		name: 'paiement',
 		href: '/paiement',
 		icon: <i className="fi fi-br-wallet"></i>,
-		current: false,
+		current: true,
 	},
 	{
 		name: 'FAQ',
