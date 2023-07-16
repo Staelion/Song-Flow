@@ -1,16 +1,16 @@
 import React from 'react'
 import NavComponent from '@/components/Global/Nav.component'
-import LoggeddashboardComponent from '@/components/Global/Loggeddashboard.component'
+import ProfilComponent from '@/components/Global/Profil.component'
 
-function Client_logged(props) {
+function Profil(props) {
 	return (
 		<>
 			<main className={'h-full w-full'}>
 				<NavComponent stickyMode={false} />
-				<LoggeddashboardComponent />
+				<ProfilComponent />
 			</main>
 		</>
 	)
 }
 
-export default Client_logged
+export default Profil
