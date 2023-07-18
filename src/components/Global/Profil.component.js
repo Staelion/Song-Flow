@@ -117,11 +117,11 @@ function ProfilComponent(props) {
 				</div>
 				{/*ZONE PRINCIPALE DINFORMATIONS CLIENT*/}
 
-				<main className="h-full pt-[80px]">
+				<main className="h-full pt-[80px] ml-96">
 					<div className="">
 						<div className="m-6 flex h-full flex-col">
 							{/* Main area */}
-							<h4 className={'flex items-start pl-[500px] font-sans text-3xl '}>
+							<h4 className={'flex items-start font-sans text-3xl '}>
 								Votre profil
 							</h4>
 
@@ -131,7 +131,7 @@ function ProfilComponent(props) {
 									className={'mt-16 flex h-full w-full flex-col '}
 								>
 									{profileinfo.map(item => (
-										<li key={item.name} className={'flex justify-evenly'}>
+										<li key={item.name} className={'flex justify-between items-center'}>
 											<p className={'font-sans font-bold text-black'}>
 												{item.name}
 											</p>
@@ -140,14 +140,6 @@ function ProfilComponent(props) {
 											</p>
 										</li>
 									))}
-
-									{/*{profileinfo.map(item => (*/}
-									{/*	<li className={'text-black'} key={item.name}></li>*/}
-									{/*))}*/}
-
-									{/*{profileinfo.map(item => (*/}
-									{/*	<li key={item.value}></li>*/}
-									{/*))}*/}
 								</ul>
 							</div>
 						</div>
