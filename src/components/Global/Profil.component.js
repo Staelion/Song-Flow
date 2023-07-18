@@ -35,6 +35,25 @@ const navigation = [
 	},
 ]
 
+const profileinfo = [
+	{
+		name: "Nom d'utilisateur",
+		value: '#',
+	},
+	{
+		name: 'Nom prénom',
+		value: '#',
+	},
+	{
+		name: 'Date de naissance',
+		value: '#',
+	},
+	{
+		name: 'E-mail',
+		value: '#',
+	},
+]
+
 function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')
 }
@@ -44,9 +63,9 @@ function ProfilComponent(props) {
 		<>
 			<div>
 				{/* Static sidebar for desktop */}
-				<div className="fixed inset-y-0 z-30 flex w-72 flex-col">
+				<div className="fixed inset-y-0 z-30 flex w-96 flex-col">
 					{/* Sidebar component, swap this element with another sidebar if you like */}
-					<div className="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 px-6 pt-[80px]">
+					<div className="flex grow flex-col gap-y-5 overflow-y-auto border-r-4 border-black  px-6 pt-[80px]">
 						{/*LOGO PROFIL AVEC MAIL ET ABONNEMENT EN COURS */}
 
 						<nav className="flex flex-1 flex-col pt-20">
@@ -97,14 +116,40 @@ function ProfilComponent(props) {
 					</div>
 				</div>
 				{/*ZONE PRINCIPALE DINFORMATIONS CLIENT*/}
-				<main className="h-full pl-72 pt-[80px]">
+
+				<main className="h-full pt-[80px]">
 					<div className="">
-						<div className="flex h-full flex-col gap-10 px-8 py-6">
+						<div className="m-6 flex h-full flex-col">
 							{/* Main area */}
-							<div className="h-96 w-full bg-red-500"></div>
-							<div className="h-96 w-full bg-red-500"></div>
-							<div className="h-96 w-full bg-red-500"></div>
-							<div className="h-96 w-full bg-red-500"></div>
+							<h4 className={'flex items-start pl-[500px] font-sans text-3xl '}>
+								Votre profil
+							</h4>
+
+							<div className={'flex bg-red-400 text-2xl text-black'}>
+								<ul
+									role={'infos'}
+									className={'mt-16 flex h-full w-full flex-col '}
+								>
+									{profileinfo.map(item => (
+										<li key={item.name} className={'flex justify-evenly'}>
+											<p className={'font-sans font-bold text-black'}>
+												{item.name}
+											</p>
+											<p className={'font-sans font-bold text-black'}>
+												{item.value}
+											</p>
+										</li>
+									))}
+
+									{/*{profileinfo.map(item => (*/}
+									{/*	<li className={'text-black'} key={item.name}></li>*/}
+									{/*))}*/}
+
+									{/*{profileinfo.map(item => (*/}
+									{/*	<li key={item.value}></li>*/}
+									{/*))}*/}
+								</ul>
+							</div>
 						</div>
 					</div>
 				</main>
