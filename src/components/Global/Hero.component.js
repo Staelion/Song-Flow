@@ -26,13 +26,14 @@ function HeroComponent(props) {
 							Je me lance
 						</Link>
 
-						<button
+						<Link
+							href={'#'}
 							className={
 								'flex items-center rounded-2xl border-2 border-solid border-mainaccent-700/0  px-12 py-4 text-2xl text-white transition delay-100 ease-in-out hover:border-mainaccent-700 '
 							}
 						>
 							Esssayer gratuitement
-						</button>
+						</Link>
 					</div>
 				</div>
 				<div className={'hidden lg:flex lg:w-2/5'}>{/* Background here	*/}</div>
