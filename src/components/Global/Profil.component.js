@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
+
 import Link from 'next/link'
 
 const navigation = [
@@ -161,7 +161,7 @@ function ProfilComponent(props) {
 									}
 								>
 									<Link
-										href={'/change_profile'}
+										href={'/profil_edit'}
 										className={
 											'flex items-center rounded-2xl bg-mainaccent-700/100 px-12 py-4 text-xl text-white shadow-[0_4px_5px_#31066f] transition delay-100 ease-in-out hover:brightness-125'
 										}
