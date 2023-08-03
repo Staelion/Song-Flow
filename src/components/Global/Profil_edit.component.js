@@ -80,7 +80,7 @@ function ProfilEditComponent(props) {
 								<li className="-mx-6 mt-auto">
 									<Link
 										href="#"
-										className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50"
+										className="text-md flex items-center gap-x-4 px-6 py-3 font-semibold leading-6 text-gray-900 hover:bg-gray-50"
 									>
 										{/*<img*/}
 										{/*	className="h-8 w-8 rounded-full bg-gray-50"*/}
@@ -108,20 +108,20 @@ function ProfilEditComponent(props) {
 								</h2>
 
 								<div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-									<div className="sm:col-span-3">
+									<div className="sm:col-span-3 ">
 										<label
 											htmlFor="first-name"
-											className="block text-sm font-medium leading-6 text-gray-900"
+											className="text-md block font-medium leading-6 text-black"
 										>
 											Prénom
 										</label>
-										<div className="mt-2">
+										<div className="mt-2 ">
 											<input
 												type="text"
 												name="first-name"
 												id="first-name"
 												autoComplete="given-name"
-												className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+												className="sm:text-md block w-full rounded-full bg-gray-500 py-1.5 text-black shadow-sm focus:border-transparent focus:bg-white sm:leading-6"
 											/>
 										</div>
 									</div>
@@ -129,7 +129,7 @@ function ProfilEditComponent(props) {
 									<div className="sm:col-span-3">
 										<label
 											htmlFor="last-name"
-											className="block text-sm font-medium leading-6 text-gray-900"
+											className="text-md block font-medium leading-6 text-gray-900"
 										>
 											Nom
 										</label>
@@ -139,7 +139,7 @@ function ProfilEditComponent(props) {
 												name="last-name"
 												id="last-name"
 												autoComplete="family-name"
-												className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+												className="sm:text-md block w-full rounded-full bg-gray-500 py-1.5 text-black shadow-sm focus:border-transparent focus:bg-white sm:leading-6"
 											/>
 										</div>
 									</div>
@@ -147,7 +147,7 @@ function ProfilEditComponent(props) {
 									<div className="sm:col-span-4">
 										<label
 											htmlFor="email"
-											className="block text-sm font-medium leading-6 text-gray-900"
+											className="text-md block font-medium leading-6 text-gray-900"
 										>
 											Adresse mail
 										</label>
@@ -157,7 +157,7 @@ function ProfilEditComponent(props) {
 												name="email"
 												type="email"
 												autoComplete="email"
-												className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+												className="sm:text-md block w-full rounded-full bg-gray-500 py-1.5 text-black shadow-sm focus:border-transparent focus:bg-white sm:leading-6"
 											/>
 										</div>
 									</div>
@@ -165,7 +165,7 @@ function ProfilEditComponent(props) {
 									<div className="sm:col-span-3">
 										<label
 											htmlFor="country"
-											className="block text-sm font-medium leading-6 text-gray-900"
+											className="text-md block font-medium leading-6 text-gray-900"
 										>
 											Country
 										</label>
@@ -174,7 +174,7 @@ function ProfilEditComponent(props) {
 												id="country"
 												name="country"
 												autoComplete="Nom du pays"
-												className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+												className="sm:text-md block w-full    rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 sm:max-w-xs sm:leading-6"
 											>
 												<option value="France" selected="selected">
 													France
@@ -481,7 +481,7 @@ function ProfilEditComponent(props) {
 									<div className="sm:col-span-2 sm:col-start-1">
 										<label
 											htmlFor="day"
-											className="block text-sm font-medium leading-6 text-gray-900"
+											className="text-md block font-medium leading-6 text-gray-900"
 										>
 											day
 										</label>
@@ -490,7 +490,7 @@ function ProfilEditComponent(props) {
 												name="day"
 												id="day"
 												autoComplete="day"
-												className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+												className="sm:text-md block w-full    rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset      ring-gray-300 sm:leading-6"
 											>
 												<option value={'day'} selected={'selected'}>
 													Jour
@@ -533,7 +533,7 @@ function ProfilEditComponent(props) {
 									<div className="sm:col-span-2">
 										<label
 											htmlFor="month"
-											className="block text-sm font-medium leading-6 text-gray-900"
+											className="text-md block font-medium leading-6 text-gray-900"
 										>
 											Month
 										</label>
@@ -541,8 +541,8 @@ function ProfilEditComponent(props) {
 											<select
 												name="month"
 												id="month"
-												autoComplete="address-level1"
-												className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+												autoComplete="Mois"
+												className="sm:text-md block w-full rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset      ring-gray-300 sm:leading-6"
 											>
 												<option value={'mois'} selected={'selected'}>
 													Mois
@@ -566,7 +566,7 @@ function ProfilEditComponent(props) {
 									<div className="sm:col-span-2">
 										<label
 											htmlFor="year"
-											className="block text-sm font-medium leading-6 text-gray-900"
+											className="text-md block font-medium leading-6 text-gray-900"
 										>
 											Year
 										</label>
@@ -575,7 +575,7 @@ function ProfilEditComponent(props) {
 												name="year"
 												id="year"
 												autoComplete="year"
-												className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+												className="sm:text-md block w-full    rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset      ring-gray-300 sm:leading-6"
 											>
 												<option value="année" selected="selected">
 													Année
@@ -671,13 +671,15 @@ function ProfilEditComponent(props) {
 								</div>
 							</div>
 						</form>
-						<button
+
+						<Link
+							href={'#'}
 							className={
 								' ml-14 flex w-2/5 items-center justify-center rounded-2xl bg-mainaccent-700/100 px-12 py-4 text-xl text-white shadow-[0_4px_5px_#31066f] transition delay-100 ease-in-out hover:brightness-125'
 							}
 						>
 							Enregistrer
-						</button>
+						</Link>
 					</div>
 				</div>
 			</main>
