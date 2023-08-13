@@ -724,28 +724,6 @@ function ProfilEditComponent(props) {
 						Enregistrer
 					</Link>
 				</div>
-				<div className={'flex h-screen w-full items-start justify-start pt-48'}>
-					<div
-						className={
-							'grid h-full w-full grid-cols-12 grid-rows-6 bg-blue-100'
-						}
-					>
-						<div
-							className={
-								'col-start-1 col-end-12 row-start-1 row-end-2 w-screen bg-mainblue-400'
-							}
-						>
-							col1
-						</div>
-						<div
-							className={
-								'col-start-4 col-end-13 row-start-2 row-end-3 bg-red-400'
-							}
-						>
-							col2
-						</div>
-					</div>
-				</div>
 			</main>
 		</>
 	)
