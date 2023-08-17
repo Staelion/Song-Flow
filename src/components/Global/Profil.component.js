@@ -115,6 +115,7 @@ function ProfilComponent(props) {
 						</nav>
 					</div>
 				</div>
+
 				{/*ZONE PRINCIPALE DINFORMATIONS CLIENT*/}
 
 				<main className="ml-96 h-full pt-[80px]">

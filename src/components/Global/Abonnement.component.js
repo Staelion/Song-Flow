@@ -45,10 +45,10 @@ function ProfilComponent(props) {
 		<>
 			<div>
 				{/* Static sidebar for desktop */}
-				<div className="fixed inset-y-0 z-30 flex w-72 flex-col">
+				<div className="fixed inset-y-0 z-30 flex w-96 flex-col">
 					{/* Sidebar component, swap this element with another sidebar if you like */}
-					<div className="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 px-6 pt-[80px]">
-						{/*LOGO PROFIL AVEC MAIL ET ABONNEMENT EN COURS */}
+					<div className="flex grow flex-col gap-y-5 overflow-y-auto border-r-4 border-black px-6 pt-[80px]">
+						{/* LOGO PROFIL AVEC MAIL ET ABONNEMENT EN COURS */}
 
 						<nav className="flex flex-1 flex-col pt-20">
 							<ul role="list" className="flex flex-1 flex-col gap-y-7">
@@ -98,14 +98,15 @@ function ProfilComponent(props) {
 					</div>
 				</div>
 				{/*ZONE PRINCIPALE DINFORMATIONS CLIENT*/}
-				<main className="h-full pl-72 pt-[80px]">
+				<main className="ml-96 h-full pt-[80px]">
 					<div className="">
 						<div className="flex h-full flex-col gap-10 px-8 py-6">
 							{/* Main area */}
-							<div className="h-96 w-full bg-red-500"></div>
-							<div className="h-96 w-full bg-red-500"></div>
-							<div className="h-96 w-full bg-red-500"></div>
-							<div className="h-96 w-full bg-red-500"></div>
+							<h4 className="text-bold flex justify-start font-sans text-6xl">
+								Votre abonnement
+							</h4>
+
+							{/*Fonction java pour afficher abonnement actif ou non */}
 						</div>
 					</div>
 				</main>
