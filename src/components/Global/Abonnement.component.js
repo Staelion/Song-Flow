@@ -1,7 +1,9 @@
 import React, { Fragment, useState } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
-
 import Link from 'next/link'
+import Banner from './IsSubscribed.component'
+
+// const showbanner = () => {
+// 	const Banner = true // Mettez ici votre condition
 
 const navigation = [
 	{
@@ -105,8 +107,45 @@ function ProfilComponent(props) {
 							<h4 className="text-bold flex justify-start font-sans text-6xl">
 								Votre abonnement
 							</h4>
+							{/*Fonction javascript pour afficher abonnement actif ou non */}
 
-							{/*Fonction java pour afficher abonnement actif ou non */}
+							{/*<div>*/}
+							{/*	{Subscirption ? (*/}
+							{/*		<Banner type="first" />*/}
+							{/*	) : (*/}
+							{/*		<Banner type="second" />*/}
+							{/*	)}*/}
+							{/*</div>*/}
+
+							{/*case pas d'abonnement*/}
+							<div
+								className={
+									'flex h-[300px] w-4/5 border-4 border-black bg-red-600'
+								}
+							>
+								<div
+									className={
+										'text-bold flex w-full items-center justify-center font-sans text-4xl'
+									}
+								>
+									Pas d{"'"}abonnemenmt actif !
+								</div>
+							</div>
+
+							{/*case abonnement en cours*/}
+							{/*<div*/}
+							{/*    className={*/}
+							{/*        'flex h-[300px] w-4/5 border-4 border-black bg-green-600'*/}
+							{/*    }*/}
+							{/*>*/}
+							{/*    <div*/}
+							{/*        className={*/}
+							{/*            'text-bold flex w-full items-center justify-center font-sans text-4xl'*/}
+							{/*        }*/}
+							{/*    >*/}
+							{/*        Abonnement premium actif ! j'usqu'au 01/01/2050*/}
+							{/*    </div>*/}
+							{/*</div>*/}
 						</div>
 					</div>
 				</main>
