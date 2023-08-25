@@ -2,8 +2,11 @@ import React, { Fragment, useState } from 'react'
 import Link from 'next/link'
 import Banner from './IsSubscribed.component'
 
-// const showbanner = () => {
-// 	const Banner = true // Mettez ici votre condition
+// const HomePage = () => {
+// 	const showBanner = true; // Mettez ici votre condition
+
+const IsSubscribed = true
+const showbanner = IsSubscribed
 
 const navigation = [
 	{
@@ -109,43 +112,13 @@ function ProfilComponent(props) {
 							</h4>
 							{/*Fonction javascript pour afficher abonnement actif ou non */}
 
-							{/*<div>*/}
-							{/*	{Subscirption ? (*/}
-							{/*		<Banner type="first" />*/}
-							{/*	) : (*/}
-							{/*		<Banner type="second" />*/}
-							{/*	)}*/}
-							{/*</div>*/}
-
-							{/*case pas d'abonnement*/}
-							<div
-								className={
-									'flex h-[300px] w-4/5 border-4 border-black bg-red-600'
-								}
-							>
-								<div
-									className={
-										'text-bold flex w-full items-center justify-center font-sans text-4xl'
-									}
-								>
-									Pas d{"'"}abonnemenmt actif !
-								</div>
+							<div>
+								{showbanner ? (
+									<Banner type="first" />
+								) : (
+									<Banner type="second" />
+								)}
 							</div>
-
-							{/*case abonnement en cours*/}
-							{/*<div*/}
-							{/*    className={*/}
-							{/*        'flex h-[300px] w-4/5 border-4 border-black bg-green-600'*/}
-							{/*    }*/}
-							{/*>*/}
-							{/*    <div*/}
-							{/*        className={*/}
-							{/*            'text-bold flex w-full items-center justify-center font-sans text-4xl'*/}
-							{/*        }*/}
-							{/*    >*/}
-							{/*        Abonnement premium actif ! j'usqu'au 01/01/2050*/}
-							{/*    </div>*/}
-							{/*</div>*/}
 						</div>
 					</div>
 				</main>

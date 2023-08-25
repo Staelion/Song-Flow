@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const showbanner = true
+// export const showbanner = true
 const Banner = ({ type }) => {
 	return (
 		<div className="banner">
