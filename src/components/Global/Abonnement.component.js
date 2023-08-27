@@ -5,7 +5,7 @@ import Banner from './IsSubscribed.component'
 // const HomePage = () => {
 // 	const showBanner = true; // Mettez ici votre condition
 
-const IsSubscribed = true
+const IsSubscribed = false
 const showbanner = IsSubscribed
 
 const navigation = [
@@ -103,7 +103,7 @@ function ProfilComponent(props) {
 					</div>
 				</div>
 				{/*ZONE PRINCIPALE DINFORMATIONS CLIENT*/}
-				<main className="ml-96 h-full pt-[80px]">
+				<main className="ml-96 h-full min-h-[1500px] pt-[80px]">
 					<div className="">
 						<div className="flex h-full flex-col gap-10 px-8 py-6">
 							{/* Main area */}
@@ -112,11 +112,42 @@ function ProfilComponent(props) {
 							</h4>
 							{/*Fonction javascript pour afficher abonnement actif ou non */}
 
-							<div>
+							<div className={' '}>
 								{showbanner ? (
 									<Banner type="first" />
 								) : (
 									<Banner type="second" />
+								)}
+							</div>
+
+							<div>
+								{showbanner ? (
+									<div></div>
+								) : (
+									<div
+										className={
+											'flex w-full flex-col  items-center justify-center'
+										}
+									>
+										<div className={' p-8 text-center text-2xl'}>
+											"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore et dolore magna
+											aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+											ullamco laboris nisi ut aliquip ex ea commodo consequat.
+											Duis aute irure dolor in reprehenderit in voluptate velit
+											esse cillum dolore eu fugiat nulla pariatur. Excepteur
+											sint occaecat cupidatat non proident, sunt in culpa qui
+											officia deserunt mollit anim id est laborum."
+										</div>
+										<Link
+											href={'#'}
+											className={
+												' mt-4 flex w-1/3 justify-center rounded-2xl bg-mainaccent-700/100 px-12 py-4 text-xl text-white shadow-[0_4px_5px_#31066f] transition delay-100 ease-in-out hover:brightness-125'
+											}
+										>
+											Découvre l{"'"}abonnement premium
+										</Link>
+									</div>
 								)}
 							</div>
 						</div>

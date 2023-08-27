@@ -131,12 +131,12 @@ function ProfilComponent(props) {
 									role={'infos'}
 									className={'mt-16 flex h-full w-full flex-col'}
 								>
-									<div className={'grid w-full grid-cols-12 gap-5'}>
+									<div className={'grid w-full grid-cols-12 gap-8'}>
 										{profileinfo.map(item => (
 											<li
 												key={item.name}
 												className={
-													'col-span-6 col-start-4 flex w-full items-center justify-between '
+													'col-span-7 col-start-3 flex w-full items-center justify-between '
 												}
 											>
 												<div className={''}>
