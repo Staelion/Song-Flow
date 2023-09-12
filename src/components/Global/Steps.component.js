@@ -9,10 +9,13 @@ const steps = [
 
 function StepsComponent() {
 	return (
-		<nav aria-label="Progress">
+		<nav
+			aria-label="Progress"
+			className={'mt-3 flex h-[50px] w-full justify-center'}
+		>
 			<ol
 				role="list"
-				className="divide-y divide-gray-300 rounded-md border border-gray-300 md:flex md:divide-y-0"
+				className="divide-y divide-black rounded-md border border-black md:flex md:divide-y-0"
 			>
 				{steps.map((step, stepIdx) => (
 					<li key={step.name} className="relative md:flex md:flex-1">
@@ -66,7 +69,7 @@ function StepsComponent() {
 									aria-hidden="true"
 								>
 									<svg
-										className="h-full w-full text-gray-300"
+										className="h-full w-full text-black"
 										viewBox="0 0 22 80"
 										fill="none"
 										preserveAspectRatio="none"

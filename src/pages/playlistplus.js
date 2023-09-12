@@ -7,7 +7,6 @@ function Playlistplus(props) {
 	return (
 		<>
 			<main className={'h-full w-full'}>
-				<NavComponent />
 				<StepsComponent />
 				<FooterComponent />
 			</main>
