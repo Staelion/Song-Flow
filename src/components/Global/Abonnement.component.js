@@ -1,7 +1,12 @@
 import React, { Fragment, useState } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
-
 import Link from 'next/link'
+import Banner from './IsSubscribed.component'
+
+// const HomePage = () => {
+// 	const showBanner = true; // Mettez ici votre condition
+
+const IsSubscribed = false
+const showbanner = IsSubscribed
 
 const navigation = [
 	{
@@ -45,10 +50,10 @@ function ProfilComponent(props) {
 		<>
 			<div>
 				{/* Static sidebar for desktop */}
-				<div className="fixed inset-y-0 z-30 flex w-72 flex-col">
+				<div className="fixed inset-y-0 z-30 flex w-96 flex-col">
 					{/* Sidebar component, swap this element with another sidebar if you like */}
-					<div className="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 px-6 pt-[80px]">
-						{/*LOGO PROFIL AVEC MAIL ET ABONNEMENT EN COURS */}
+					<div className="flex grow flex-col gap-y-5 overflow-y-auto border-r-4 border-black px-6 pt-[80px]">
+						{/* LOGO PROFIL AVEC MAIL ET ABONNEMENT EN COURS */}
 
 						<nav className="flex flex-1 flex-col pt-20">
 							<ul role="list" className="flex flex-1 flex-col gap-y-7">
@@ -98,14 +103,53 @@ function ProfilComponent(props) {
 					</div>
 				</div>
 				{/*ZONE PRINCIPALE DINFORMATIONS CLIENT*/}
-				<main className="h-full pl-72 pt-[80px]">
+				<main className="ml-96 h-full min-h-[1500px] pt-[80px]">
 					<div className="">
 						<div className="flex h-full flex-col gap-10 px-8 py-6">
 							{/* Main area */}
-							<div className="h-96 w-full bg-red-500"></div>
-							<div className="h-96 w-full bg-red-500"></div>
-							<div className="h-96 w-full bg-red-500"></div>
-							<div className="h-96 w-full bg-red-500"></div>
+							<h4 className="text-bold flex justify-start font-sans text-6xl">
+								Votre abonnement
+							</h4>
+							{/*Fonction javascript pour afficher abonnement actif ou non */}
+
+							<div className={' '}>
+								{showbanner ? (
+									<Banner type="first" />
+								) : (
+									<Banner type="second" />
+								)}
+							</div>
+
+							<div>
+								{showbanner ? (
+									<div></div>
+								) : (
+									<div
+										className={
+											'flex w-full flex-col  items-center justify-center'
+										}
+									>
+										<div className={' p-8 text-center text-2xl'}>
+											"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore et dolore magna
+											aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+											ullamco laboris nisi ut aliquip ex ea commodo consequat.
+											Duis aute irure dolor in reprehenderit in voluptate velit
+											esse cillum dolore eu fugiat nulla pariatur. Excepteur
+											sint occaecat cupidatat non proident, sunt in culpa qui
+											officia deserunt mollit anim id est laborum."
+										</div>
+										<Link
+											href={'#'}
+											className={
+												' mt-4 flex w-1/3 justify-center rounded-2xl bg-mainaccent-700/100 px-12 py-4 text-xl text-white shadow-[0_4px_5px_#31066f] transition delay-100 ease-in-out hover:brightness-125'
+											}
+										>
+											Découvre l{"'"}abonnement premium
+										</Link>
+									</div>
+								)}
+							</div>
 						</div>
 					</div>
 				</main>
