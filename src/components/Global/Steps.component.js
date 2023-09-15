@@ -2,92 +2,165 @@ import React from 'react'
 import { CheckIcon } from '@heroicons/react/24/solid'
 
 const steps = [
-	{ id: '01', name: 'Job details', href: '#', status: 'complete' },
-	{ id: '02', name: 'Application form', href: '#', status: 'current' },
-	{ id: '03', name: 'Preview', href: '#', status: 'upcoming' },
+	{
+		id: '01',
+		name: 'Connexion',
+		description: 'Vitae sed mi luctus laoreet.',
+		href: '#',
+		status: 'current',
+	},
+	{
+		id: '02',
+		name: 'Options',
+		description: 'Cursus semper viverra.',
+		href: '#',
+		status: 'upcoming',
+	},
+	{
+		id: '03',
+		name: 'Données ',
+		description: 'Penatibus eu quis ante.',
+		href: '#',
+		status: 'upcoming',
+	},
 ]
+
+function classNames(...classes) {
+	return classes.filter(Boolean).join(' ')
+}
 
 function StepsComponent() {
 	return (
-		<nav
-			aria-label="Progress"
-			className={'mt-3 flex h-[50px] w-full justify-center'}
-		>
-			<ol
-				role="list"
-				className="divide-y divide-black rounded-md border border-black md:flex md:divide-y-0"
-			>
-				{steps.map((step, stepIdx) => (
-					<li key={step.name} className="relative md:flex md:flex-1">
-						{step.status === 'complete' ? (
-							<a href={step.href} className="group flex w-full items-center">
-								<span className="flex items-center px-6 py-4 text-sm font-medium">
-									<span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-indigo-600 group-hover:bg-indigo-800">
-										<CheckIcon
-											className="h-6 w-6 text-white"
-											aria-hidden="true"
-										/>
-									</span>
-									<span className="ml-4 text-sm font-medium text-gray-900">
-										{step.name}
-									</span>
-								</span>
-							</a>
-						) : step.status === 'current' ? (
-							<a
-								href={step.href}
-								className="flex items-center px-6 py-4 text-sm font-medium"
-								aria-current="step"
-							>
-								<span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 border-indigo-600">
-									<span className="text-indigo-600">{step.id}</span>
-								</span>
-								<span className="ml-4 text-sm font-medium text-indigo-600">
-									{step.name}
-								</span>
-							</a>
-						) : (
-							<a href={step.href} className="group flex items-center">
-								<span className="flex items-center px-6 py-4 text-sm font-medium">
-									<span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 border-gray-300 group-hover:border-gray-400">
-										<span className="text-gray-500 group-hover:text-gray-900">
-											{step.id}
-										</span>
-									</span>
-									<span className="ml-4 text-sm font-medium text-gray-500 group-hover:text-gray-900">
-										{step.name}
-									</span>
-								</span>
-							</a>
-						)}
-
-						{stepIdx !== steps.length - 1 ? (
-							<>
-								{/* Arrow separator for lg screens and up */}
+		<div className={'flex justify-center'}>
+			<div className="border-mainorange-900er mt-4 w-[1200px] border-2">
+				<nav className=" border-ma max-w-7xl" aria-label="Progress">
+					<ol role="list" className="  rounded-md lg:flex lg:rounded-none">
+						{steps.map((step, stepIdx) => (
+							<li key={step.id} className="relative overflow-hidden lg:flex-1">
 								<div
-									className="absolute right-0 top-0 hidden h-full w-5 md:block"
-									aria-hidden="true"
+									className={classNames(
+										stepIdx === 0 ? 'rounded-t-md border-b-0' : '',
+										stepIdx === steps.length - 1
+											? 'rounded-b-md border-t-0'
+											: '',
+										'overflow-hidden border border-mainorange-900 lg:border-0'
+									)}
 								>
-									<svg
-										className="h-full w-full text-black"
-										viewBox="0 0 22 80"
-										fill="none"
-										preserveAspectRatio="none"
-									>
-										<path
-											d="M0 -2L20 40L0 82"
-											vectorEffect="non-scaling-stroke"
-											stroke="currentcolor"
-											strokeLinejoin="round"
-										/>
-									</svg>
+									{step.status === 'complete' ? (
+										<a href={step.href} className="group">
+											<span
+												className="absolute left-0 top-0 h-full w-1 bg-transparent group-hover:bg-mainorange-900 lg:bottom-0 lg:top-auto lg:h-1 lg:w-full"
+												aria-hidden="true"
+											/>
+											<span
+												className={classNames(
+													stepIdx !== 0 ? 'lg:pl-9' : '',
+													'flex items-start px-6 py-5 text-sm font-medium'
+												)}
+											>
+												<span className="flex-shrink-0">
+													<span className="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-600">
+														<CheckIcon
+															className="h-6 w-6 text-white"
+															aria-hidden="true"
+														/>
+													</span>
+												</span>
+												<span className="ml-4 mt-0.5 flex min-w-0 flex-col">
+													<span className="text-sm font-medium text-black">
+														{step.name}
+													</span>
+													<span className="text-sm font-medium text-black">
+														{step.description}
+													</span>
+												</span>
+											</span>
+										</a>
+									) : step.status === 'current' ? (
+										<a href={step.href} aria-current="step">
+											<span
+												className="absolute left-0 top-0 h-full w-1 bg-indigo-600 lg:bottom-0 lg:top-auto lg:h-1 lg:w-full"
+												aria-hidden="true"
+											/>
+											<span
+												className={classNames(
+													stepIdx !== 0 ? 'lg:pl-9' : '',
+													'flex items-start px-6 py-5 text-sm font-medium'
+												)}
+											>
+												<span className="flex-shrink-0">
+													<span className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-indigo-600">
+														<span className="text-indigo-600">{step.id}</span>
+													</span>
+												</span>
+												<span className="ml-4 mt-0.5 flex min-w-0 flex-col">
+													<span className="font-oswald text-sm font-medium text-white">
+														{step.name}
+													</span>
+													<span className="font-oswald text-sm font-medium text-white">
+														{step.description}
+													</span>
+												</span>
+											</span>
+										</a>
+									) : (
+										<a href={step.href} className="group">
+											<span
+												className="absolute left-0 top-0 h-full w-1 bg-transparent group-hover:bg-mainorange-900 lg:bottom-0 lg:top-auto lg:h-1 lg:w-full"
+												aria-hidden="true"
+											/>
+											<span
+												className={classNames(
+													stepIdx !== 0 ? 'lg:pl-9' : '',
+													'flex items-start px-6 py-5 text-sm font-medium'
+												)}
+											>
+												<span className="flex-shrink-0">
+													<span className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-mainorange-900">
+														<span className="text-gray-500">{step.id}</span>
+													</span>
+												</span>
+												<span className="ml-4 mt-0.5 flex min-w-0 flex-col">
+													<span className="font-oswald text-sm font-medium text-gray-500">
+														{step.name}
+													</span>
+													<span className="font-oswald text-sm font-medium text-gray-500">
+														{step.description}
+													</span>
+												</span>
+											</span>
+										</a>
+									)}
+
+									{stepIdx !== 0 ? (
+										<>
+											{/* Separator */}
+											<div
+												className="absolute inset-0 left-0 top-0 hidden w-3 lg:block"
+												aria-hidden="true"
+											>
+												<svg
+													className=" h-full w-full "
+													viewBox="0 0 12 82"
+													fill="none"
+													preserveAspectRatio="none"
+												>
+													<path
+														d="M0.5 0V31L10.5 41L0.5 51V82"
+														stroke="currentcolor"
+														vectorEffect="non-scaling-stroke"
+													/>
+												</svg>
+											</div>
+										</>
+									) : null}
 								</div>
-							</>
-						) : null}
-					</li>
-				))}
-			</ol>
-		</nav>
+							</li>
+						))}
+					</ol>
+				</nav>
+			</div>
+		</div>
 	)
 }
 
