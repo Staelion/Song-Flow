@@ -1,39 +1,15 @@
 import React from 'react'
 import { CheckIcon } from '@heroicons/react/24/solid'
 
-const steps = [
-	{
-		id: '01',
-		name: 'Connexion',
-		description: 'Vitae sed mi luctus laoreet.',
-		href: '#',
-		status: 'current',
-	},
-	{
-		id: '02',
-		name: 'Options',
-		description: 'Cursus semper viverra.',
-		href: '#',
-		status: 'upcoming',
-	},
-	{
-		id: '03',
-		name: 'Données ',
-		description: 'Penatibus eu quis ante.',
-		href: '#',
-		status: 'upcoming',
-	},
-]
-
 function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')
 }
 
-function StepsComponent() {
+function StepsComponent({ steps, etape1 }) {
 	return (
 		<div className={'flex justify-center'}>
-			<div className="border-mainorange-900er mt-4 w-[1200px] border-2">
-				<nav className=" border-ma max-w-7xl" aria-label="Progress">
+			<div className="mt-4 w-[1200px] border-2 border-mainorange-900">
+				<nav className=" max-w-7xl" aria-label="Progress">
 					<ol role="list" className="  rounded-md lg:flex lg:rounded-none">
 						{steps.map((step, stepIdx) => (
 							<li key={step.id} className="relative overflow-hidden lg:flex-1">
@@ -47,7 +23,12 @@ function StepsComponent() {
 									)}
 								>
 									{step.status === 'complete' ? (
-										<a href={step.href} className="group">
+										<button
+											onClick={() => {
+												etape1()
+											}}
+											className="group"
+										>
 											<span
 												className="absolute left-0 top-0 h-full w-1 bg-transparent group-hover:bg-mainorange-900 lg:bottom-0 lg:top-auto lg:h-1 lg:w-full"
 												aria-hidden="true"
@@ -75,7 +56,7 @@ function StepsComponent() {
 													</span>
 												</span>
 											</span>
-										</a>
+										</button>
 									) : step.status === 'current' ? (
 										<a href={step.href} aria-current="step">
 											<span
@@ -140,7 +121,7 @@ function StepsComponent() {
 												aria-hidden="true"
 											>
 												<svg
-													className=" h-full w-full "
+													className=" h-full w-full text-mainorange-900 "
 													viewBox="0 0 12 82"
 													fill="none"
 													preserveAspectRatio="none"
