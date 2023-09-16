@@ -5,7 +5,7 @@ function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')
 }
 
-function StepsComponent({ steps, etape1 }) {
+function StepsComponent({ steps, completeToCurrent }) {
 	return (
 		<div className={'flex justify-center'}>
 			<div className="mt-4 w-[1200px] border-2 border-mainorange-900">
@@ -22,11 +22,12 @@ function StepsComponent({ steps, etape1 }) {
 										'overflow-hidden border border-mainorange-900 lg:border-0'
 									)}
 								>
+									{/*CSS statut complete*/}
 									{step.status === 'complete' ? (
 										<button
-											onClick={() => {
-												etape1()
-											}}
+											// onClick={() => {
+											// 	completeToCurrent()
+											// }}
 											className="group"
 										>
 											<span
@@ -57,8 +58,9 @@ function StepsComponent({ steps, etape1 }) {
 												</span>
 											</span>
 										</button>
-									) : step.status === 'current' ? (
-										<a href={step.href} aria-current="step">
+									) : // CSS statut current
+									step.status === 'current' ? (
+										<button aria-current="step">
 											<span
 												className="absolute left-0 top-0 h-full w-1 bg-indigo-600 lg:bottom-0 lg:top-auto lg:h-1 lg:w-full"
 												aria-hidden="true"
@@ -83,9 +85,10 @@ function StepsComponent({ steps, etape1 }) {
 													</span>
 												</span>
 											</span>
-										</a>
+										</button>
 									) : (
-										<a href={step.href} className="group">
+										// CSS statut autre ( upcoming )
+										<button className="group">
 											<span
 												className="absolute left-0 top-0 h-full w-1 bg-transparent group-hover:bg-mainorange-900 lg:bottom-0 lg:top-auto lg:h-1 lg:w-full"
 												aria-hidden="true"
@@ -110,18 +113,18 @@ function StepsComponent({ steps, etape1 }) {
 													</span>
 												</span>
 											</span>
-										</a>
+										</button>
 									)}
 
 									{stepIdx !== 0 ? (
 										<>
 											{/* Separator */}
 											<div
-												className="absolute inset-0 left-0 top-0 hidden w-3 lg:block"
+												className="absolute inset-0 left-0 top-0 hidden w-3  lg:block"
 												aria-hidden="true"
 											>
 												<svg
-													className=" h-full w-full text-mainorange-900 "
+													className=" h-full w-full  text-mainorange-900"
 													viewBox="0 0 12 82"
 													fill="none"
 													preserveAspectRatio="none"

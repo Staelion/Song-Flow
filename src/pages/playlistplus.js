@@ -15,21 +15,18 @@ function Playlistplus(props) {
 			id: '01',
 			name: 'Connexion',
 			description: 'Vitae sed mi luctus laoreet.',
-			href: '#',
 			status: 'current',
 		},
 		{
 			id: '02',
 			name: 'Options',
 			description: 'Cursus semper viverra.',
-			href: '#',
 			status: 'upcoming',
 		},
 		{
 			id: '03',
 			name: 'Données ',
 			description: 'Penatibus eu quis ante.',
-			href: '#',
 			status: 'upcoming',
 		},
 	])
@@ -56,7 +53,7 @@ function Playlistplus(props) {
 			setSteps(newStepper)
 		}
 	}
-	// to do : function de changement du tableau : steps ( comme previous / next, mais par rapport à un élément spécifique ) x3
+	// to do : function de changement du tableau : steps ( comme previous / next, mais par rapport à un élément spécifique )
 	// [
 	//     {
 	//         id: '01',
@@ -80,14 +77,23 @@ function Playlistplus(props) {
 	//         status: 'upcoming',
 	//     },
 	// ]
-	const etape1 = () => {}
+	const completeToCurrent = () => {
+		if (stepsCount !== 0) {
+			setStepsCount(0)
+			let newStepper = [...steps]
+			newStepper[stepsCount].status = 'current'
+			newStepper[stepsCount + 1].status = 'upcoming'
+
+			setSteps(newStepper)
+		}
+	}
 
 	return (
 		<>
 			<main className={'h-full w-full'}>
 				<NavComponent />
 				{/* todo : comme steps, tu veux lui passer les fonctions de changement */}
-				<StepsComponent steps={steps} etape1={etape1} />
+				<StepsComponent steps={steps} completeToCurrent={completeToCurrent} />
 				{/* formulaire */}
 				<button
 					className={'flex rounded-full'}
