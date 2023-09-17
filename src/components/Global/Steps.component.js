@@ -5,12 +5,19 @@ function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')
 }
 
-function StepsComponent({ steps, completeToCurrent }) {
+function StepsComponent({ steps, clickOnStep }) {
+	// [ 1 , 2 , 3 , 4 , 5 ]
+	// +1
+	// -1
+	// -> go sur le 1 / 2 / 3 / 4 / 5
+	// -> go sur le 2 -> passer 3 / 4 / 5 à upcoming + 2 à current + 1 à complete
+
 	return (
 		<div className={'flex justify-center'}>
 			<div className="mt-4 w-[1200px] border-2 border-mainorange-900">
 				<nav className=" max-w-7xl" aria-label="Progress">
 					<ol role="list" className="  rounded-md lg:flex lg:rounded-none">
+						{/* .map((elem, index)=>{+declanche_ça+})*/}
 						{steps.map((step, stepIdx) => (
 							<li key={step.id} className="relative overflow-hidden lg:flex-1">
 								<div
@@ -25,9 +32,9 @@ function StepsComponent({ steps, completeToCurrent }) {
 									{/*CSS statut complete*/}
 									{step.status === 'complete' ? (
 										<button
-											// onClick={() => {
-											// 	completeToCurrent()
-											// }}
+											onClick={() => {
+												clickOnStep(step.id)
+											}}
 											className="group"
 										>
 											<span
@@ -60,7 +67,12 @@ function StepsComponent({ steps, completeToCurrent }) {
 										</button>
 									) : // CSS statut current
 									step.status === 'current' ? (
-										<button aria-current="step">
+										<button
+											onClick={() => {
+												clickOnStep(step.id)
+											}}
+											aria-current="step"
+										>
 											<span
 												className="absolute left-0 top-0 h-full w-1 bg-indigo-600 lg:bottom-0 lg:top-auto lg:h-1 lg:w-full"
 												aria-hidden="true"
@@ -88,7 +100,12 @@ function StepsComponent({ steps, completeToCurrent }) {
 										</button>
 									) : (
 										// CSS statut autre ( upcoming )
-										<button className="group">
+										<button
+											onClick={() => {
+												clickOnStep(step.id)
+											}}
+											className="group"
+										>
 											<span
 												className="absolute left-0 top-0 h-full w-1 bg-transparent group-hover:bg-mainorange-900 lg:bottom-0 lg:top-auto lg:h-1 lg:w-full"
 												aria-hidden="true"

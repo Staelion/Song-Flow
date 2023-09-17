@@ -77,15 +77,24 @@ function Playlistplus(props) {
 	//         status: 'upcoming',
 	//     },
 	// ]
-	const completeToCurrent = () => {
-		if (stepsCount !== 0) {
-			setStepsCount(0)
-			let newStepper = [...steps]
-			newStepper[stepsCount].status = 'current'
-			newStepper[stepsCount + 1].status = 'upcoming'
-
-			setSteps(newStepper)
+	const clickOnStep = id_step => {
+		// 	id_step : le step sur le quel tu click
+		// 	loop on steps
+		// 	-> elem < id_step => complete
+		// 	-> elem > id_step => upcoming
+		// 	-> elem = id_step => current
+		let newStepper = [...steps]
+		for (const step of newStepper) {
+			if (step.id < id_step) {
+				step.status = 'complete'
+			} else if (step.id > id_step) {
+				step.status = 'upcoming'
+			} else {
+				step.status = 'current'
+			}
 		}
+		setSteps(newStepper)
+		setStepsCount(id_step - 1)
 	}
 
 	return (
@@ -93,7 +102,7 @@ function Playlistplus(props) {
 			<main className={'h-full w-full'}>
 				<NavComponent />
 				{/* todo : comme steps, tu veux lui passer les fonctions de changement */}
-				<StepsComponent steps={steps} completeToCurrent={completeToCurrent} />
+				<StepsComponent steps={steps} clickOnStep={clickOnStep} />
 				{/* formulaire */}
 				<button
 					className={'flex rounded-full'}
