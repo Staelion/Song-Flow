@@ -104,25 +104,31 @@ function Playlistplus(props) {
 				{/* todo : comme steps, tu veux lui passer les fonctions de changement */}
 				<StepsComponent steps={steps} clickOnStep={clickOnStep} />
 				{/* formulaire */}
-				<button
-					className={'flex rounded-full'}
-					disabled={stepsCount === steps.length - 1}
-					onClick={() => {
-						nextStep()
-					}}
-				>
-					Etape suivante
-				</button>
-				<br />
-				<button
-					disabled={stepsCount === 0}
-					onClick={() => {
-						previousStep()
-					}}
-				>
-					Etape précédente
-				</button>
-
+				<div className={'mt-20 flex justify-center'}>
+					<button
+						className={
+							' mx-3 text-xl font-semibold text-white underline-offset-2 hover:underline disabled:text-mainaccent-900  disabled:hover:no-underline'
+						}
+						disabled={stepsCount === steps.length - 1}
+						onClick={() => {
+							nextStep()
+						}}
+					>
+						Etape précédante
+					</button>
+					<br />
+					<button
+						className={
+							' mx-3 text-xl font-semibold text-white underline-offset-2 hover:underline disabled:text-mainaccent-900  disabled:hover:no-underline'
+						}
+						disabled={stepsCount === 0}
+						onClick={() => {
+							previousStep()
+						}}
+					>
+						Etape suivante
+					</button>
+				</div>
 				{/* todo boutton de fin */}
 				<FooterComponent />
 			</main>

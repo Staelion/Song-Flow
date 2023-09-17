@@ -14,8 +14,11 @@ function StepsComponent({ steps, clickOnStep }) {
 
 	return (
 		<div className={'flex justify-center'}>
-			<div className="mt-4 w-[1200px] border-2 border-mainorange-900">
-				<nav className=" max-w-7xl" aria-label="Progress">
+			<div className="mt-4 w-[1200px] rounded-full border-2  border-black">
+				<nav
+					className=" max-w-7xl rounded-full bg-white bg-opacity-60"
+					aria-label="Progress"
+				>
 					<ol role="list" className="  rounded-md lg:flex lg:rounded-none">
 						{/* .map((elem, index)=>{+declanche_ça+})*/}
 						{steps.map((step, stepIdx) => (
@@ -26,29 +29,29 @@ function StepsComponent({ steps, clickOnStep }) {
 										stepIdx === steps.length - 1
 											? 'rounded-b-md border-t-0'
 											: '',
-										'overflow-hidden border border-mainorange-900 lg:border-0'
+										'overflow-hidden  lg:border-0'
 									)}
 								>
 									{/*CSS statut complete*/}
 									{step.status === 'complete' ? (
 										<button
+											className={' group w-full'}
 											onClick={() => {
 												clickOnStep(step.id)
 											}}
-											className="group"
 										>
 											<span
-												className="absolute left-0 top-0 h-full w-1 bg-transparent group-hover:bg-mainorange-900 lg:bottom-0 lg:top-auto lg:h-1 lg:w-full"
+												className="absolute left-0 top-0 h-full w-1 bg-transparent group-hover:bg-mainaccent-700 lg:bottom-0 lg:top-auto lg:h-1 lg:w-full"
 												aria-hidden="true"
 											/>
 											<span
 												className={classNames(
 													stepIdx !== 0 ? 'lg:pl-9' : '',
-													'flex items-start px-6 py-5 text-sm font-medium'
+													'flex items-start px-6 py-5 text-sm font-medium '
 												)}
 											>
 												<span className="flex-shrink-0">
-													<span className="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-600">
+													<span className="flex h-10 w-10 items-center justify-center rounded-full bg-mainaccent-700">
 														<CheckIcon
 															className="h-6 w-6 text-white"
 															aria-hidden="true"
@@ -56,10 +59,10 @@ function StepsComponent({ steps, clickOnStep }) {
 													</span>
 												</span>
 												<span className="ml-4 mt-0.5 flex min-w-0 flex-col">
-													<span className="text-sm font-medium text-black">
+													<span className="text-md font-oswald font-bold text-black">
 														{step.name}
 													</span>
-													<span className="text-sm font-medium text-black">
+													<span className="text-md font-oswald font-medium text-black">
 														{step.description}
 													</span>
 												</span>
@@ -68,31 +71,34 @@ function StepsComponent({ steps, clickOnStep }) {
 									) : // CSS statut current
 									step.status === 'current' ? (
 										<button
+											className={'w-full'}
 											onClick={() => {
 												clickOnStep(step.id)
 											}}
 											aria-current="step"
 										>
 											<span
-												className="absolute left-0 top-0 h-full w-1 bg-indigo-600 lg:bottom-0 lg:top-auto lg:h-1 lg:w-full"
+												className="wh bre absolute left-0 top-0 h-full bg-mainaccent-700 lg:bottom-0 lg:top-auto lg:h-1 lg:w-full"
 												aria-hidden="true"
 											/>
 											<span
 												className={classNames(
 													stepIdx !== 0 ? 'lg:pl-9' : '',
-													'flex items-start px-6 py-5 text-sm font-medium'
+													'flex items-start px-6 py-5 text-sm font-bold'
 												)}
 											>
 												<span className="flex-shrink-0">
-													<span className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-indigo-600">
-														<span className="text-indigo-600">{step.id}</span>
+													<span className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-mainaccent-700">
+														<span className="text-mainaccent-700">
+															{step.id}
+														</span>
 													</span>
 												</span>
 												<span className="ml-4 mt-0.5 flex min-w-0 flex-col">
-													<span className="font-oswald text-sm font-medium text-white">
+													<span className="font-oswald text-sm font-bold text-mainaccent-700">
 														{step.name}
 													</span>
-													<span className="font-oswald text-sm font-medium text-white">
+													<span className="font-oswald text-sm font-medium text-mainaccent-700">
 														{step.description}
 													</span>
 												</span>
@@ -104,7 +110,7 @@ function StepsComponent({ steps, clickOnStep }) {
 											onClick={() => {
 												clickOnStep(step.id)
 											}}
-											className="group"
+											className="group w-full"
 										>
 											<span
 												className="absolute left-0 top-0 h-full w-1 bg-transparent group-hover:bg-mainorange-900 lg:bottom-0 lg:top-auto lg:h-1 lg:w-full"
@@ -113,7 +119,7 @@ function StepsComponent({ steps, clickOnStep }) {
 											<span
 												className={classNames(
 													stepIdx !== 0 ? 'lg:pl-9' : '',
-													'flex items-start px-6 py-5 text-sm font-medium'
+													'flex items-start px-6 py-5 text-sm font-bold '
 												)}
 											>
 												<span className="flex-shrink-0">
@@ -122,10 +128,10 @@ function StepsComponent({ steps, clickOnStep }) {
 													</span>
 												</span>
 												<span className="ml-4 mt-0.5 flex min-w-0 flex-col">
-													<span className="font-oswald text-sm font-medium text-gray-500">
+													<span className="font-oswald text-sm font-bold text-gray-600">
 														{step.name}
 													</span>
-													<span className="font-oswald text-sm font-medium text-gray-500">
+													<span className="font-oswald text-sm font-medium text-gray-600">
 														{step.description}
 													</span>
 												</span>
@@ -141,7 +147,7 @@ function StepsComponent({ steps, clickOnStep }) {
 												aria-hidden="true"
 											>
 												<svg
-													className=" h-full w-full  text-mainorange-900"
+													className=" h-full w-full  text-black"
 													viewBox="0 0 12 82"
 													fill="none"
 													preserveAspectRatio="none"
