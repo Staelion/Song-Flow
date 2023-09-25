@@ -1,5 +1,6 @@
 import React from 'react'
 import { CheckIcon } from '@heroicons/react/24/solid'
+import Link from 'next/link'
 
 function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')
@@ -14,7 +15,7 @@ function StepsComponent({ steps, clickOnStep }) {
 
 	return (
 		<div className={'flex justify-center'}>
-			<div className="mt-4 w-[1200px] rounded-full border-2  border-black">
+			<div className="mt-4 w-[1200px] overflow-hidden rounded-full border-2  border-black">
 				<nav
 					className=" max-w-7xl rounded-full bg-white bg-opacity-60"
 					aria-label="Progress"
@@ -34,14 +35,15 @@ function StepsComponent({ steps, clickOnStep }) {
 								>
 									{/*CSS statut complete*/}
 									{step.status === 'complete' ? (
-										<button
+										<Link
+											href={'/step' + step.id}
 											className={' group w-full'}
 											onClick={() => {
 												clickOnStep(step.id)
 											}}
 										>
 											<span
-												className="absolute left-0 top-0 h-full w-1 bg-transparent group-hover:bg-mainaccent-700 lg:bottom-0 lg:top-auto lg:h-1 lg:w-full"
+												className=" absolute left-0 top-0 h-full w-1 bg-transparent group-hover:bg-mainaccent-700 lg:bottom-0 lg:top-auto lg:h-1 lg:w-full"
 												aria-hidden="true"
 											/>
 											<span
@@ -67,10 +69,11 @@ function StepsComponent({ steps, clickOnStep }) {
 													</span>
 												</span>
 											</span>
-										</button>
+										</Link>
 									) : // CSS statut current
 									step.status === 'current' ? (
-										<button
+										<Link
+											href={'/step' + step.id}
 											className={'w-full'}
 											onClick={() => {
 												clickOnStep(step.id)
@@ -78,7 +81,7 @@ function StepsComponent({ steps, clickOnStep }) {
 											aria-current="step"
 										>
 											<span
-												className="wh bre absolute left-0 top-0 h-full bg-mainaccent-700 lg:bottom-0 lg:top-auto lg:h-1 lg:w-full"
+												className="absolute left-0 top-0 h-full bg-mainaccent-700 lg:bottom-0 lg:top-auto lg:h-1 lg:w-full"
 												aria-hidden="true"
 											/>
 											<span
@@ -103,10 +106,11 @@ function StepsComponent({ steps, clickOnStep }) {
 													</span>
 												</span>
 											</span>
-										</button>
+										</Link>
 									) : (
 										// CSS statut autre ( upcoming )
-										<button
+										<Link
+											href={'/step' + step.id}
 											onClick={() => {
 												clickOnStep(step.id)
 											}}
@@ -136,7 +140,7 @@ function StepsComponent({ steps, clickOnStep }) {
 													</span>
 												</span>
 											</span>
-										</button>
+										</Link>
 									)}
 
 									{stepIdx !== 0 ? (

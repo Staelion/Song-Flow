@@ -3,7 +3,7 @@ import FooterComponent from '@/components/Global/Footer.component'
 import NavComponent from '@/components/Global/Nav.component'
 import StepsComponent from '@/components/Global/Steps.component'
 
-function Playlistplus(props) {
+function Step02(props) {
 	// position actuelle
 	// variable de react
 	const [stepsCount, setStepsCount] = useState(0)
@@ -16,18 +16,21 @@ function Playlistplus(props) {
 			name: 'Connexion',
 			description: 'Vitae sed mi luctus laoreet.',
 			status: 'current',
+			href: '/step01',
 		},
 		{
 			id: '02',
 			name: 'Options',
 			description: 'Cursus semper viverra.',
 			status: 'upcoming',
+			href: '/step02',
 		},
 		{
 			id: '03',
 			name: 'Données ',
 			description: 'Penatibus eu quis ante.',
 			status: 'upcoming',
+			href: '/step03',
 		},
 	])
 
@@ -109,9 +112,9 @@ function Playlistplus(props) {
 						className={
 							' mx-3 text-xl font-semibold text-white underline-offset-2 hover:underline disabled:text-mainaccent-900  disabled:hover:no-underline'
 						}
-						disabled={stepsCount === steps.length - 1}
+						disabled={stepsCount === 0}
 						onClick={() => {
-							nextStep()
+							previousStep()
 						}}
 					>
 						Etape précédante
@@ -121,9 +124,9 @@ function Playlistplus(props) {
 						className={
 							' mx-3 text-xl font-semibold text-white underline-offset-2 hover:underline disabled:text-mainaccent-900  disabled:hover:no-underline'
 						}
-						disabled={stepsCount === 0}
+						disabled={stepsCount === steps.length - 1}
 						onClick={() => {
-							previousStep()
+							nextStep()
 						}}
 					>
 						Etape suivante
@@ -136,4 +139,4 @@ function Playlistplus(props) {
 	)
 }
 
-export default Playlistplus
+export default Step02
