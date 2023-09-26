@@ -1,12 +1,13 @@
-import React, { useState } from 'react'
 import FooterComponent from '@/components/Global/Footer.component'
 import NavComponent from '@/components/Global/Nav.component'
 import StepsComponent from '@/components/Global/Steps.component'
+import { useState } from 'react'
 
 function Step01(props) {
 	// position actuelle
 	// variable de react
 	const [stepsCount, setStepsCount] = useState(0)
+
 	// [ 1 , 2 , 3 ,4 ]
 	// compteur : [ 2 ]
 	// stepper change le style en fonction du compteur
@@ -16,21 +17,21 @@ function Step01(props) {
 			name: 'Connexion',
 			description: 'Vitae sed mi luctus laoreet.',
 			status: 'current',
-			href: '/step0',
+			href: '/step01',
 		},
 		{
 			id: '02',
 			name: 'Options',
 			description: 'Cursus semper viverra.',
 			status: 'upcoming',
-			href: '/step1',
+			href: '/step02',
 		},
 		{
 			id: '03',
 			name: 'Données ',
 			description: 'Penatibus eu quis ante.',
 			status: 'upcoming',
-			href: '',
+			href: '/step03',
 		},
 	])
 
@@ -56,37 +57,15 @@ function Step01(props) {
 			setSteps(newStepper)
 		}
 	}
-	// to do : function de changement du tableau : steps ( comme previous / next, mais par rapport à un élément spécifique )
-	// [
-	//     {
-	//         id: '01',
-	//         name: 'Connexion',
-	//         description: 'Vitae sed mi luctus laoreet.',
-	//         href: '#',
-	//         status: 'complete',
-	//     },
-	//     {
-	//         id: '02',
-	//         name: 'Options',
-	//         description: 'Cursus semper viverra.',
-	//         href: '#',
-	//         status: 'current',
-	//     },
-	//     {
-	//         id: '03',
-	//         name: 'Données ',
-	//         description: 'Penatibus eu quis ante.',
-	//         href: '#',
-	//         status: 'upcoming',
-	//     },
-	// ]
 	const clickOnStep = id_step => {
 		// 	id_step : le step sur le quel tu click
 		// 	loop on steps
 		// 	-> elem < id_step => complete
 		// 	-> elem > id_step => upcoming
 		// 	-> elem = id_step => current
+
 		let newStepper = [...steps]
+
 		for (const step of newStepper) {
 			if (step.id < id_step) {
 				step.status = 'complete'
@@ -98,6 +77,7 @@ function Step01(props) {
 		}
 		setSteps(newStepper)
 		setStepsCount(id_step - 1)
+		console.log(stepsCount)
 	}
 
 	return (
