@@ -16,14 +16,14 @@ function Step01(props) {
 			id: '01',
 			name: 'Connexion',
 			description: 'Vitae sed mi luctus laoreet.',
-			status: 'current',
+			status: 'complete',
 			href: '/step01',
 		},
 		{
 			id: '02',
 			name: 'Options',
 			description: 'Cursus semper viverra.',
-			status: 'upcoming',
+			status: 'current',
 			href: '/step02',
 		},
 		{
