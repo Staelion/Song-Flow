@@ -2,8 +2,6 @@ import FooterComponent from '@/components/Global/Footer.component'
 import NavComponent from '@/components/Global/Nav.component'
 import StepsComponent from '@/components/Global/Steps.component'
 import React, { useState } from 'react'
-import Link from 'next/link'
-import NextPreviousComponent from '@/components/Global/NextPrevious.component'
 
 function Step01(props) {
 	// position actuelle
