@@ -1,7 +1,7 @@
 import React from 'react'
-import NavComponent from '@/components/Global/Nav.component'
-import ProfilComponent from '@/components/Global/Profil.component'
-import FAQComponant from '@/components/Global/FAQ.component'
+import NavComponent from '@/components/Global/Landing page/Nav.component'
+import ProfilComponent from '@/components/Profil/Profil.component'
+import FAQComponant from '@/components/Profil/FAQ.component'
 
 function Profil(props) {
 	return (

@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 function FooterComponent(props) {
 	return (
-		<div className={'mt-60 border-t-8 border-mainorange-500 pt-5'}>
+		<div className={'z-50 mt-60 border-t-8 border-mainorange-500 pt-5'}>
 			<div className="m-auto max-w-screen-2xl">
 				<div className={'flex max-w-full justify-around font-oswald'}>
 					<div className={'flex flex-col justify-center'}>

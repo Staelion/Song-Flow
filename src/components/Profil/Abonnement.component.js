@@ -1,6 +1,7 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useContext, useState } from 'react'
 import Link from 'next/link'
-import Banner from './IsSubscribed.component'
+import Banner from '../Global/IsSubscribed.component'
+import { profilContext } from '@/providers/profilContext'
 
 // const HomePage = () => {
 // 	const showBanner = true; // Mettez ici votre condition
@@ -8,44 +9,13 @@ import Banner from './IsSubscribed.component'
 const IsSubscribed = false
 const showbanner = IsSubscribed
 
-const navigation = [
-	{
-		name: 'Profil',
-		href: '/profil',
-		icon: <i className="fi fi-br-user"></i>,
-		current: false,
-	},
-	{
-		name: 'Abonnement',
-		href: '/abonnement',
-		icon: <i className="fi fi-br-star"></i>,
-		current: true,
-	},
-	{
-		name: 'paiement',
-		href: '/paiement',
-		icon: <i className="fi fi-br-wallet"></i>,
-		current: false,
-	},
-	{
-		name: 'FAQ',
-		href: '/FAQ',
-		icon: <i className="fi fi-br-bookmark"></i>,
-		current: false,
-	},
-	{
-		name: 'Se déconnecter',
-		href: '#',
-		icon: <i className="fi fi-br-arrow-right-to-bracket"></i>,
-		current: false,
-	},
-]
-
 function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')
 }
 
 function ProfilComponent(props) {
+	const { navigation, profileinfo } = useContext(profilContext)
+
 	return (
 		<>
 			<div>
@@ -61,12 +31,18 @@ function ProfilComponent(props) {
 									<ul role="list" className="-mx-2 space-y-3">
 										{navigation.map(item => (
 											<li key={item.name}>
-												<Link
-													href={item.href}
+												{/* todo : Link -> button : onClick( qui déclenche une fonction qui vient du vient du provider ) */}
+												{/* href -> l'élément dans navigation */}
+												{/* abonnement // truc / bidule / check navigation : rendre le composant qui dépend de l'état de navigation */}
+												{/* comme ça a été fait dans steps */}
+
+												<button
+													onClick={() => {}}
+													// fonction qui choisit la page en fonction de find
 													className={classNames(
 														item.current
-															? 'bg-mainaccent-500 text-black'
-															: ' text-black hover:bg-mainaccent-500 hover:text-black',
+															? 'w-full bg-mainaccent-500 text-black'
+															: 'w-full text-black hover:bg-mainaccent-500 hover:text-black',
 														'group flex gap-x-3 rounded-md p-2 font-sans text-lg font-semibold leading-6'
 													)}
 												>
@@ -78,7 +54,7 @@ function ProfilComponent(props) {
 														{item.icon}
 													</p>
 													<span>{item.name}</span>
-												</Link>
+												</button>
 											</li>
 										))}
 									</ul>

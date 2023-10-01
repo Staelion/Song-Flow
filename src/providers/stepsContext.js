@@ -10,21 +10,18 @@ export function StepsProvider({ children }) {
 			name: 'Connexion',
 			description: 'Vitae sed mi luctus laoreet.',
 			status: 'current',
-			href: '/step01',
 		},
 		{
 			id: '02',
 			name: 'Options',
 			description: 'Cursus semper viverra.',
 			status: 'upcoming',
-			href: '/step02',
 		},
 		{
 			id: '03',
 			name: 'Données ',
 			description: 'Penatibus eu quis ante.',
 			status: 'upcoming',
-			href: '/step03',
 		},
 	]) // Vos données initiales pour "steps"
 

@@ -1,7 +1,7 @@
-import FooterComponent from '@/components/Global/Footer.component'
-import NavComponent from '@/components/Global/Nav.component'
+import FooterComponent from '@/components/Global/Landing page/Footer.component'
+import NavComponent from '@/components/Global/Landing page/Nav.component'
 import StepsComponent from '@/components/Global/Steps.component'
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { StepsContext } from '@/providers/stepsContext'
 import Step01Component from '@/components/Global/Steps/Step01.component'
 import Step02Component from '@/components/Global/Steps/Step02.component'
@@ -19,6 +19,9 @@ function Step(props) {
 				<NavComponent />
 				{/* todo : comme steps, tu veux lui passer les fonctions de changement */}
 				<StepsComponent steps={steps} clickOnStep={clickOnStep} />
+				{currentStep.id === '01' && <Step01Component />}
+				{currentStep.id === '02' && <Step02Component />}
+				{currentStep.id === '03' && <Step03Component />}
 				{/* formulaire */}
 				<div className={'mt-20 flex justify-center'}>
 					<button
@@ -45,10 +48,6 @@ function Step(props) {
 						Etape suivante
 					</button>
 				</div>
-
-				{currentStep.id === '01' && <Step01Component />}
-				{currentStep.id === '02' && <Step02Component />}
-				{currentStep.id === '03' && <Step03Component />}
 
 				{/* todo boutton de fin */}
 				<FooterComponent />

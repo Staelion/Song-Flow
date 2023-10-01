@@ -1,7 +1,7 @@
 import React from 'react'
 import { Head } from 'next/document'
-import NavComponent from '@/components/Global/Nav.component'
-import FooterComponent from '@/components/Global/Footer.component'
+import NavComponent from '@/components/Global/Landing page/Nav.component'
+import FooterComponent from '@/components/Global/Landing page/Footer.component'
 import LoginComponent from '@/components/Global/login.component'
 
 function Login(props) {

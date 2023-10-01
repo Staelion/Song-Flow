@@ -1,7 +1,7 @@
 import React from 'react'
-import NavComponent from '@/components/Global/Nav.component'
-import ProfilComponent from '@/components/Global/Profil.component'
-import PaiementComponent from '@/components/Global/Paiement.component'
+import NavComponent from '@/components/Global/Landing page/Nav.component'
+import ProfilComponent from '@/components/Profil/Profil.component'
+import PaiementComponent from '@/components/Profil/Paiement.component'
 
 function Profil(props) {
 	return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import NavComponent from '@/components/Global/Nav.component'
+import NavComponent from '@/components/Global/Landing page/Nav.component'
 
 function QuiSommesNous(props) {
 	return (

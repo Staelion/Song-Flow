@@ -1,71 +1,41 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useContext, useState } from 'react'
 
 import Link from 'next/link'
-
-const navigation = [
-	{
-		name: 'Profil',
-		href: '/profil',
-		icon: <i className="fi fi-br-user"></i>,
-		current: true,
-	},
-	{
-		name: 'Abonnement',
-		href: '/abonnement',
-		icon: <i className="fi fi-br-star"></i>,
-		current: false,
-	},
-	{
-		name: 'paiement',
-		href: '/paiement',
-		icon: <i className="fi fi-br-wallet"></i>,
-		current: false,
-	},
-	{
-		name: 'FAQ',
-		href: '/FAQ',
-		icon: <i className="fi fi-br-bookmark"></i>,
-		current: false,
-	},
-	{
-		name: 'Se déconnecter',
-		href: '#',
-		icon: <i className="fi fi-br-arrow-right-to-bracket"></i>,
-		current: false,
-	},
-]
-
-const profileinfo = [
-	{
-		name: "Nom d'utilisateur",
-		value: '#',
-	},
-	{
-		name: 'Nom prénom',
-		value: '#',
-	},
-	{
-		name: 'Date de naissance',
-		value: '#',
-	},
-	{
-		name: 'E-mail',
-		value: '#',
-	},
-]
+import { ProfilContext } from '@/providers/profilContext'
 
 function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')
 }
 
-function ProfilComponent(props) {
+function ProfilComponent() {
+	const { navigation } = useContext(ProfilContext)
+
+	const profileinfo = [
+		{
+			name: "Nom d'utilisateur",
+			value: '#',
+		},
+		{
+			name: 'Nom prénom',
+			value: '#',
+		},
+		{
+			name: 'Date de naissance',
+			value: '#',
+		},
+		{
+			name: 'E-mail',
+			value: '#',
+		},
+	]
+
 	return (
 		<>
 			<div>
 				{/* Static sidebar for desktop */}
 				<div className="fixed inset-y-0 z-30 flex w-96 flex-col">
 					{/* Sidebar component, swap this element with another sidebar if you like */}
-					<div className="flex grow flex-col gap-y-5 overflow-y-auto border-r-4 border-black  px-6 pt-[80px]">
+					<div className=" flex grow flex-col gap-y-5 overflow-y-auto border-r-4 border-black px-6 pt-[80px]">
 						{/*LOGO PROFIL AVEC MAIL ET ABONNEMENT EN COURS */}
 
 						<nav className="flex flex-1 flex-col pt-20">
@@ -74,12 +44,11 @@ function ProfilComponent(props) {
 									<ul role="list" className="-mx-2 space-y-3">
 										{navigation.map(item => (
 											<li key={item.name}>
-												<Link
-													href={item.href}
+												<button
 													className={classNames(
 														item.current
-															? 'bg-mainaccent-500 text-black'
-															: ' text-black hover:bg-mainaccent-500 hover:text-black',
+															? ' w-full bg-mainaccent-500 text-black'
+															: 'w-full text-black hover:bg-mainaccent-500 hover:text-black',
 														'group flex gap-x-3 rounded-md p-2 font-sans text-lg font-semibold leading-6'
 													)}
 												>
@@ -91,7 +60,7 @@ function ProfilComponent(props) {
 														{item.icon}
 													</p>
 													<span>{item.name}</span>
-												</Link>
+												</button>
 											</li>
 										))}
 									</ul>

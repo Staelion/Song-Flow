@@ -1,39 +1,5 @@
 import React from 'react'
 import Link from 'next/link'
-import Select from 'react-select'
-
-const navigation = [
-	{
-		name: 'Profil',
-		href: '/profil',
-		icon: <i className="fi fi-br-user"></i>,
-		current: true,
-	},
-	{
-		name: 'Abonnement',
-		href: '/abonnement',
-		icon: <i className="fi fi-br-star"></i>,
-		current: false,
-	},
-	{
-		name: 'paiement',
-		href: '/paiement',
-		icon: <i className="fi fi-br-wallet"></i>,
-		current: false,
-	},
-	{
-		name: 'FAQ',
-		href: '/FAQ',
-		icon: <i className="fi fi-br-bookmark"></i>,
-		current: false,
-	},
-	{
-		name: 'Se déconnecter',
-		href: '#',
-		icon: <i className="fi fi-br-arrow-right-to-bracket"></i>,
-		current: false,
-	},
-]
 
 function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')
@@ -67,12 +33,11 @@ function ProfilEditComponent(props) {
 									<ul role="list" className="-mx-2 space-y-3">
 										{navigation.map(item => (
 											<li key={item.name}>
-												<Link
-													href={item.href}
+												<button
 													className={classNames(
 														item.current
-															? 'bg-mainaccent-500 text-black'
-															: ' text-black hover:bg-mainaccent-500 hover:text-black',
+															? 'w-full bg-mainaccent-500 text-black'
+															: ' w-full text-black hover:bg-mainaccent-500 hover:text-black',
 														'group flex gap-x-3 rounded-md p-2 font-sans text-lg font-semibold leading-6'
 													)}
 												>
@@ -84,7 +49,7 @@ function ProfilEditComponent(props) {
 														{item.icon}
 													</p>
 													<span>{item.name}</span>
-												</Link>
+												</button>
 											</li>
 										))}
 									</ul>
