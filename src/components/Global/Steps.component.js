@@ -35,8 +35,7 @@ function StepsComponent({ steps, clickOnStep }) {
 								>
 									{/*CSS statut complete*/}
 									{step.status === 'complete' ? (
-										<Link
-											href={'/step' + step.id}
+										<button
 											className={' group w-full'}
 											onClick={() => {
 												clickOnStep(step.id)
@@ -69,11 +68,10 @@ function StepsComponent({ steps, clickOnStep }) {
 													</span>
 												</span>
 											</span>
-										</Link>
+										</button>
 									) : // CSS statut current
 									step.status === 'current' ? (
-										<Link
-											href={'/step' + step.id}
+										<button
 											className={'w-full'}
 											onClick={() => {
 												clickOnStep(step.id)
@@ -106,11 +104,10 @@ function StepsComponent({ steps, clickOnStep }) {
 													</span>
 												</span>
 											</span>
-										</Link>
+										</button>
 									) : (
 										// CSS statut autre ( upcoming )
-										<Link
-											href={'/step' + step.id}
+										<button
 											onClick={() => {
 												clickOnStep(step.id)
 											}}
@@ -140,7 +137,7 @@ function StepsComponent({ steps, clickOnStep }) {
 													</span>
 												</span>
 											</span>
-										</Link>
+										</button>
 									)}
 
 									{stepIdx !== 0 ? (

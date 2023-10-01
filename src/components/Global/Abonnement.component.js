@@ -107,7 +107,7 @@ function ProfilComponent(props) {
 					<div className="">
 						<div className="flex h-full flex-col gap-10 px-8 py-6">
 							{/* Main area */}
-							<h4 className="text-bold flex justify-start font-sans text-6xl">
+							<h4 className="text-bold flex justify-start font-sans text-3xl">
 								Votre abonnement
 							</h4>
 							{/*Fonction javascript pour afficher abonnement actif ou non */}
