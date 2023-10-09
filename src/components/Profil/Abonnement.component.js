@@ -37,8 +37,6 @@ function ProfilComponent(props) {
 												{/* comme ça a été fait dans steps */}
 
 												<button
-													onClick={() => {}}
-													// fonction qui choisit la page en fonction de find
 													className={classNames(
 														item.current
 															? 'w-full bg-mainaccent-500 text-black'

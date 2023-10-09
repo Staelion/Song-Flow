@@ -1,7 +1,8 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useContext, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 
 import Link from 'next/link'
+import { ProfilContext } from '@/providers/profilContext'
 
 function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')

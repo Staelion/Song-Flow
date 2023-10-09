@@ -1,5 +1,4 @@
 import React, { Fragment, useContext, useState } from 'react'
-
 import Link from 'next/link'
 import { ProfilContext } from '@/providers/profilContext'
 
@@ -7,27 +6,31 @@ function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')
 }
 
-function ProfilComponent() {
-	const { navigation } = useContext(ProfilContext)
+const profileinfo = [
+	{
+		name: "Nom d'utilisateur",
+		value: '#',
+	},
+	{
+		name: 'Nom prénom',
+		value: '#',
+	},
+	{
+		name: 'Date de naissance',
+		value: '#',
+	},
+	{
+		name: 'E-mail',
+		value: '#',
+	},
+]
 
-	const profileinfo = [
-		{
-			name: "Nom d'utilisateur",
-			value: '#',
-		},
-		{
-			name: 'Nom prénom',
-			value: '#',
-		},
-		{
-			name: 'Date de naissance',
-			value: '#',
-		},
-		{
-			name: 'E-mail',
-			value: '#',
-		},
-	]
+function ProfilComponent() {
+	const { navigation, menuChange } = useContext(ProfilContext)
+
+	const handleMenuClick = menuItem => {
+		menuChange(menuItem) // Appeler la fonction menuChange avec l'élément du menu cliqué
+	}
 
 	return (
 		<>
@@ -45,6 +48,7 @@ function ProfilComponent() {
 										{navigation.map(item => (
 											<li key={item.name}>
 												<button
+													onClick={() => handleMenuClick(item)} // Ajouter un gestionnaire d'événements onClick
 													className={classNames(
 														item.current
 															? ' w-full bg-mainaccent-500 text-black'

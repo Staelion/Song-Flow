@@ -32,11 +32,37 @@ function ProfilProvider({ children }) {
 	])
 
 	// Fonction qui change la valeur boolean ' current ' en true quand je clique dessus
+	// ma fonction
 
+	// const menuChange = () => {
+	// 	let current = navigation
+	//
+	// 	for (const current of [navigation]) {
+	// 		{
+	// 			if (current !== true)
+	// 				return {
+	// 					current: 'true',
+	// 				}
+	// 		}
+	// 	}
+	// }
+
+	// la fonction de bobby
+	const menuChange = clickedMenuItem => {
+		const updatedNavigation = navigation.map(menuItem => {
+			if (menuItem.name === clickedMenuItem.name) {
+				return { ...menuItem, current: true }
+			} else {
+				return { ...menuItem, current: false }
+			}
+		})
+
+		setNavigation(updatedNavigation)
+	}
 	// appeler cette fonction dans le onclick des component
 
 	return (
-		<ProfilContext.Provider value={{ navigation }}>
+		<ProfilContext.Provider value={{ navigation, menuChange }}>
 			{children}
 		</ProfilContext.Provider>
 	)
