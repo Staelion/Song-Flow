@@ -8,7 +8,7 @@ import { ProfilContext } from '@/providers/profilContext'
 
 function Profil(props) {
 	// find
-	const { navigation, profileinfo } = useContext(ProfilContext)
+	const { navigation, profileinfo, menuChange } = useContext(ProfilContext)
 
 	const currentProfilPage = navigation.find(
 		child_navigation => child_navigation.current === true

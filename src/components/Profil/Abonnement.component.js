@@ -1,7 +1,7 @@
 import React, { Fragment, useContext, useState } from 'react'
 import Link from 'next/link'
 import Banner from '../Global/IsSubscribed.component'
-import { profilContext } from '@/providers/profilContext'
+import { ProfilContext } from '@/providers/profilContext'
 
 // const HomePage = () => {
 // 	const showBanner = true; // Mettez ici votre condition
@@ -13,8 +13,12 @@ function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')
 }
 
-function ProfilComponent(props) {
-	const { navigation, profileinfo } = useContext(profilContext)
+function ProfilComponent() {
+	const { navigation, menuChange } = useContext(ProfilContext)
+
+	const handleMenuClick = menuItem => {
+		menuChange(menuItem) // Appeler la fonction menuChange avec l'élément du menu cliqué
+	}
 
 	return (
 		<>
@@ -37,6 +41,7 @@ function ProfilComponent(props) {
 												{/* comme ça a été fait dans steps */}
 
 												<button
+													onClick={() => handleMenuClick(item)} // Ajouter un gestionnaire d'événements onClick
 													className={classNames(
 														item.current
 															? 'w-full bg-mainaccent-500 text-black'

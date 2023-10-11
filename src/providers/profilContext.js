@@ -69,3 +69,5 @@ function ProfilProvider({ children }) {
 }
 
 export default ProfilProvider
+
+export class profilContext {}

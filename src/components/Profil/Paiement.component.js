@@ -6,7 +6,13 @@ function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')
 }
 
-function ProfilComponent(props) {
+function ProfilComponent() {
+	const { navigation, menuChange } = useContext(ProfilContext)
+
+	const handleMenuClick = menuItem => {
+		menuChange(menuItem) // Appeler la fonction menuChange avec l'élément du menu cliqué
+	}
+
 	return (
 		<>
 			<div>
@@ -23,6 +29,7 @@ function ProfilComponent(props) {
 										{navigation.map(item => (
 											<li key={item.name}>
 												<button
+													onClick={() => handleMenuClick(item)} // Ajouter un gestionnaire d'événements onClick
 													className={classNames(
 														item.current
 															? 'w-full bg-mainaccent-500 text-black'
