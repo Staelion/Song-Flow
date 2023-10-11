@@ -1,6 +1,6 @@
 import React from 'react'
 import NavComponent from '@/components/Global/Landing page/Nav.component'
-import ProfilEditComponent from '@/components/Global/Profil_edit.component'
+import ProfilEditComponent from '@/components/Profil/Profil_edit.component'
 
 function ProfilEdit(props) {
 	return (
