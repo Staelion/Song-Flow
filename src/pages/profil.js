@@ -4,6 +4,7 @@ import ProfilComponent from '@/components/Profil/Profil.component'
 import AbonnementComponent from '@/components/Profil/Abonnement.component'
 import PaiementComponent from '@/components/Profil/Paiement.component'
 import FAQComponent from '@/components/Profil/FAQ.component'
+import ProfilEditComponent from '@/components/Profil/Profil_edit.component'
 import { ProfilContext } from '@/providers/profilContext'
 
 function Profil(props) {

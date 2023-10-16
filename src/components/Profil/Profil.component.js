@@ -1,6 +1,7 @@
 import React, { Fragment, useContext, useState } from 'react'
 import Link from 'next/link'
 import { ProfilContext } from '@/providers/profilContext'
+import Profil_editComponent from '@/components/Profil/Profil_edit.component'
 
 function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')
@@ -30,6 +31,12 @@ function ProfilComponent() {
 
 	const handleMenuClick = menuItem => {
 		menuChange(menuItem) // Appeler la fonction menuChange avec l'élément du menu cliqué
+	}
+
+	const [isEditing, setIsEditing] = useState(false)
+
+	const handleEditClick = () => {
+		setIsEditing(true)
 	}
 
 	return (
@@ -90,72 +97,75 @@ function ProfilComponent() {
 				</div>
 
 				{/*ZONE PRINCIPALE DINFORMATIONS CLIENT*/}
+				{isEditing ? (
+					<Profil_editComponent />
+				) : (
+					<main className="ml-96 h-full pt-[80px]">
+						<div className="">
+							<div className="m-6 flex h-full flex-col">
+								{/* Main area */}
+								<h4 className={'flex items-start font-sans text-3xl '}>
+									Votre profil
+								</h4>
 
-				<main className="ml-96 h-full pt-[80px]">
-					<div className="">
-						<div className="m-6 flex h-full flex-col">
-							{/* Main area */}
-							<h4 className={'flex items-start font-sans text-3xl '}>
-								Votre profil
-							</h4>
+								<div className={'flex text-2xl text-black'}>
+									<ul
+										role={'infos'}
+										className={'mt-16 flex h-full w-full flex-col'}
+									>
+										<div className={'grid w-full grid-cols-12 gap-8'}>
+											{profileinfo.map(item => (
+												<li
+													key={item.name}
+													className={
+														'col-span-7 col-start-3 flex w-full items-center justify-between '
+													}
+												>
+													<div className={''}>
+														<p className={'font-sans font-bold text-black'}>
+															{item.name}
+														</p>
+													</div>
+													<div className={''}>
+														<p className={'font-sans font-bold text-black'}>
+															{item.value}
+														</p>
+													</div>
+												</li>
+											))}
+										</div>
+									</ul>
+								</div>
 
-							<div className={'flex text-2xl text-black'}>
-								<ul
-									role={'infos'}
-									className={'mt-16 flex h-full w-full flex-col'}
-								>
-									<div className={'grid w-full grid-cols-12 gap-8'}>
-										{profileinfo.map(item => (
-											<li
-												key={item.name}
-												className={
-													'col-span-7 col-start-3 flex w-full items-center justify-between '
-												}
-											>
-												<div className={''}>
-													<p className={'font-sans font-bold text-black'}>
-														{item.name}
-													</p>
-												</div>
-												<div className={''}>
-													<p className={'font-sans font-bold text-black'}>
-														{item.value}
-													</p>
-												</div>
-											</li>
-										))}
+								<div className={'flex h-full w-full justify-center '}>
+									<div
+										className={
+											'flex h-[85px] w-[1000px] justify-center gap-20 pt-8'
+										}
+									>
+										<button
+											onClick={handleEditClick}
+											className={
+												'flex items-center rounded-2xl bg-mainaccent-700/100 px-12 py-4 text-xl text-white shadow-[0_4px_5px_#31066f] transition delay-100 ease-in-out hover:brightness-125'
+											}
+										>
+											Modifier mes informations
+										</button>
+
+										<Link
+											href={'#'}
+											className={
+												'flex items-center rounded-2xl border-2 border-solid border-mainaccent-700 px-12 py-4 text-xl text-white transition delay-100 ease-in-out hover:brightness-125 '
+											}
+										>
+											Changer le mot de passe
+										</Link>
 									</div>
-								</ul>
-							</div>
-
-							<div className={'flex h-full w-full justify-center '}>
-								<div
-									className={
-										'flex h-[85px] w-[1000px] justify-center gap-20 pt-8'
-									}
-								>
-									<Link
-										href={'/profil_edit'}
-										className={
-											'flex items-center rounded-2xl bg-mainaccent-700/100 px-12 py-4 text-xl text-white shadow-[0_4px_5px_#31066f] transition delay-100 ease-in-out hover:brightness-125'
-										}
-									>
-										Modifier mes informations
-									</Link>
-
-									<Link
-										href={'#'}
-										className={
-											'flex items-center rounded-2xl border-2 border-solid border-mainaccent-700 px-12 py-4 text-xl text-white transition delay-100 ease-in-out hover:brightness-125 '
-										}
-									>
-										Changer le mot de passe
-									</Link>
 								</div>
 							</div>
 						</div>
-					</div>
-				</main>
+					</main>
+				)}
 			</div>
 		</>
 	)
