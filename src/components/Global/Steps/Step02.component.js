@@ -72,10 +72,9 @@ const animals = [
 	},
 ]
 
-const users = [
+const OptionsQ1 = [
 	{
 		id: 1,
-		label: 'Tony Reichert',
 		name: 'Tony Reichert',
 		role: 'CEO',
 		team: 'Management',
@@ -84,7 +83,6 @@ const users = [
 	},
 	{
 		id: 2,
-		label: 'Zoey Lang',
 		name: 'Zoey Lang',
 		role: 'Tech Lead',
 		team: 'Development',
@@ -93,7 +91,6 @@ const users = [
 	},
 	{
 		id: 3,
-		label: 'Jane Fisher',
 		name: 'Jane Fisher',
 		role: 'Sr. Dev',
 		team: 'Development',
@@ -102,7 +99,6 @@ const users = [
 	},
 	{
 		id: 4,
-		label: 'William Howard',
 		name: 'William Howard',
 		role: 'C.M.',
 		team: 'Marketing',
@@ -111,7 +107,6 @@ const users = [
 	},
 	{
 		id: 5,
-		label: 'Kristen Copper',
 		name: 'Kristen Copper',
 		role: 'S. Manager',
 		team: 'Sales',
@@ -120,7 +115,6 @@ const users = [
 	},
 	{
 		id: 6,
-		label: 'Brian Kim',
 		name: 'Brian Kim',
 		role: 'P. Manager',
 		team: 'Management',
@@ -158,85 +152,87 @@ const users = [
 		status: 'active',
 		age: '35',
 	},
+]
+
+const OptionsQ2 = [
 	{
-		id: 11,
-		name: 'Brandon Stevens',
-		role: 'Jr. Dev',
+		id: 1,
+		name: 'NICO Reichert',
+		role: 'CEO',
+		team: 'Management',
+		status: 'active',
+		age: '29',
+	},
+	{
+		id: 2,
+		name: 'KARINE Lang',
+		role: 'Tech Lead',
+		team: 'Development',
+		status: 'paused',
+		age: '25',
+	},
+	{
+		id: 3,
+		name: 'Jane Fisher',
+		role: 'Sr. Dev',
 		team: 'Development',
 		status: 'active',
 		age: '22',
 	},
 	{
-		id: 12,
-		name: 'Megan Richards',
-		role: 'P. Manager',
-		team: 'Product',
-		status: 'paused',
+		id: 4,
+		name: 'KYLIAN Howard',
+		role: 'C.M.',
+		team: 'Marketing',
+		status: 'vacation',
 		age: '28',
 	},
 	{
-		id: 13,
-		name: 'Oliver Scott',
+		id: 5,
+		name: 'CLEMENCE Copper',
 		role: 'S. Manager',
-		team: 'Security',
-		status: 'active',
-		age: '37',
-	},
-	{
-		id: 14,
-		name: 'Grace Allen',
-		role: 'M. Specialist',
-		team: 'Marketing',
-		status: 'active',
-		age: '30',
-	},
-	{
-		id: 15,
-		name: 'Noah Carter',
-		role: 'IT Specialist',
-		team: 'I. Technology',
-		status: 'paused',
-		age: '31',
-	},
-	{
-		id: 16,
-		name: 'Ava Perez',
-		role: 'Manager',
 		team: 'Sales',
 		status: 'active',
+		age: '24',
+	},
+	{
+		id: 6,
+		name: 'Brian Kim',
+		role: 'P. Manager',
+		team: 'Management',
 		age: '29',
 	},
 	{
-		id: 17,
-		name: 'Liam Johnson',
-		role: 'Data Analyst',
-		team: 'Analysis',
-		status: 'active',
-		age: '28',
-	},
-	{
-		id: 18,
-		name: 'Sophia Taylor',
-		role: 'QA Analyst',
-		team: 'Testing',
-		status: 'active',
+		id: 7,
+		name: 'Michael Hunt',
+		role: 'Designer',
+		team: 'Design',
+		status: 'paused',
 		age: '27',
 	},
 	{
-		id: 19,
-		name: 'Lucas Harris',
-		role: 'Administrator',
-		team: 'Information Technology',
-		status: 'paused',
-		age: '32',
+		id: 8,
+		name: 'Samantha Brooks',
+		role: 'HR Manager',
+		team: 'HR',
+		status: 'active',
+		age: '31',
 	},
 	{
-		id: 20,
-		name: 'Mia Robinson',
-		role: 'Coordinator',
+		id: 9,
+		name: 'Frank Harrison',
+		role: 'F. Manager',
+		team: 'Finance',
+		status: 'vacation',
+		age: '33',
+	},
+	{
+		id: 10,
+		name: 'Emma Adams',
+		role: 'Ops Manager',
 		team: 'Operations',
 		status: 'active',
-		age: '26',
+		age: '35',
 	},
 ]
 
@@ -382,9 +378,45 @@ function Step02Component() {
 				<p>template question a choix multiples </p>
 
 				<Select
-					items={users}
-					label="Assigned to"
+					items={OptionsQ1}
+					label="Question 1"
 					variant="bordered"
+					isMultiline={true}
+					selectionMode="multiple"
+					placeholder="Select a user"
+					labelPlacement="outside"
+					classNames={{
+						base: 'max-w-xs',
+						trigger: 'min-h-unit-12 py-2',
+					}}
+					renderValue={items => {
+						return (
+							<div className="flex flex-wrap gap-2">
+								{items.map(item => (
+									<Chip key={item.key}>{item.data.name}</Chip>
+								))}
+							</div>
+						)
+					}}
+				>
+					{user => (
+						<SelectItem key={user.id} textValue={user.name}>
+							<div className="flex items-center gap-2">
+								<div className="flex flex-col">
+									<span className="text-small">{user.name}</span>
+									<span className="text-tiny text-default-400">
+										{user.email}
+									</span>
+								</div>
+							</div>
+						</SelectItem>
+					)}
+				</Select>
+
+				<Select
+					items={OptionsQ2}
+					label="Question 2"
+					variant="flat"
 					isMultiline={true}
 					selectionMode="multiple"
 					placeholder="Select a user"
