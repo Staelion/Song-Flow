@@ -1,7 +1,15 @@
 import { useContext, useState } from 'react'
 import { StepsContext } from '@/providers/stepsContext'
 import { Switch } from '@headlessui/react'
-import { Select, SelectItem } from '@nextui-org/react'
+import {
+	Select,
+	SelectItem,
+	Chip,
+	SelectSection,
+	user,
+	Avatar,
+} from '@nextui-org/react'
+import React from 'react'
 
 const animals = [
 	{
@@ -64,6 +72,177 @@ const animals = [
 	},
 ]
 
+const users = [
+	{
+		id: 1,
+		label: 'Tony Reichert',
+		name: 'Tony Reichert',
+		role: 'CEO',
+		team: 'Management',
+		status: 'active',
+		age: '29',
+	},
+	{
+		id: 2,
+		label: 'Zoey Lang',
+		name: 'Zoey Lang',
+		role: 'Tech Lead',
+		team: 'Development',
+		status: 'paused',
+		age: '25',
+	},
+	{
+		id: 3,
+		label: 'Jane Fisher',
+		name: 'Jane Fisher',
+		role: 'Sr. Dev',
+		team: 'Development',
+		status: 'active',
+		age: '22',
+	},
+	{
+		id: 4,
+		label: 'William Howard',
+		name: 'William Howard',
+		role: 'C.M.',
+		team: 'Marketing',
+		status: 'vacation',
+		age: '28',
+	},
+	{
+		id: 5,
+		label: 'Kristen Copper',
+		name: 'Kristen Copper',
+		role: 'S. Manager',
+		team: 'Sales',
+		status: 'active',
+		age: '24',
+	},
+	{
+		id: 6,
+		label: 'Brian Kim',
+		name: 'Brian Kim',
+		role: 'P. Manager',
+		team: 'Management',
+		age: '29',
+	},
+	{
+		id: 7,
+		name: 'Michael Hunt',
+		role: 'Designer',
+		team: 'Design',
+		status: 'paused',
+		age: '27',
+	},
+	{
+		id: 8,
+		name: 'Samantha Brooks',
+		role: 'HR Manager',
+		team: 'HR',
+		status: 'active',
+		age: '31',
+	},
+	{
+		id: 9,
+		name: 'Frank Harrison',
+		role: 'F. Manager',
+		team: 'Finance',
+		status: 'vacation',
+		age: '33',
+	},
+	{
+		id: 10,
+		name: 'Emma Adams',
+		role: 'Ops Manager',
+		team: 'Operations',
+		status: 'active',
+		age: '35',
+	},
+	{
+		id: 11,
+		name: 'Brandon Stevens',
+		role: 'Jr. Dev',
+		team: 'Development',
+		status: 'active',
+		age: '22',
+	},
+	{
+		id: 12,
+		name: 'Megan Richards',
+		role: 'P. Manager',
+		team: 'Product',
+		status: 'paused',
+		age: '28',
+	},
+	{
+		id: 13,
+		name: 'Oliver Scott',
+		role: 'S. Manager',
+		team: 'Security',
+		status: 'active',
+		age: '37',
+	},
+	{
+		id: 14,
+		name: 'Grace Allen',
+		role: 'M. Specialist',
+		team: 'Marketing',
+		status: 'active',
+		age: '30',
+	},
+	{
+		id: 15,
+		name: 'Noah Carter',
+		role: 'IT Specialist',
+		team: 'I. Technology',
+		status: 'paused',
+		age: '31',
+	},
+	{
+		id: 16,
+		name: 'Ava Perez',
+		role: 'Manager',
+		team: 'Sales',
+		status: 'active',
+		age: '29',
+	},
+	{
+		id: 17,
+		name: 'Liam Johnson',
+		role: 'Data Analyst',
+		team: 'Analysis',
+		status: 'active',
+		age: '28',
+	},
+	{
+		id: 18,
+		name: 'Sophia Taylor',
+		role: 'QA Analyst',
+		team: 'Testing',
+		status: 'active',
+		age: '27',
+	},
+	{
+		id: 19,
+		name: 'Lucas Harris',
+		role: 'Administrator',
+		team: 'Information Technology',
+		status: 'paused',
+		age: '32',
+	},
+	{
+		id: 20,
+		name: 'Mia Robinson',
+		role: 'Coordinator',
+		team: 'Operations',
+		status: 'active',
+		age: '26',
+	},
+]
+
+const headingClasses =
+	'flex w-full sticky top-1 z-20 py-1.5 px-2 bg-default-100 shadow-small rounded-small'
+
 function Step02Component() {
 	const { steps, stepsCount, nextStep, previousStep, clickOnStep } =
 		useContext(StepsContext)
@@ -93,7 +272,7 @@ function Step02Component() {
 
 	return (
 		<>
-			<section className={'mx-auto flex max-w-3xl flex-col gap-8 py-16'}>
+			<section className={'mx-auto flex flex-col gap-8 py-16'}>
 				<div>step 02</div>
 				<div>
 					<Select
@@ -111,39 +290,42 @@ function Step02Component() {
 					</Select>
 				</div>
 				<p>template question oui / non</p>
-				<div className={'flex h-[45px] '}>
+				<div
+					className={'flex h-[50px]  w-1/2 rounded-medium bg-white shadow-sm'}
+				>
 					{/*Numéro de la question*/}
-					<div
-						className={
-							' flex h-10 w-10 items-center justify-center rounded-full bg-mainaccent-700 text-white'
-						}
-					>
-						01
-					</div>
-					{/*titre de la question */}
-					<div
-						className={
-							'flex w-1/3 max-w-full items-center justify-center  pl-5 font-oswald text-white'
-						}
-					>
-						Utilisation de samples ?
-					</div>
-					{/*switch oui non */}
-					<div className={' flex items-center justify-center px-5'}>
-						<Switch
-							checked={toggleState1}
-							onChange={setToggleState1}
-							className={`${
-								toggleState1 ? 'bg-mainaccent-700' : 'bg-amber-950'
-							} relative inline-flex h-5 w-10 items-center rounded-full`}
+					<div className={'flex w-full items-center justify-between'}>
+						<div className={'flex items-center justify-center px-3'}>
+							<div className="flex h-11 w-11 items-center justify-center rounded-full bg-mainaccent-700 text-white ">
+								01
+							</div>
+						</div>
+
+						{/*titre de la question */}
+						<div
+							className={
+								'flex  max-w-full items-center justify-center  pl-5 font-oswald text-black'
+							}
 						>
-							<span className="sr-only">Enable this option</span>
-							<span
+							Utilisation de samples ?
+						</div>
+						{/*switch oui non */}
+						<div className={' flex items-center justify-center px-5'}>
+							<Switch
+								checked={toggleState1}
+								onChange={setToggleState1}
 								className={`${
-									toggleState1 ? 'translate-x-5' : 'translate-x-1'
-								} inline-block h-4 w-4 transform rounded-full bg-white transition`}
-							/>
-						</Switch>
+									toggleState1 ? 'bg-mainaccent-700' : 'bg-amber-950'
+								} relative inline-flex h-6 w-12 items-center rounded-full`}
+							>
+								<span className="sr-only">Enable this option</span>
+								<span
+									className={`${
+										toggleState1 ? 'translate-x-7' : 'translate-x-1'
+									} inline-block h-4 w-4 transform rounded-full bg-white transition`}
+								/>
+							</Switch>
+						</div>
 					</div>
 				</div>
 				<p>template question libre</p>
@@ -197,7 +379,43 @@ function Step02Component() {
 					</div>
 				</form>
 				<p>template question a slider / slider double</p>
-				<p>template question a choix multiples (combobox Headless UI)</p>
+				<p>template question a choix multiples </p>
+
+				<Select
+					items={users}
+					label="Assigned to"
+					variant="bordered"
+					isMultiline={true}
+					selectionMode="multiple"
+					placeholder="Select a user"
+					labelPlacement="outside"
+					classNames={{
+						base: 'max-w-xs',
+						trigger: 'min-h-unit-12 py-2',
+					}}
+					renderValue={items => {
+						return (
+							<div className="flex flex-wrap gap-2">
+								{items.map(item => (
+									<Chip key={item.key}>{item.data.name}</Chip>
+								))}
+							</div>
+						)
+					}}
+				>
+					{user => (
+						<SelectItem key={user.id} textValue={user.name}>
+							<div className="flex items-center gap-2">
+								<div className="flex flex-col">
+									<span className="text-small">{user.name}</span>
+									<span className="text-tiny text-default-400">
+										{user.email}
+									</span>
+								</div>
+							</div>
+						</SelectItem>
+					)}
+				</Select>
 			</section>
 		</>
 	)
