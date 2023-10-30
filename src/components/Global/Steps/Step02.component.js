@@ -236,9 +236,6 @@ const OptionsQ2 = [
 	},
 ]
 
-const headingClasses =
-	'flex w-full sticky top-1 z-20 py-1.5 px-2 bg-default-100 shadow-small rounded-small'
-
 function Step02Component() {
 	const { steps, stepsCount, nextStep, previousStep, clickOnStep } =
 		useContext(StepsContext)
@@ -268,7 +265,11 @@ function Step02Component() {
 
 	return (
 		<>
-			<section className={'mx-auto flex flex-col gap-8 py-16'}>
+			<section
+				className={
+					'mx-auto flex w-full max-w-7xl flex-col justify-center gap-8 py-16'
+				}
+			>
 				<div>step 02</div>
 				<div>
 					<Select
