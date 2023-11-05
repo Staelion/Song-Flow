@@ -381,7 +381,7 @@ function Step02Component() {
 				<Select
 					items={OptionsQ1}
 					label="Question 1"
-					variant="bordered"
+					variant="underlined"
 					isMultiline={true}
 					selectionMode="multiple"
 					placeholder="Select a user"
@@ -417,7 +417,7 @@ function Step02Component() {
 				<Select
 					items={OptionsQ2}
 					label="Question 2"
-					variant="flat"
+					variant="underlined"
 					isMultiline={true}
 					selectionMode="multiple"
 					placeholder="Select a user"
