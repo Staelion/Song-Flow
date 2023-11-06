@@ -5,11 +5,13 @@ import {
 	Select,
 	SelectItem,
 	Chip,
+	Input,
 	SelectSection,
 	user,
 	Avatar,
 } from '@nextui-org/react'
 import React from 'react'
+import { bgWhite } from 'next/dist/lib/picocolors'
 
 const animals = [
 	{
@@ -236,6 +238,8 @@ const OptionsQ2 = [
 	},
 ]
 
+// qustions a input multiples
+
 function Step02Component() {
 	const { steps, stepsCount, nextStep, previousStep, clickOnStep } =
 		useContext(StepsContext)
@@ -262,6 +266,28 @@ function Step02Component() {
 	const handleServiceAdd = () => {
 		setServiceList([...serviceList, { service: '' }])
 	}
+
+	const [chip1, setChip1] = React.useState([])
+	const [name1, setName1] = useState('')
+
+	const [chip2, setChip2] = React.useState([])
+	const [name2, setName2] = useState('')
+
+	const handleClose1 = chipToRemove => {
+		setChip1(chip1.filter(chip => chip !== chipToRemove))
+		if (chip1.length === 1) {
+			setChip1([])
+		}
+	}
+
+	const handleClose2 = chipToRemove => {
+		setChip2(chip2.filter(chip => chip !== chipToRemove))
+		if (chip2.length === 1) {
+			setChip2([])
+		}
+	}
+
+	let nextId = 1
 
 	return (
 		<>
@@ -326,55 +352,71 @@ function Step02Component() {
 					</div>
 				</div>
 				<p>template question libre</p>
-				<form className="App" autoComplete="off">
-					<div className="form-field">
-						<label htmlFor="service">Service(s)</label>
-						{serviceList.map((singleService, index) => (
-							<div key={index} className="services">
-								<div className="first-division">
-									<input
-										name="service"
-										type="text"
-										id="service"
-										value={singleService.service}
-										onChange={e => handleServiceChange(e, index)}
-										required
-									/>
-									{serviceList.length - 1 === index &&
-										serviceList.length < 5 && (
-											<button
-												type="button"
-												onClick={handleServiceAdd}
-												className="add-btn"
-											>
-												<span>Add a Service</span>
-											</button>
-										)}
-								</div>
-								<div className="second-division">
-									{serviceList.length !== 1 && (
-										<button
-											type="button"
-											onClick={() => handleServiceRemove(index)}
-											className="remove-btn"
-										>
-											<span>Remove</span>
-										</button>
-									)}
-								</div>
-							</div>
-						))}
-					</div>
-					<div className="output">
-						<h2>Output</h2>
-						{serviceList &&
-							serviceList.map((singleService, index) => (
-								<ul key={index}>
-									{singleService.service && <li>{singleService.service}</li>}
-								</ul>
-							))}
-					</div>
-				</form>
+
+				<div className=" flex w-1/2 flex-wrap gap-2">
+					<Input
+						type="Genre"
+						label="Genre"
+						defaultValue=""
+						className="max-w-xs"
+						onChange={e => setName1(e.target.value)}
+					/>
+					<button
+						className={
+							'm-1 w-[80px] rounded-2xl bg-mainorange-900/70 p-1 hover:bg-mainaccent-700/70'
+						}
+						onClick={() => {
+							setChip1([...chip1, { id: nextId++, name: name1 }])
+						}}
+					>
+						Ajouter
+					</button>
+
+					{chip1.map((chipItem, index) => (
+						<Chip
+							key={index}
+							onClose={() => handleClose1(chipItem)}
+							variant="solid"
+							radius={'md'}
+						>
+							{chipItem.name}
+						</Chip>
+					))}
+				</div>
+
+				{/*SECOND TEST*/}
+
+				<div className=" flex w-1/2 flex-wrap gap-2">
+					<Input
+						type="Sous-genre"
+						label="Sous-genre"
+						defaultValue=""
+						className="max-w-xs"
+						onChange={e => setName2(e.target.value)}
+					/>
+					<button
+						className={
+							'm-1 w-[80px] rounded-2xl bg-mainorange-900/70 p-1 hover:bg-mainaccent-700/70'
+						}
+						onClick={() => {
+							setChip2([...chip2, { id: nextId++, name: name2 }])
+						}}
+					>
+						Ajouter
+					</button>
+
+					{chip2.map((chipItem, index) => (
+						<Chip
+							key={index}
+							onClose={() => handleClose2(chipItem)}
+							variant="solid"
+							radius={'md'}
+						>
+							{chipItem.name}
+						</Chip>
+					))}
+				</div>
+
 				<p>template question a slider / slider double</p>
 				<p>template question a choix multiples </p>
 
