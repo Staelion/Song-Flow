@@ -1,17 +1,8 @@
 import { useContext, useState } from 'react'
 import { StepsContext } from '@/providers/stepsContext'
 import { Switch } from '@headlessui/react'
-import {
-	Select,
-	SelectItem,
-	Chip,
-	Input,
-	SelectSection,
-	user,
-	Avatar,
-} from '@nextui-org/react'
 import React from 'react'
-import { bgWhite } from 'next/dist/lib/picocolors'
+import { Select, SelectItem, Chip, Input, Slider } from '@nextui-org/react'
 
 const animals = [
 	{
@@ -418,6 +409,33 @@ function Step02Component() {
 				</div>
 
 				<p>template question a slider / slider double</p>
+
+				<p>Slider simple </p>
+
+				<Slider
+					label="BPM"
+					showTooltip={true}
+					step={1}
+					maxValue={200}
+					minValue={60}
+					marks={[
+						{
+							value: 140,
+							label: '140 BPM',
+						},
+						{
+							value: 100,
+							label: '100 BPM',
+						},
+						{
+							value: 175,
+							label: '175 BPM',
+						},
+					]}
+					defaultValue={140}
+					className="max-w-md"
+				/>
+
 				<p>template question a choix multiples </p>
 
 				<Select
