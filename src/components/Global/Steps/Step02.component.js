@@ -416,6 +416,8 @@ function Step02Component() {
 					label="BPM"
 					showTooltip={true}
 					step={1}
+					color={'secondary'}
+					size={'sm'}
 					maxValue={200}
 					minValue={60}
 					marks={[
