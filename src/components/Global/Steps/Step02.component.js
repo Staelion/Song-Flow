@@ -287,7 +287,6 @@ function Step02Component() {
 					'mx-auto flex w-full max-w-7xl flex-col justify-center gap-8 py-16'
 				}
 			>
-				<div>step 02</div>
 				<div>
 					<Select
 						isRequired
@@ -416,8 +415,8 @@ function Step02Component() {
 					label="BPM"
 					showTooltip={true}
 					step={1}
-					color={'secondary'}
 					size={'sm'}
+					color={'secondary'}
 					maxValue={200}
 					minValue={60}
 					marks={[
@@ -438,7 +437,20 @@ function Step02Component() {
 					className="max-w-md"
 				/>
 
-				<p>template question a choix multiples </p>
+				<p>Slider double</p>
+
+				<Slider
+					label="Année"
+					step={1}
+					size={'sm'}
+					color={'secondary'}
+					maxValue={2024}
+					minValue={1920}
+					defaultValue={[1980, 2010]}
+					className="max-w-md"
+				/>
+
+				<p>template question à choix multiples </p>
 
 				<Select
 					items={OptionsQ1}
