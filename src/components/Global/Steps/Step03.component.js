@@ -5,7 +5,7 @@ function Step03Component() {
 	const { steps, stepsCount, nextStep, previousStep, clickOnStep } =
 		useContext(StepsContext)
 
-	return <div>step 03</div>
+	return
 }
 
 export default Step03Component
