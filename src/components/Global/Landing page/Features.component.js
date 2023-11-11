@@ -121,7 +121,7 @@ export default function FeaturesComponent() {
 			</div>
 
 			<div className={'flex w-full justify-center'}>
-				<button className="shadow-inner-[0_-4px5px#7c20ef] flex items-center rounded-2xl border-2 border-mainorange-500/0 bg-mainorange-500/100 px-12 py-4 text-2xl font-bold text-black shadow-[0_4px5px#31066f] transition delay-100 ease-in-out hover:border-mainorange-500 hover:bg-mainorange-500/0 hover:text-mainorange-500 hover:shadow-none">
+				<button className="shadow-inner-[0_-4px5px#7c20ef] z-10 flex items-center rounded-2xl border-2 border-mainorange-500/0 bg-mainorange-500/100 px-12 py-4 text-2xl font-bold text-black shadow-[0_4px5px#31066f] transition delay-100 ease-in-out hover:border-mainorange-500 hover:bg-mainorange-500/0 hover:text-mainorange-500 hover:shadow-none">
 					Passer à SongFlow Plus
 				</button>
 			</div>

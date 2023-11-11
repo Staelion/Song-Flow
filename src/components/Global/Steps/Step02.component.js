@@ -4,67 +4,6 @@ import { Switch } from '@headlessui/react'
 import React from 'react'
 import { Select, SelectItem, Chip, Input, Slider } from '@nextui-org/react'
 
-const animals = [
-	{
-		label: 'Cat',
-		value: 'cat',
-		description: 'The second most popular pet in the world',
-	},
-	{
-		label: 'Dog',
-		value: 'dog',
-		description: 'The most popular pet in the world',
-	},
-	{
-		label: 'Elephant',
-		value: 'elephant',
-		description: 'The largest land animal',
-	},
-	{ label: 'Lion', value: 'lion', description: 'The king of the jungle' },
-	{ label: 'Tiger', value: 'tiger', description: 'The largest cat species' },
-	{
-		label: 'Giraffe',
-		value: 'giraffe',
-		description: 'The tallest land animal',
-	},
-	{
-		label: 'Dolphin',
-		value: 'dolphin',
-		description: 'A widely distributed and diverse group of aquatic mammals',
-	},
-	{
-		label: 'Penguin',
-		value: 'penguin',
-		description: 'A group of aquatic flightless birds',
-	},
-	{
-		label: 'Zebra',
-		value: 'zebra',
-		description: 'A several species of African equids',
-	},
-	{
-		label: 'Shark',
-		value: 'shark',
-		description:
-			'A group of elasmobranch fish characterized by a cartilaginous skeleton',
-	},
-	{
-		label: 'Whale',
-		value: 'whale',
-		description: 'Diverse group of fully aquatic placental marine mammals',
-	},
-	{
-		label: 'Otter',
-		value: 'otter',
-		description: 'A carnivorous mammal in the subfamily Lutrinae',
-	},
-	{
-		label: 'Crocodile',
-		value: 'crocodile',
-		description: 'A large semiaquatic reptile',
-	},
-]
-
 const OptionsQ1 = [
 	{
 		id: 1,
@@ -287,21 +226,6 @@ function Step02Component() {
 					'mx-auto flex w-full max-w-7xl flex-col justify-center gap-8 py-16'
 				}
 			>
-				<div>
-					<Select
-						isRequired
-						label="Favorite Animal"
-						placeholder="Select an animal"
-						defaultSelectedKeys={['cat']}
-						className="max-w-xs"
-					>
-						{animals.map(animal => (
-							<SelectItem key={animal.value} value={animal.value}>
-								{animal.label}
-							</SelectItem>
-						))}
-					</Select>
-				</div>
 				<p>template question oui / non</p>
 				<div
 					className={'flex h-[50px]  w-1/2 rounded-medium bg-white shadow-sm'}
