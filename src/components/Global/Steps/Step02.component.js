@@ -181,23 +181,6 @@ function Step02Component() {
 
 	const [serviceList, setServiceList] = useState([{ service: '' }])
 
-	const handleServiceChange = (e, index) => {
-		const { name, value } = e.target
-		const list = [...serviceList]
-		list[index][name] = value
-		setServiceList(list)
-	}
-
-	const handleServiceRemove = index => {
-		const list = [...serviceList]
-		list.splice(index, 1)
-		setServiceList(list)
-	}
-
-	const handleServiceAdd = () => {
-		setServiceList([...serviceList, { service: '' }])
-	}
-
 	const [chip1, setChip1] = React.useState([])
 	const [name1, setName1] = useState('')
 
