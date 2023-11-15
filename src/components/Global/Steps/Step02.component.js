@@ -415,7 +415,7 @@ function Step02Component() {
 		<>
 			<section
 				className={
-					'mx-auto flex w-full max-w-7xl flex-col justify-center gap-12 py-10'
+					'mx-auto flex w-full max-w-7xl flex-col justify-center gap-12 px-10 py-10'
 				}
 			>
 				{/*<p>template question oui / non</p>*/}
@@ -697,19 +697,19 @@ function Step02Component() {
 					minValue={60}
 					marks={[
 						{
-							value: 140,
-							label: '140 BPM',
-						},
-						{
 							value: 100,
 							label: '100 BPM',
+						},
+						{
+							value: 140,
+							label: '140 BPM',
 						},
 						{
 							value: 175,
 							label: '175 BPM',
 						},
 					]}
-					defaultValue={140}
+					defaultValue={[100, 140]}
 					className="max-w-3xl"
 				/>
 
