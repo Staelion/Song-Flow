@@ -2,7 +2,14 @@ import { useContext, useState } from 'react'
 import { StepsContext } from '@/providers/stepsContext'
 import { Switch } from '@headlessui/react'
 import React from 'react'
-import { Select, SelectItem, Chip, Input, Slider } from '@nextui-org/react'
+import {
+	Select,
+	SelectItem,
+	Chip,
+	Input,
+	Slider,
+	SelectSection,
+} from '@nextui-org/react'
 
 // templates
 const OptionsQ1 = [
@@ -245,139 +252,142 @@ function Step02Component() {
 		{
 			section: 'Blues',
 			items: [
-				{ item: 'Delta blues' },
-				{ item: 'Chicago blues' },
-				{ item: 'Jump blues' },
+				{ item: 'Delta blues', id: 1 },
+				{ item: 'Chicago blues', id: 2 },
+				{ item: 'Jump blues', id: 3 },
 			],
 		},
 		{
 			section: 'Rock',
 			items: [
-				{ item: 'Rock and roll' },
-				{ item: 'Rockabilly' },
-				{ item: 'Rock psychédélique' },
-				{ item: 'Rock progressif' },
+				{ item: 'Rock and roll', id: 4 },
+				{ item: 'Rockabilly', id: 5 },
+				{ item: 'Rock psychédélique', id: 6 },
+				{ item: 'Rock progressif', id: 7 },
 			],
 		},
 		{
 			section: 'Musique traditionnelle',
 			items: [
-				{ item: 'Musique celtique' },
-				{ item: 'Musique folklorique' },
-				{ item: 'Musique du monde' },
+				{ item: 'Musique celtique', id: 8 },
+				{ item: 'Musique folklorique', id: 9 },
+				{ item: 'Musique du monde', id: 10 },
 			],
 		},
 		{
 			section: 'Soul',
 			items: [
-				{ item: 'Motown' },
-				{ item: 'Northern soul' },
-				{ item: 'Southern soul' },
+				{ item: 'Motown', id: 11 },
+				{ item: 'Northern soul', id: 12 },
+				{ item: 'Southern soul', id: 13 },
 			],
 		},
 		{
 			section: 'Country',
 			items: [
-				{ item: 'Country western' },
-				{ item: 'Country pop' },
-				{ item: 'Honky-tonk' },
+				{ item: 'Country western', id: 14 },
+				{ item: 'Country pop', id: 15 },
+				{ item: 'Honky-tonk', id: 16 },
 			],
 		},
 		{
 			section: 'Reggae',
 			items: [
-				{ item: 'Roots reggae' },
-				{ item: 'Dub' },
-				{ item: 'Rocksteady' },
+				{ item: 'Roots reggae', id: 17 },
+				{ item: 'Dub', id: 18 },
+				{ item: 'Rocksteady', id: 19 },
 			],
 		},
 		{
 			section: 'Funk',
 			items: [
-				{ item: 'Funk originel' },
-				{ item: 'P-Funk' },
-				{ item: 'Funk rock' },
+				{ item: 'Funk originel', id: 20 },
+				{ item: 'P-Funk', id: 21 },
+				{ item: 'Funk rock', id: 22 },
 			],
 		},
 		{
 			section: 'Disco',
 			items: [
-				{ item: 'Disco originel' },
-				{ item: 'Euro disco' },
-				{ item: 'Italo disco' },
+				{ item: 'Disco originel', id: 23 },
+				{ item: 'Euro disco', id: 24 },
+				{ item: 'Italo disco', id: 25 },
 			],
 		},
 		{
 			section: 'Hip-hop / Rap',
 			items: [
-				{ item: 'Old school rap' },
-				{ item: 'Golden age hip-hop' },
-				{ item: 'East coast rap' },
+				{ item: 'Old school rap', id: 26 },
+				{ item: 'Golden age hip-hop', id: 27 },
+				{ item: 'East coast rap', id: 28 },
 			],
 		},
 		{
 			section: 'Rhythm and Blues (R&B)',
 			items: [
-				{ item: 'Doo-wop' },
-				{ item: 'Motown' },
-				{ item: 'New jack swing' },
+				{ item: 'Doo-wop', id: 29 },
+				{ item: 'Motown', id: 30 },
+				{ item: 'New jack swing', id: 31 },
 			],
 		},
 		{
 			section: 'Swing',
-			items: [{ item: 'Swing' }, { item: 'Swing revival' }],
+			items: [
+				{ item: 'Swing', id: 32 },
+				{ item: 'Swing revival', id: 33 },
+			],
 		},
 		{
 			section: 'Rock and roll',
 			items: [
-				{ item: 'Rockabilly' },
-				{ item: 'Doo-wop' },
-				{ item: 'Surf rock' },
+				{ item: 'Rockabilly', id: 34 },
+				{ item: 'Doo-wop', id: 35 },
+				{ item: 'Surf rock', id: 36 },
 			],
 		},
 		{
 			section: 'Country',
 			items: [
-				{ item: 'Bluegrass' },
-				{ item: 'Outlaw country' },
-				{ item: 'Western swing' },
+				{ item: 'Bluegrass', id: 37 },
+				{ item: 'Outlaw country', id: 38 },
+				{ item: 'Western swing', id: 39 },
 			],
 		},
 		{
 			section: 'Électronique',
 			items: [
-				{ item: 'Acid jazz' },
-				{ item: 'Ambient' },
-				{ item: 'Ambient house' },
-				{ item: 'Chillout / Ambient' },
-				{ item: 'Chiptune' },
-				{ item: 'Disco' },
-				{ item: 'Drone' },
-				{ item: 'Électroacoustique' },
-				{ item: 'Électronique' },
-				{ item: 'Fusion' },
-				{ item: 'Lounge' },
-				{ item: 'Vaporwave' },
-				{ item: 'Shatta' },
-				{ item: 'Electro-swing' },
-				{ item: 'Future house' },
-				{ item: 'Synthwave' },
-				{ item: 'Lo-fi' },
-				{ item: 'Trance' },
-				{ item: 'EDM' },
-				{ item: 'Drum&Bass' },
-				{ item: 'Uptempo' },
-				{ item: 'Breakbeat' },
-				{ item: 'Dubstep' },
-				{ item: 'House' },
-				{ item: 'Techno' },
-				{ item: 'Alternative rock' },
-				{ item: 'Indie rock' },
-				{ item: 'Indie pop' },
-				{ item: 'Pop' },
-				{ item: 'Rap' },
-				{ item: 'Trap' },
-				{ item: 'Reggae fusion' },
+				{ item: 'Acid jazz', id: 40 },
+				{ item: 'Ambient', id: 41 },
+				{ item: 'Ambient house', id: 42 },
+				{ item: 'Chillout / Ambient', id: 43 },
+				{ item: 'Chiptune', id: 44 },
+				{ item: 'Disco', id: 45 },
+				{ item: 'Drone', id: 46 },
+				{ item: 'Électroacoustique', id: 47 },
+				{ item: 'Électronique', id: 48 },
+				{ item: 'Fusion', id: 49 },
+				{ item: 'Lounge', id: 50 },
+				{ item: 'Vaporwave', id: 51 },
+				{ item: 'Shatta', id: 52 },
+				{ item: 'Electro-swing', id: 53 },
+				{ item: 'Future house', id: 54 },
+				{ item: 'Synthwave', id: 55 },
+				{ item: 'Lo-fi', id: 56 },
+				{ item: 'Trance', id: 57 },
+				{ item: 'EDM', id: 58 },
+				{ item: 'Drum&Bass', id: 59 },
+				{ item: 'Uptempo', id: 60 },
+				{ item: 'Breakbeat', id: 61 },
+				{ item: 'Dubstep', id: 62 },
+				{ item: 'House', id: 63 },
+				{ item: 'Techno', id: 64 },
+				{ item: 'Alternative rock', id: 65 },
+				{ item: 'Indie rock', id: 66 },
+				{ item: 'Indie pop', id: 67 },
+				{ item: 'Pop', id: 68 },
+				{ item: 'Rap', id: 69 },
+				{ item: 'Trap', id: 70 },
+				{ item: 'Reggae fusion', id: 71 },
 			],
 		},
 	]
@@ -805,10 +815,56 @@ function Step02Component() {
 				</Select>
 
 				<p>
-					{' '}
 					Sous genre musicaux avec combinaison de multi select chip et sections
-					?{' '}
 				</p>
+
+				<Select
+					items={sousGenresMusicaux}
+					label="Choix du sous-genre musical"
+					variant="underlined"
+					isMultiline={true}
+					selectionMode="multiple"
+					placeholder="Rock, Pop, Electro, etc..."
+					labelPlacement="outside"
+					classNames={{
+						base: 'max-w-xs',
+						trigger: 'min-h-unit-12 py-2',
+					}}
+					// fonctionnement du visuel du select
+					renderValue={items => {
+						return (
+							<div className="flex flex-wrap gap-2">
+								{items.map(item => (
+									<Chip key={item.key}>{items.item}</Chip>
+								))}
+							</div>
+						)
+					}}
+				>
+					{/*fonctionnement du select*/}
+					{/*// affichage des genres musicaux en sections*/}
+					{sousGenresMusicaux.map(section => (
+						<SelectSection key={section[0]} textValue={section}>
+							<div className="flex items-center gap-2">
+								<div className="flex flex-col">
+									<span className="text-small">{section.section}</span>
+								</div>
+							</div>
+							{/*affichage des sous genres musicaux*/}
+							{section.items.map(items => (
+								<SelectItem key={items.item} textValue={items.item}>
+									<div className="flex items-center gap-2">
+										<div className="flex flex-col">
+											<span className="text-small">{items.item}</span>
+										</div>
+									</div>
+								</SelectItem>
+							))}
+						</SelectSection>
+					))}
+				</Select>
+
+				{/*===============================================================*/}
 
 				<Slider
 					label="Tempo"
