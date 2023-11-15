@@ -546,6 +546,7 @@ function Step02Component() {
 	]
 	return (
 		<>
+			<div></div>
 			<section
 				className={
 					'mx-auto flex w-full max-w-7xl flex-col justify-center gap-12 px-10 py-10'
@@ -834,34 +835,41 @@ function Step02Component() {
 					renderValue={items => {
 						return (
 							<div className="flex flex-wrap gap-2">
-								{items.map(item => (
-									<Chip key={item.key}>{items.item}</Chip>
-								))}
+								{items.map(item => {
+									return <Chip key={item.key}>{item.textValue}</Chip>
+								})}
 							</div>
 						)
 					}}
 				>
 					{/*fonctionnement du select*/}
 					{/*// affichage des genres musicaux en sections*/}
-					{sousGenresMusicaux.map(section => (
-						<SelectSection key={section[0]} textValue={section}>
-							<div className="flex items-center gap-2">
-								<div className="flex flex-col">
-									<span className="text-small">{section.section}</span>
-								</div>
-							</div>
-							{/*affichage des sous genres musicaux*/}
-							{section.items.map(items => (
-								<SelectItem key={items.item} textValue={items.item}>
-									<div className="flex items-center gap-2">
-										<div className="flex flex-col">
-											<span className="text-small">{items.item}</span>
-										</div>
-									</div>
-								</SelectItem>
-							))}
-						</SelectSection>
-					))}
+					{/*{sousGenresMusicaux.map(section => {*/}
+					{/*	console.log(section)*/}
+					{/*})}*/}
+					{sousGenresMusicaux.map(section => {
+						return (
+							<SelectSection
+								showDivider
+								key={section[0]}
+								title={section.section}
+								color={'primary'}
+							>
+								{/*affichage des sous genres musicaux*/}
+								{section.items.map(elem => {
+									return (
+										<SelectItem key={elem.id} title={elem.item}>
+											<div className="flex items-center gap-2">
+												<div className="flex flex-col">
+													<span className="text-small">{elem.item}</span>
+												</div>
+											</div>
+										</SelectItem>
+									)
+								})}
+							</SelectSection>
+						)
+					})}
 				</Select>
 
 				{/*===============================================================*/}
