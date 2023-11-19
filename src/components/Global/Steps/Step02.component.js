@@ -225,9 +225,8 @@ function Step02Component() {
 		{ id: 10, genre: 'Reggae' },
 		{ id: 11, genre: 'Rhythm and Blues (R&B)' },
 		{ id: 12, genre: 'Rock' },
-		{ id: 13, genre: 'Rock and roll' },
-		{ id: 14, genre: 'Soul' },
-		{ id: 15, genre: 'Swing' },
+		{ id: 13, genre: 'Soul' },
+		{ id: 14, genre: 'Swing' },
 	]
 
 	const sousGenresMusicaux = [
@@ -252,142 +251,233 @@ function Step02Component() {
 		{
 			section: 'Blues',
 			items: [
-				{ item: 'Delta blues', id: 1 },
-				{ item: 'Chicago blues', id: 2 },
-				{ item: 'Jump blues', id: 3 },
+				{ item: 'Delta blues' },
+				{ item: 'Chicago blues' },
+				{ item: 'Jump blues' },
 			],
 		},
 		{
 			section: 'Rock',
 			items: [
-				{ item: 'Rock and roll', id: 4 },
-				{ item: 'Rockabilly', id: 5 },
-				{ item: 'Rock psychédélique', id: 6 },
-				{ item: 'Rock progressif', id: 7 },
+				{ item: 'Rockabilly' },
+				{ item: 'Rock psychédélique' },
+				{ item: 'Rock progressif' },
 			],
 		},
 		{
 			section: 'Musique traditionnelle',
 			items: [
-				{ item: 'Musique celtique', id: 8 },
-				{ item: 'Musique folklorique', id: 9 },
-				{ item: 'Musique du monde', id: 10 },
+				{ item: 'Musique celtique' },
+				{ item: 'Musique folklorique' },
+				{ item: 'Musique du monde' },
 			],
 		},
 		{
 			section: 'Soul',
 			items: [
-				{ item: 'Motown', id: 11 },
-				{ item: 'Northern soul', id: 12 },
-				{ item: 'Southern soul', id: 13 },
+				{ item: 'Motown' },
+				{ item: 'Northern soul' },
+				{ item: 'Southern soul' },
 			],
 		},
 		{
 			section: 'Country',
 			items: [
-				{ item: 'Country western', id: 14 },
-				{ item: 'Country pop', id: 15 },
-				{ item: 'Honky-tonk', id: 16 },
+				{ item: 'Country western' },
+				{ item: 'Country pop' },
+				{ item: 'Honky-tonk' },
 			],
 		},
 		{
 			section: 'Reggae',
 			items: [
-				{ item: 'Roots reggae', id: 17 },
-				{ item: 'Dub', id: 18 },
-				{ item: 'Rocksteady', id: 19 },
+				{ item: 'Roots reggae' },
+				{ item: 'Dub' },
+				{ item: 'Rocksteady' },
 			],
 		},
 		{
 			section: 'Funk',
 			items: [
-				{ item: 'Funk originel', id: 20 },
-				{ item: 'P-Funk', id: 21 },
-				{ item: 'Funk rock', id: 22 },
+				{ item: 'Funk originel' },
+				{ item: 'P-Funk' },
+				{ item: 'Funk rock' },
 			],
 		},
 		{
 			section: 'Disco',
 			items: [
-				{ item: 'Disco originel', id: 23 },
-				{ item: 'Euro disco', id: 24 },
-				{ item: 'Italo disco', id: 25 },
+				{ item: 'Disco originel' },
+				{ item: 'Euro disco' },
+				{ item: 'Italo disco' },
 			],
 		},
 		{
 			section: 'Hip-hop / Rap',
 			items: [
-				{ item: 'Old school rap', id: 26 },
-				{ item: 'Golden age hip-hop', id: 27 },
-				{ item: 'East coast rap', id: 28 },
+				{ item: 'Old school rap' },
+				{ item: 'Golden age hip-hop' },
+				{ item: 'East coast rap' },
 			],
 		},
 		{
 			section: 'Rhythm and Blues (R&B)',
 			items: [
-				{ item: 'Doo-wop', id: 29 },
-				{ item: 'Motown', id: 30 },
-				{ item: 'New jack swing', id: 31 },
+				{ item: 'Doo-wop' },
+				{ item: 'Motown' },
+				{ item: 'New jack swing' },
 			],
 		},
 		{
 			section: 'Swing',
-			items: [
-				{ item: 'Swing', id: 32 },
-				{ item: 'Swing revival', id: 33 },
-			],
+			items: [{ item: 'Swing' }, { item: 'Swing revival' }],
 		},
 		{
 			section: 'Rock and roll',
 			items: [
-				{ item: 'Rockabilly', id: 34 },
-				{ item: 'Doo-wop', id: 35 },
-				{ item: 'Surf rock', id: 36 },
+				{ item: 'Rockabilly' },
+				{ item: 'Doo-wop' },
+				{ item: 'Surf rock' },
 			],
 		},
 		{
 			section: 'Country',
 			items: [
-				{ item: 'Bluegrass', id: 37 },
-				{ item: 'Outlaw country', id: 38 },
-				{ item: 'Western swing', id: 39 },
+				{ item: 'Bluegrass' },
+				{ item: 'Outlaw country' },
+				{ item: 'Western swing' },
 			],
 		},
 		{
 			section: 'Électronique',
 			items: [
-				{ item: 'Acid jazz', id: 40 },
-				{ item: 'Ambient', id: 41 },
-				{ item: 'Ambient house', id: 42 },
-				{ item: 'Chillout / Ambient', id: 43 },
-				{ item: 'Chiptune', id: 44 },
-				{ item: 'Disco', id: 45 },
-				{ item: 'Drone', id: 46 },
-				{ item: 'Électroacoustique', id: 47 },
-				{ item: 'Électronique', id: 48 },
-				{ item: 'Fusion', id: 49 },
-				{ item: 'Lounge', id: 50 },
-				{ item: 'Vaporwave', id: 51 },
-				{ item: 'Shatta', id: 52 },
-				{ item: 'Electro-swing', id: 53 },
-				{ item: 'Future house', id: 54 },
-				{ item: 'Synthwave', id: 55 },
-				{ item: 'Lo-fi', id: 56 },
-				{ item: 'Trance', id: 57 },
-				{ item: 'EDM', id: 58 },
-				{ item: 'Drum&Bass', id: 59 },
-				{ item: 'Uptempo', id: 60 },
-				{ item: 'Breakbeat', id: 61 },
-				{ item: 'Dubstep', id: 62 },
-				{ item: 'House', id: 63 },
-				{ item: 'Techno', id: 64 },
-				{ item: 'Alternative rock', id: 65 },
-				{ item: 'Indie rock', id: 66 },
-				{ item: 'Indie pop', id: 67 },
-				{ item: 'Pop', id: 68 },
-				{ item: 'Rap', id: 69 },
-				{ item: 'Trap', id: 70 },
-				{ item: 'Reggae fusion', id: 71 },
+				{ item: 'Acid jazz' },
+				{ item: 'Ambient' },
+				{ item: 'Ambient house' },
+				{ item: 'Chillout / Ambient' },
+				{ item: 'Chiptune' },
+				{ item: 'Disco' },
+				{ item: 'Drone' },
+				{ item: 'Électroacoustique' },
+				{ item: 'Électronique' },
+				{ item: 'Fusion' },
+				{ item: 'Lounge' },
+				{ item: 'Vaporwave' },
+				{ item: 'Shatta' },
+				{ item: 'Electro-swing' },
+				{ item: 'Future house' },
+				{ item: 'Synthwave' },
+				{ item: 'Lo-fi' },
+				{ item: 'Trance' },
+				{ item: 'EDM' },
+				{ item: 'Drum&Bass' },
+				{ item: 'Uptempo' },
+				{ item: 'Breakbeat' },
+				{ item: 'Dubstep' },
+				{ item: 'House' },
+				{ item: 'Techno' },
+				{ item: 'Alternative rock' },
+				{ item: 'Indie rock' },
+				{ item: 'Indie pop' },
+				{ item: 'Pop' },
+				{ item: 'Rap' },
+				{ item: 'Trap' },
+				{ item: 'Reggae fusion' },
+			],
+		},
+	]
+
+	const optionsStructureMusicale = [
+		{
+			section: 'Intro',
+			items: [
+				{ item: 'Court et doux' },
+				{ item: 'Progressif et captivant' },
+				{ item: 'Dynamique et énergique' },
+			],
+		},
+		{
+			section: 'Couplet',
+			items: [
+				{ item: 'Calme et apaisant' },
+				{ item: 'Rythmé et entraînant' },
+				{ item: 'Expressif et émotionnel' },
+			],
+		},
+		{
+			section: 'Refrain',
+			items: [
+				{ item: 'Mélodique et accrocheur' },
+				{ item: 'Puissant et percutant' },
+				{ item: 'Léger et aérien' },
+			],
+		},
+		{
+			section: 'Pont',
+			items: [
+				{ item: 'Surprenant et mystérieux' },
+				{ item: 'Transition en douceur' },
+				{ item: 'Intense et dramatique' },
+			],
+		},
+		{
+			section: 'Solo',
+			items: [
+				{ item: 'Guitare électrique' },
+				{ item: 'Clavier' },
+				{ item: 'Saxophone' },
+			],
+		},
+		{
+			section: 'Break',
+			items: [
+				{ item: 'Minimaliste' },
+				{ item: 'Explosif' },
+				{ item: 'Atmosphérique' },
+			],
+		},
+		{
+			section: 'Crescendo',
+			items: [
+				{ item: 'Progression graduelle' },
+				{ item: 'Montée rapide' },
+				{ item: 'Montée lente' },
+			],
+		},
+		{
+			section: 'Finale',
+			items: [
+				{ item: 'Épique et grandiose' },
+				{ item: 'Douce et contemplative' },
+				{ item: 'Soudaine et inattendue' },
+			],
+		},
+		{
+			section: 'Variation rythmique',
+			items: [{ item: 'Syncopé' }, { item: 'Reggae' }, { item: 'Valse' }],
+		},
+		{
+			section: 'Variation de tempo',
+			items: [
+				{ item: 'Rapide et frénétique' },
+				{ item: 'Lent et langoureux' },
+				{ item: 'Alternance dynamique' },
+			],
+		},
+		{
+			section: 'Instrumentation',
+			items: [
+				{ item: 'Orchestral' },
+				{ item: 'Rock' },
+				{ item: 'Électronique' },
+			],
+		},
+		{
+			section: 'Ambiance',
+			items: [
+				{ item: 'Joyeuse et festive' },
+				{ item: 'Mélancolique' },
+				{ item: 'Motivante et inspirante' },
 			],
 		},
 	]
@@ -549,7 +639,7 @@ function Step02Component() {
 			<div></div>
 			<section
 				className={
-					'mx-auto flex w-full max-w-7xl flex-col justify-center gap-12 px-10 py-10'
+					'mx-auto flex w-10/12 max-w-full flex-col justify-center gap-12 px-10 py-10'
 				}
 			>
 				{/*<p>template question oui / non</p>*/}
@@ -780,303 +870,347 @@ function Step02Component() {
 					Rassure toi, tu pourra ajouter ou supprimer des titres une fois ta
 					playlist générée
 				</p>
-
-				<Select
-					items={genresMusicaux}
-					label="Choix du genre musical"
-					variant="underlined"
-					size={'lg'}
-					isMultiline={true}
-					selectionMode="multiple"
-					placeholder="Rock, Pop, Electro, etc..."
-					labelPlacement="outside"
-					classNames={{
-						base: 'max-w-md',
-						trigger: 'min-h-unit-12 py-2',
-					}}
-					renderValue={items => {
-						return (
-							<div className="flex flex-wrap gap-2">
-								{items.map(item => (
-									<Chip key={item.key}>{item.data.genre}</Chip>
-								))}
-							</div>
-						)
-					}}
-				>
-					{user => (
-						<SelectItem key={user.id} textValue={user.genre}>
-							<div className="flex items-center gap-2">
-								<div className="flex flex-col">
-									<span className="text-small">{user.genre}</span>
+				<div className={'h-full border-4 border-black p-5'}>
+					<Select
+						items={genresMusicaux}
+						label="Choix du genre musical"
+						variant="underlined"
+						size={'lg'}
+						isMultiline={true}
+						selectionMode="multiple"
+						placeholder="Rock, Pop, Electro, etc..."
+						labelPlacement="outside"
+						classNames={{
+							base: 'max-w-md px-5 py-5',
+							trigger: 'min-h-unit-12 py-2',
+						}}
+						renderValue={items => {
+							return (
+								<div className="flex flex-wrap gap-2">
+									{items.map(item => (
+										<Chip key={item.key}>{item.data.genre}</Chip>
+									))}
 								</div>
-							</div>
-						</SelectItem>
-					)}
-				</Select>
-
-				<p>
-					Sous genre musicaux avec combinaison de multi select chip et sections
-				</p>
-
-				<Select
-					items={sousGenresMusicaux}
-					label="Choix du sous-genre musical"
-					variant="underlined"
-					isMultiline={true}
-					selectionMode="multiple"
-					placeholder="Rock, Pop, Electro, etc..."
-					labelPlacement="outside"
-					classNames={{
-						base: 'max-w-xs',
-						trigger: 'min-h-unit-12 py-2',
-					}}
-					// fonctionnement du visuel du select
-					renderValue={items => {
-						return (
-							<div className="flex flex-wrap gap-2">
-								{items.map(item => {
-									return <Chip key={item.key}>{item.textValue}</Chip>
-								})}
-							</div>
-						)
-					}}
-				>
-					{/*fonctionnement du select*/}
-					{/*// affichage des genres musicaux en sections*/}
-					{/*{sousGenresMusicaux.map(section => {*/}
-					{/*	console.log(section)*/}
-					{/*})}*/}
-					{sousGenresMusicaux.map(section => {
-						return (
-							<SelectSection
-								showDivider
-								key={section[0]}
-								title={section.section}
-								color={'primary'}
-							>
-								{/*affichage des sous genres musicaux*/}
-								{section.items.map(elem => {
-									return (
-										<SelectItem key={elem.id} title={elem.item}>
-											<div className="flex items-center gap-2">
-												<div className="flex flex-col">
-													<span className="text-small">{elem.item}</span>
-												</div>
-											</div>
-										</SelectItem>
-									)
-								})}
-							</SelectSection>
-						)
-					})}
-				</Select>
-
-				{/*===============================================================*/}
-
-				<Slider
-					label="Tempo"
-					showTooltip={true}
-					step={1}
-					size={'sm'}
-					color={'secondary'}
-					maxValue={200}
-					minValue={60}
-					marks={[
-						{
-							value: 100,
-							label: '100 BPM',
-						},
-						{
-							value: 140,
-							label: '140 BPM',
-						},
-						{
-							value: 175,
-							label: '175 BPM',
-						},
-					]}
-					defaultValue={[100, 140]}
-					className="max-w-3xl"
-				/>
-
-				<p>
-					{' '}
-					structure musicale avec combinaison de multi selct chip et sections{' '}
-				</p>
-
-				<Select
-					items={ambianceMusicale}
-					label="Choix de l'anmbiance musicale"
-					variant="underlined"
-					size={'lg'}
-					isMultiline={true}
-					selectionMode="multiple"
-					placeholder="Calme, Dynamique, etc..."
-					labelPlacement="outside"
-					classNames={{
-						base: 'max-w-md',
-						trigger: 'min-h-unit-12 py-2',
-					}}
-					renderValue={items => {
-						return (
-							<div className="flex flex-wrap gap-2">
-								{items.map(item => (
-									<Chip key={item.key}>{item.data.ambiance}</Chip>
-								))}
-							</div>
-						)
-					}}
-				>
-					{user => (
-						<SelectItem key={user.id} textValue={user.ambiance}>
-							<div className="flex items-center gap-2">
-								<div className="flex flex-col">
-									<span className="text-small">{user.ambiance}</span>
-								</div>
-							</div>
-						</SelectItem>
-					)}
-				</Select>
-
-				<Slider
-					label="Popularité"
-					showTooltip={true}
-					step={1}
-					showSteps={true}
-					size={'sm'}
-					color={'secondary'}
-					maxValue={11}
-					minValue={1}
-					marks={[
-						{ value: 1, label: 'Inconnu' },
-						{ value: 2, label: 'Méconnu' },
-						{ value: 3, label: 'Underground' },
-						{ value: 4, label: 'Émergent' },
-						{ value: 5, label: 'Niche' },
-						{ value: 6, label: 'Peu importe' },
-						{ value: 7, label: 'Populaire localement' },
-						{ value: 8, label: 'Reconnu nationalement' },
-						{ value: 9, label: 'Mainstream' },
-						{ value: 10, label: 'Iconique' },
-						{ value: 11, label: 'Culte' },
-					]}
-					defaultValue={6}
-					className="max-w-full"
-				/>
-
-				<Slider
-					label="Année"
-					step={1}
-					size={'sm'}
-					color={'secondary'}
-					maxValue={2024}
-					minValue={1920}
-					defaultValue={[1980, 2010]}
-					className="max-w-md"
-				/>
-
-				<Slider
-					label="Durée"
-					step={0.1}
-					size={'sm'}
-					color={'secondary'}
-					showTooltip={true}
-					formatOptions={'{value} min'}
-					tooltipValueFormatOptions={'{value} min'}
-					maxValue={10}
-					minValue={0.5}
-					defaultValue={[2.5, 4]}
-					marks={[
-						{
-							value: 0.5,
-							label: '30 sec et moins',
-						},
-						{ value: 2, label: '2 min' },
-						{
-							value: 4,
-							label: '4 min',
-						},
-						{
-							value: 6,
-							label: '6 min',
-						},
-						{
-							value: 8,
-							label: '8 min',
-						},
-						{
-							value: 10,
-							label: '10+ min',
-						},
-					]}
-					className="max-w-md"
-				/>
-
-				<div className=" flex w-1/2 flex-wrap gap-2">
-					<Input
-						type="Genre"
-						label="Origine culturelle ou géographique"
-						defaultValue=""
-						className="max-w-xs"
-						onChange={e => setName1(e.target.value)}
-					/>
-					<button
-						className={
-							'm-1 w-[80px] rounded-2xl bg-mainorange-900/70 p-1 hover:bg-mainaccent-700/70'
-						}
-						onClick={() => {
-							setChip1([...chip1, { id: nextId++, name: name1 }])
+							)
 						}}
 					>
-						Ajouter
-					</button>
+						{user => (
+							<SelectItem key={user.id} textValue={user.genre}>
+								<div className="flex items-center gap-2">
+									<div className="flex flex-col">
+										<span className="text-small">{user.genre}</span>
+									</div>
+								</div>
+							</SelectItem>
+						)}
+					</Select>
 
-					{chip1.map((chipItem, index) => (
-						<Chip
-							key={index}
-							onClose={() => handleClose1(chipItem)}
-							variant="solid"
-							radius={'md'}
+					<Select
+						items={sousGenresMusicaux}
+						label="Choix du sous-genre musical"
+						variant="underlined"
+						isMultiline={true}
+						selectionMode="multiple"
+						placeholder="Rock, Pop, Electro, etc..."
+						labelPlacement="outside"
+						classNames={{
+							base: 'max-w-xs px-5 py-5',
+							trigger: 'min-h-unit-12 py-2',
+						}}
+						// fonctionnement du visuel du select
+						renderValue={items => {
+							return (
+								<div className="flex flex-wrap gap-2">
+									{items.map(item => {
+										return <Chip key={item.key}>{item.textValue}</Chip>
+									})}
+								</div>
+							)
+						}}
+					>
+						{/*fonctionnement du select*/}
+						{/*// affichage des genres musicaux en sections*/}
+						{/*{sousGenresMusicaux.map(section => {*/}
+						{/*	console.log(section)*/}
+						{/*})}*/}
+						{sousGenresMusicaux.map(section => {
+							return (
+								<SelectSection
+									showDivider
+									key={section[0]}
+									title={section.section}
+									color={'primary'}
+								>
+									{/*affichage des sous genres musicaux*/}
+									{section.items.map(elem => {
+										return (
+											<SelectItem key={elem.id} title={elem.item}>
+												<div className="flex items-center gap-2">
+													<div className="flex flex-col">
+														<span className="text-small">{elem.item}</span>
+													</div>
+												</div>
+											</SelectItem>
+										)
+									})}
+								</SelectSection>
+							)
+						})}
+					</Select>
+
+					<Slider
+						label="Tempo"
+						showTooltip={true}
+						step={1}
+						size={'sm'}
+						color={'secondary'}
+						maxValue={200}
+						minValue={60}
+						marks={[
+							{
+								value: 100,
+								label: '100 BPM',
+							},
+							{
+								value: 140,
+								label: '140 BPM',
+							},
+							{
+								value: 175,
+								label: '175 BPM',
+							},
+						]}
+						defaultValue={[100, 140]}
+						className="max-w-3xl px-5 py-5"
+					/>
+
+					<p>
+						{' '}
+						structure musicale avec combinaison de multi selct chip et sections{' '}
+					</p>
+					<Select
+						items={optionsStructureMusicale}
+						label="Choix de la structure musicale"
+						variant="underlined"
+						isMultiline={true}
+						selectionMode="multiple"
+						placeholder=""
+						labelPlacement="outside"
+						classNames={{
+							base: 'max-w-xs px-5 py-5',
+							trigger: 'min-h-unit-12 py-2',
+						}}
+						// fonctionnement du visuel du select
+						renderValue={items => {
+							return (
+								<div className="flex flex-wrap gap-2">
+									{items.map(item => {
+										return <Chip key={item.key}>{item.textValue}</Chip>
+									})}
+								</div>
+							)
+						}}
+					>
+						{optionsStructureMusicale.map(section => {
+							return (
+								<SelectSection
+									showDivider
+									key={section[0]}
+									title={section.section}
+									color={'primary'}
+								>
+									{/*affichage des sous genres musicaux*/}
+									{section.items.map(elem => {
+										return (
+											<SelectItem key={elem.id} title={elem.item}>
+												<div className="flex items-center gap-2">
+													<div className="flex flex-col">
+														<span className="text-small">{elem.item}</span>
+													</div>
+												</div>
+											</SelectItem>
+										)
+									})}
+								</SelectSection>
+							)
+						})}
+					</Select>
+
+					<Select
+						items={ambianceMusicale}
+						label="Choix de l'anmbiance musicale"
+						variant="underlined"
+						size={'lg'}
+						isMultiline={true}
+						selectionMode="multiple"
+						placeholder="Calme, Dynamique, etc..."
+						labelPlacement="outside"
+						classNames={{
+							base: 'max-w-md px-5 py-5',
+							trigger: 'min-h-unit-12 py-2',
+						}}
+						renderValue={items => {
+							return (
+								<div className="flex flex-wrap gap-2">
+									{items.map(item => (
+										<Chip key={item.key}>{item.data.ambiance}</Chip>
+									))}
+								</div>
+							)
+						}}
+					>
+						{user => (
+							<SelectItem key={user.id} textValue={user.ambiance}>
+								<div className="flex items-center gap-2">
+									<div className="flex flex-col">
+										<span className="text-small">{user.ambiance}</span>
+									</div>
+								</div>
+							</SelectItem>
+						)}
+					</Select>
+
+					<Slider
+						label="Popularité"
+						showTooltip={true}
+						step={1}
+						showSteps={true}
+						size={'sm'}
+						color={'secondary'}
+						maxValue={11}
+						minValue={1}
+						marks={[
+							{ value: 1, label: 'Inconnu' },
+							{ value: 2, label: 'Méconnu' },
+							{ value: 3, label: 'Underground' },
+							{ value: 4, label: 'Émergent' },
+							{ value: 5, label: 'Niche' },
+							{ value: 6, label: 'Peu importe' },
+							{ value: 7, label: 'Populaire localement' },
+							{ value: 8, label: 'Reconnu nationalement' },
+							{ value: 9, label: 'Mainstream' },
+							{ value: 10, label: 'Iconique' },
+							{ value: 11, label: 'Culte' },
+						]}
+						defaultValue={6}
+						className="max-w-full px-5 py-5"
+					/>
+
+					<Slider
+						label="Année"
+						step={1}
+						size={'sm'}
+						color={'secondary'}
+						maxValue={2024}
+						minValue={1920}
+						defaultValue={[1980, 2010]}
+						className="max-w-md px-5 py-5"
+					/>
+
+					<Slider
+						label="Durée"
+						step={0.1}
+						size={'sm'}
+						color={'secondary'}
+						showTooltip={true}
+						formatOptions={'{value} min'}
+						tooltipValueFormatOptions={'{value} min'}
+						maxValue={10}
+						minValue={0.5}
+						defaultValue={[2.5, 4]}
+						marks={[
+							{
+								value: 0.5,
+								label: '30 sec et moins',
+							},
+							{ value: 2, label: '2 min' },
+							{
+								value: 4,
+								label: '4 min',
+							},
+							{
+								value: 6,
+								label: '6 min',
+							},
+							{
+								value: 8,
+								label: '8 min',
+							},
+							{
+								value: 10,
+								label: '10+ min',
+							},
+						]}
+						className="max-w-md px-5 py-5"
+					/>
+
+					<div className=" flex w-1/2 flex-row flex-wrap items-center gap-2">
+						<Input
+							type="Genre"
+							label="Origine culturelle ou géographique"
+							defaultValue=""
+							className="max-w-xs px-5 py-5 "
+							onChange={e => setName1(e.target.value)}
+						/>
+						<button
+							className={
+								'm-1 h-[60px] w-[80px] rounded-2xl bg-mainorange-900/70 p-1 hover:bg-mainaccent-700/70'
+							}
+							onClick={() => {
+								setChip1([...chip1, { id: nextId++, name: name1 }])
+							}}
 						>
-							{chipItem.name}
-						</Chip>
-					))}
+							Ajouter
+						</button>
+
+						{chip1.map((chipItem, index) => (
+							<Chip
+								key={index}
+								onClose={() => handleClose1(chipItem)}
+								variant="solid"
+								radius={'md'}
+							>
+								{chipItem.name}
+							</Chip>
+						))}
+					</div>
+
+					<Select
+						label="Choix de la langue des paroles"
+						variant="underlined"
+						size={'lg'}
+						isMultiline={true}
+						selectionMode="multiple"
+						items={languesDeLaMusique}
+						placeholder="anglais, français, etc..."
+						labelPlacement="outside"
+						classNames={{
+							base: 'max-w-md px-5 py-5',
+							trigger: 'min-h-unit-12 py-2',
+						}}
+						renderValue={items => {
+							return (
+								<div className="flex flex-wrap gap-2">
+									{items.map(item => (
+										<Chip key={item.key}>{item.data.langue}</Chip>
+									))}
+								</div>
+							)
+						}}
+					>
+						{user => (
+							<SelectItem key={user.id} textValue={user.langue}>
+								<div className="flex items-center gap-2">
+									<div className="flex flex-col">
+										<span className="text-small">{user.langue}</span>
+									</div>
+								</div>
+							</SelectItem>
+						)}
+					</Select>
 				</div>
 
-				<Select
-					label="Choix de la langue des paroles"
-					variant="underlined"
-					size={'lg'}
-					isMultiline={true}
-					selectionMode="multiple"
-					items={languesDeLaMusique}
-					placeholder="anglais, français, etc..."
-					labelPlacement="outside"
-					classNames={{
-						base: 'max-w-md',
-						trigger: 'min-h-unit-12 py-2',
-					}}
-					renderValue={items => {
-						return (
-							<div className="flex flex-wrap gap-2">
-								{items.map(item => (
-									<Chip key={item.key}>{item.data.langue}</Chip>
-								))}
-							</div>
-						)
-					}}
-				>
-					{user => (
-						<SelectItem key={user.id} textValue={user.langue}>
-							<div className="flex items-center gap-2">
-								<div className="flex flex-col">
-									<span className="text-small">{user.langue}</span>
-								</div>
-							</div>
-						</SelectItem>
-					)}
-				</Select>
+				<h2 className={'text-2xl font-bold'}>Options secondaires </h2>
 			</section>
 		</>
 	)
