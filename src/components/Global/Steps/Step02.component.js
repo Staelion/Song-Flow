@@ -9,6 +9,10 @@ import {
 	Input,
 	Slider,
 	SelectSection,
+	Tabs,
+	Tab,
+	Card,
+	CardBody,
 } from '@nextui-org/react'
 
 // templates
@@ -858,357 +862,394 @@ function Step02Component() {
 				{/*	)}*/}
 				{/*</Select>*/}
 
-				{/*Vrai questionnaire */}
-
-				<h2 className={'text-2xl font-bold'}>Options principales </h2>
-				<h4>
-					Ici tu vas pouvoir choisir les paramètres de ta playlist personnalisée
-					! tout est optionnel, mais garde en tête que plus tu aura défini d
-					{"'"}otions plus la playlist répondra a tes besoins
-				</h4>
-				<p>
-					Rassure toi, tu pourra ajouter ou supprimer des titres une fois ta
-					playlist générée
-				</p>
-				<div className={'h-full border-4 border-black p-5'}>
-					<Select
-						items={genresMusicaux}
-						label="Choix du genre musical"
-						variant="underlined"
+				{/*code de la tabs */}
+				<div className="flex w-full flex-col">
+					<Tabs
+						aria-label="Options"
+						variant={'underlined'}
 						size={'lg'}
-						isMultiline={true}
-						selectionMode="multiple"
-						placeholder="Rock, Pop, Electro, etc..."
-						labelPlacement="outside"
-						classNames={{
-							base: 'max-w-md px-5 py-5',
-							trigger: 'min-h-unit-12 py-2',
-						}}
-						renderValue={items => {
-							return (
-								<div className="flex flex-wrap gap-2">
-									{items.map(item => (
-										<Chip key={item.key}>{item.data.genre}</Chip>
-									))}
-								</div>
-							)
-						}}
+						radius={'full'}
+						className={'w-fit rounded-full border-2 border-black'}
 					>
-						{user => (
-							<SelectItem key={user.id} textValue={user.genre}>
-								<div className="flex items-center gap-2">
-									<div className="flex flex-col">
-										<span className="text-small">{user.genre}</span>
-									</div>
-								</div>
-							</SelectItem>
-						)}
-					</Select>
-
-					<Select
-						items={sousGenresMusicaux}
-						label="Choix du sous-genre musical"
-						variant="underlined"
-						isMultiline={true}
-						selectionMode="multiple"
-						placeholder="Rock, Pop, Electro, etc..."
-						labelPlacement="outside"
-						classNames={{
-							base: 'max-w-xs px-5 py-5',
-							trigger: 'min-h-unit-12 py-2',
-						}}
-						// fonctionnement du visuel du select
-						renderValue={items => {
-							return (
-								<div className="flex flex-wrap gap-2">
-									{items.map(item => {
-										return <Chip key={item.key}>{item.textValue}</Chip>
-									})}
-								</div>
-							)
-						}}
-					>
-						{/*fonctionnement du select*/}
-						{/*// affichage des genres musicaux en sections*/}
-						{/*{sousGenresMusicaux.map(section => {*/}
-						{/*	console.log(section)*/}
-						{/*})}*/}
-						{sousGenresMusicaux.map(section => {
-							return (
-								<SelectSection
-									showDivider
-									key={section[0]}
-									title={section.section}
-									color={'primary'}
-								>
-									{/*affichage des sous genres musicaux*/}
-									{section.items.map(elem => {
-										return (
-											<SelectItem key={elem.id} title={elem.item}>
-												<div className="flex items-center gap-2">
-													<div className="flex flex-col">
-														<span className="text-small">{elem.item}</span>
+						<Tab key="main" title="Options principales">
+							<Card radius={'lg'} className={'bg-white bg-opacity-40'}>
+								<CardBody>
+									<h4>
+										Ici tu vas pouvoir choisir les paramètres de ta playlist
+										personnalisée ! tout est optionnel, mais garde en tête que
+										plus tu aura défini d{"'"}otions plus la playlist répondra a
+										tes besoins
+									</h4>
+									<p>
+										Rassure toi, tu pourra ajouter ou supprimer des titres une
+										fois ta playlist générée
+									</p>
+									<div className={'h-full border-2 border-mainaccent-500 p-5'}>
+										<Select
+											items={genresMusicaux}
+											label="Choix du genre musical"
+											variant="underlined"
+											size={'lg'}
+											isMultiline={true}
+											selectionMode="multiple"
+											placeholder="Rock, Pop, Electro, etc..."
+											labelPlacement="outside"
+											classNames={{
+												base: 'max-w-md px-5 py-5',
+												trigger: 'min-h-unit-12 py-2',
+											}}
+											renderValue={items => {
+												return (
+													<div className="flex flex-wrap gap-2">
+														{items.map(item => (
+															<Chip key={item.key}>{item.data.genre}</Chip>
+														))}
 													</div>
-												</div>
-											</SelectItem>
-										)
-									})}
-								</SelectSection>
-							)
-						})}
-					</Select>
-
-					<Slider
-						label="Tempo"
-						showTooltip={true}
-						step={1}
-						size={'sm'}
-						color={'secondary'}
-						maxValue={200}
-						minValue={60}
-						marks={[
-							{
-								value: 100,
-								label: '100 BPM',
-							},
-							{
-								value: 140,
-								label: '140 BPM',
-							},
-							{
-								value: 175,
-								label: '175 BPM',
-							},
-						]}
-						defaultValue={[100, 140]}
-						className="max-w-3xl px-5 py-5"
-					/>
-
-					<p>
-						{' '}
-						structure musicale avec combinaison de multi selct chip et sections{' '}
-					</p>
-					<Select
-						items={optionsStructureMusicale}
-						label="Choix de la structure musicale"
-						variant="underlined"
-						isMultiline={true}
-						selectionMode="multiple"
-						placeholder=""
-						labelPlacement="outside"
-						classNames={{
-							base: 'max-w-xs px-5 py-5',
-							trigger: 'min-h-unit-12 py-2',
-						}}
-						// fonctionnement du visuel du select
-						renderValue={items => {
-							return (
-								<div className="flex flex-wrap gap-2">
-									{items.map(item => {
-										return <Chip key={item.key}>{item.textValue}</Chip>
-									})}
-								</div>
-							)
-						}}
-					>
-						{optionsStructureMusicale.map(section => {
-							return (
-								<SelectSection
-									showDivider
-									key={section[0]}
-									title={section.section}
-									color={'primary'}
-								>
-									{/*affichage des sous genres musicaux*/}
-									{section.items.map(elem => {
-										return (
-											<SelectItem key={elem.id} title={elem.item}>
-												<div className="flex items-center gap-2">
-													<div className="flex flex-col">
-														<span className="text-small">{elem.item}</span>
+												)
+											}}
+										>
+											{user => (
+												<SelectItem key={user.id} textValue={user.genre}>
+													<div className="flex items-center gap-2">
+														<div className="flex flex-col">
+															<span className="text-small">{user.genre}</span>
+														</div>
 													</div>
-												</div>
-											</SelectItem>
-										)
-									})}
-								</SelectSection>
-							)
-						})}
-					</Select>
+												</SelectItem>
+											)}
+										</Select>
 
-					<Select
-						items={ambianceMusicale}
-						label="Choix de l'anmbiance musicale"
-						variant="underlined"
-						size={'lg'}
-						isMultiline={true}
-						selectionMode="multiple"
-						placeholder="Calme, Dynamique, etc..."
-						labelPlacement="outside"
-						classNames={{
-							base: 'max-w-md px-5 py-5',
-							trigger: 'min-h-unit-12 py-2',
-						}}
-						renderValue={items => {
-							return (
-								<div className="flex flex-wrap gap-2">
-									{items.map(item => (
-										<Chip key={item.key}>{item.data.ambiance}</Chip>
-									))}
-								</div>
-							)
-						}}
-					>
-						{user => (
-							<SelectItem key={user.id} textValue={user.ambiance}>
-								<div className="flex items-center gap-2">
-									<div className="flex flex-col">
-										<span className="text-small">{user.ambiance}</span>
+										<Select
+											items={sousGenresMusicaux}
+											label="Choix du sous-genre musical"
+											variant="underlined"
+											isMultiline={true}
+											selectionMode="multiple"
+											placeholder="Rock, Pop, Electro, etc..."
+											labelPlacement="outside"
+											classNames={{
+												base: 'max-w-xs px-5 py-5',
+												trigger: 'min-h-unit-12 py-2',
+											}}
+											// fonctionnement du visuel du select
+											renderValue={items => {
+												return (
+													<div className="flex flex-wrap gap-2">
+														{items.map(item => {
+															return (
+																<Chip key={item.key}>{item.textValue}</Chip>
+															)
+														})}
+													</div>
+												)
+											}}
+										>
+											{/*fonctionnement du select*/}
+											{/*// affichage des genres musicaux en sections*/}
+											{/*{sousGenresMusicaux.map(section => {*/}
+											{/*	console.log(section)*/}
+											{/*})}*/}
+											{sousGenresMusicaux.map(section => {
+												return (
+													<SelectSection
+														showDivider
+														key={section[0]}
+														title={section.section}
+														color={'primary'}
+													>
+														{/*affichage des sous genres musicaux*/}
+														{section.items.map(elem => {
+															return (
+																<SelectItem key={elem.id} title={elem.item}>
+																	<div className="flex items-center gap-2">
+																		<div className="flex flex-col">
+																			<span className="text-small">
+																				{elem.item}
+																			</span>
+																		</div>
+																	</div>
+																</SelectItem>
+															)
+														})}
+													</SelectSection>
+												)
+											})}
+										</Select>
+
+										<Slider
+											label="Tempo"
+											showTooltip={true}
+											step={1}
+											size={'sm'}
+											color={'secondary'}
+											maxValue={200}
+											minValue={60}
+											marks={[
+												{
+													value: 100,
+													label: '100 BPM',
+												},
+												{
+													value: 140,
+													label: '140 BPM',
+												},
+												{
+													value: 175,
+													label: '175 BPM',
+												},
+											]}
+											defaultValue={[100, 140]}
+											className="max-w-3xl px-5 py-5"
+										/>
+
+										<p>
+											{' '}
+											structure musicale avec combinaison de multi selct chip et
+											sections{' '}
+										</p>
+										<Select
+											items={optionsStructureMusicale}
+											label="Choix de la structure musicale"
+											variant="underlined"
+											isMultiline={true}
+											selectionMode="multiple"
+											placeholder=""
+											labelPlacement="outside"
+											classNames={{
+												base: 'max-w-xs px-5 py-5',
+												trigger: 'min-h-unit-12 py-2',
+											}}
+											// fonctionnement du visuel du select
+											renderValue={items => {
+												return (
+													<div className="flex flex-wrap gap-2">
+														{items.map(item => {
+															return (
+																<Chip key={item.key}>{item.textValue}</Chip>
+															)
+														})}
+													</div>
+												)
+											}}
+										>
+											{optionsStructureMusicale.map(section => {
+												return (
+													<SelectSection
+														showDivider
+														key={section[0]}
+														title={section.section}
+														color={'primary'}
+													>
+														{/*affichage des sous genres musicaux*/}
+														{section.items.map(elem => {
+															return (
+																<SelectItem key={elem.id} title={elem.item}>
+																	<div className="flex items-center gap-2">
+																		<div className="flex flex-col">
+																			<span className="text-small">
+																				{elem.item}
+																			</span>
+																		</div>
+																	</div>
+																</SelectItem>
+															)
+														})}
+													</SelectSection>
+												)
+											})}
+										</Select>
+
+										<Select
+											items={ambianceMusicale}
+											label="Choix de l'anmbiance musicale"
+											variant="underlined"
+											size={'lg'}
+											isMultiline={true}
+											selectionMode="multiple"
+											placeholder="Calme, Dynamique, etc..."
+											labelPlacement="outside"
+											classNames={{
+												base: 'max-w-md px-5 py-5',
+												trigger: 'min-h-unit-12 py-2',
+											}}
+											renderValue={items => {
+												return (
+													<div className="flex flex-wrap gap-2">
+														{items.map(item => (
+															<Chip key={item.key}>{item.data.ambiance}</Chip>
+														))}
+													</div>
+												)
+											}}
+										>
+											{user => (
+												<SelectItem key={user.id} textValue={user.ambiance}>
+													<div className="flex items-center gap-2">
+														<div className="flex flex-col">
+															<span className="text-small">
+																{user.ambiance}
+															</span>
+														</div>
+													</div>
+												</SelectItem>
+											)}
+										</Select>
+
+										<Slider
+											label="Popularité"
+											showTooltip={true}
+											step={1}
+											showSteps={true}
+											size={'sm'}
+											color={'secondary'}
+											maxValue={8}
+											minValue={1}
+											marks={[
+												{ value: 1, label: 'Inconnu' },
+												{ value: 2, label: 'Méconnu' },
+												{ value: 3, label: 'Underground' },
+												{ value: 4, label: 'Émergent' },
+												{ value: 5, label: 'Niche' },
+												{ value: 6, label: 'Peu importe' },
+												{ value: 7, label: 'Populaire localement' },
+												{ value: 8, label: 'Reconnu mondialement' },
+												// { value: 9, label: 'Mainstream' },
+												// { value: 10, label: 'Iconique' },
+												// { value: 11, label: 'Culte' },
+											]}
+											defaultValue={6}
+											className="max-w-full px-5 py-5"
+										/>
+
+										<Slider
+											label="Année"
+											step={1}
+											size={'sm'}
+											color={'secondary'}
+											maxValue={2024}
+											minValue={1920}
+											defaultValue={[1980, 2010]}
+											className="max-w-md px-5 py-5"
+										/>
+
+										<Slider
+											label="Durée"
+											step={0.1}
+											size={'sm'}
+											color={'secondary'}
+											showTooltip={true}
+											formatOptions={'{value} min'}
+											tooltipValueFormatOptions={'{value} min'}
+											maxValue={10}
+											minValue={0.5}
+											defaultValue={[2.5, 4]}
+											marks={[
+												{
+													value: 0.5,
+													label: '30 sec et moins',
+												},
+												{ value: 2, label: '2 min' },
+												{
+													value: 4,
+													label: '4 min',
+												},
+												{
+													value: 6,
+													label: '6 min',
+												},
+												{
+													value: 8,
+													label: '8 min',
+												},
+												{
+													value: 10,
+													label: '10+ min',
+												},
+											]}
+											className="max-w-md px-5 py-5"
+										/>
+
+										<div className=" flex w-1/2 flex-row flex-wrap items-center gap-2">
+											<Input
+												type="Genre"
+												label="Origine culturelle ou géographique"
+												defaultValue=""
+												className="max-w-xs px-5 py-5 "
+												onChange={e => setName1(e.target.value)}
+											/>
+											<button
+												className={
+													'm-1 h-[60px] w-[80px] rounded-2xl border-2 p-1 hover:border-none hover:bg-mainaccent-700/70'
+												}
+												onClick={() => {
+													setChip1([...chip1, { id: nextId++, name: name1 }])
+												}}
+											>
+												Ajouter
+											</button>
+
+											{chip1.map((chipItem, index) => (
+												<Chip
+													key={index}
+													onClose={() => handleClose1(chipItem)}
+													variant="solid"
+													radius={'md'}
+												>
+													{chipItem.name}
+												</Chip>
+											))}
+										</div>
+
+										<Select
+											label="Choix de la langue des paroles"
+											variant="underlined"
+											size={'lg'}
+											isMultiline={true}
+											selectionMode="multiple"
+											items={languesDeLaMusique}
+											placeholder="anglais, français, etc..."
+											labelPlacement="outside"
+											classNames={{
+												base: 'max-w-md px-5 py-5',
+												trigger: 'min-h-unit-12 py-2',
+											}}
+											renderValue={items => {
+												return (
+													<div className="flex flex-wrap gap-2">
+														{items.map(item => (
+															<Chip key={item.key}>{item.data.langue}</Chip>
+														))}
+													</div>
+												)
+											}}
+										>
+											{user => (
+												<SelectItem key={user.id} textValue={user.langue}>
+													<div className="flex items-center gap-2">
+														<div className="flex flex-col">
+															<span className="text-small">{user.langue}</span>
+														</div>
+													</div>
+												</SelectItem>
+											)}
+										</Select>
 									</div>
-								</div>
-							</SelectItem>
-						)}
-					</Select>
-
-					<Slider
-						label="Popularité"
-						showTooltip={true}
-						step={1}
-						showSteps={true}
-						size={'sm'}
-						color={'secondary'}
-						maxValue={11}
-						minValue={1}
-						marks={[
-							{ value: 1, label: 'Inconnu' },
-							{ value: 2, label: 'Méconnu' },
-							{ value: 3, label: 'Underground' },
-							{ value: 4, label: 'Émergent' },
-							{ value: 5, label: 'Niche' },
-							{ value: 6, label: 'Peu importe' },
-							{ value: 7, label: 'Populaire localement' },
-							{ value: 8, label: 'Reconnu nationalement' },
-							{ value: 9, label: 'Mainstream' },
-							{ value: 10, label: 'Iconique' },
-							{ value: 11, label: 'Culte' },
-						]}
-						defaultValue={6}
-						className="max-w-full px-5 py-5"
-					/>
-
-					<Slider
-						label="Année"
-						step={1}
-						size={'sm'}
-						color={'secondary'}
-						maxValue={2024}
-						minValue={1920}
-						defaultValue={[1980, 2010]}
-						className="max-w-md px-5 py-5"
-					/>
-
-					<Slider
-						label="Durée"
-						step={0.1}
-						size={'sm'}
-						color={'secondary'}
-						showTooltip={true}
-						formatOptions={'{value} min'}
-						tooltipValueFormatOptions={'{value} min'}
-						maxValue={10}
-						minValue={0.5}
-						defaultValue={[2.5, 4]}
-						marks={[
-							{
-								value: 0.5,
-								label: '30 sec et moins',
-							},
-							{ value: 2, label: '2 min' },
-							{
-								value: 4,
-								label: '4 min',
-							},
-							{
-								value: 6,
-								label: '6 min',
-							},
-							{
-								value: 8,
-								label: '8 min',
-							},
-							{
-								value: 10,
-								label: '10+ min',
-							},
-						]}
-						className="max-w-md px-5 py-5"
-					/>
-
-					<div className=" flex w-1/2 flex-row flex-wrap items-center gap-2">
-						<Input
-							type="Genre"
-							label="Origine culturelle ou géographique"
-							defaultValue=""
-							className="max-w-xs px-5 py-5 "
-							onChange={e => setName1(e.target.value)}
-						/>
-						<button
-							className={
-								'm-1 h-[60px] w-[80px] rounded-2xl bg-mainorange-900/70 p-1 hover:bg-mainaccent-700/70'
-							}
-							onClick={() => {
-								setChip1([...chip1, { id: nextId++, name: name1 }])
-							}}
-						>
-							Ajouter
-						</button>
-
-						{chip1.map((chipItem, index) => (
-							<Chip
-								key={index}
-								onClose={() => handleClose1(chipItem)}
-								variant="solid"
-								radius={'md'}
-							>
-								{chipItem.name}
-							</Chip>
-						))}
-					</div>
-
-					<Select
-						label="Choix de la langue des paroles"
-						variant="underlined"
-						size={'lg'}
-						isMultiline={true}
-						selectionMode="multiple"
-						items={languesDeLaMusique}
-						placeholder="anglais, français, etc..."
-						labelPlacement="outside"
-						classNames={{
-							base: 'max-w-md px-5 py-5',
-							trigger: 'min-h-unit-12 py-2',
-						}}
-						renderValue={items => {
-							return (
-								<div className="flex flex-wrap gap-2">
-									{items.map(item => (
-										<Chip key={item.key}>{item.data.langue}</Chip>
-									))}
-								</div>
-							)
-						}}
-					>
-						{user => (
-							<SelectItem key={user.id} textValue={user.langue}>
-								<div className="flex items-center gap-2">
-									<div className="flex flex-col">
-										<span className="text-small">{user.langue}</span>
-									</div>
-								</div>
-							</SelectItem>
-						)}
-					</Select>
+								</CardBody>
+							</Card>
+						</Tab>
+						<Tab key="second" title="Options secondaires">
+							<Card radius={'lg'}>
+								<CardBody>
+									Ut enim ad minim veniam, quis nostrud exercitation ullamco
+									laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+									irure dolor in reprehenderit in voluptate velit esse cillum
+									dolore eu fugiat nulla pariatur.
+								</CardBody>
+							</Card>
+						</Tab>
+					</Tabs>
 				</div>
+				{/*Vrai questionnaire */}
 
 				<h2 className={'text-2xl font-bold'}>Options secondaires </h2>
 			</section>
