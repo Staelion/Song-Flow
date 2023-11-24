@@ -235,124 +235,6 @@ function Step02Component() {
 
 	const sousGenresMusicaux = [
 		{
-			section: 'Classique',
-			items: [
-				{ item: 'Baroque' },
-				{ item: 'Classique' },
-				{ item: 'Romantique' },
-				{ item: 'Contemporain' },
-			],
-		},
-		{
-			section: 'Jazz',
-			items: [
-				{ item: 'Dixieland' },
-				{ item: 'Swing' },
-				{ item: 'Bebop' },
-				{ item: 'Cool jazz' },
-			],
-		},
-		{
-			section: 'Blues',
-			items: [
-				{ item: 'Delta blues' },
-				{ item: 'Chicago blues' },
-				{ item: 'Jump blues' },
-			],
-		},
-		{
-			section: 'Rock',
-			items: [
-				{ item: 'Rockabilly' },
-				{ item: 'Rock psychédélique' },
-				{ item: 'Rock progressif' },
-			],
-		},
-		{
-			section: 'Musique traditionnelle',
-			items: [
-				{ item: 'Musique celtique' },
-				{ item: 'Musique folklorique' },
-				{ item: 'Musique du monde' },
-			],
-		},
-		{
-			section: 'Soul',
-			items: [
-				{ item: 'Motown' },
-				{ item: 'Northern soul' },
-				{ item: 'Southern soul' },
-			],
-		},
-		{
-			section: 'Country',
-			items: [
-				{ item: 'Country western' },
-				{ item: 'Country pop' },
-				{ item: 'Honky-tonk' },
-			],
-		},
-		{
-			section: 'Reggae',
-			items: [
-				{ item: 'Roots reggae' },
-				{ item: 'Dub' },
-				{ item: 'Rocksteady' },
-			],
-		},
-		{
-			section: 'Funk',
-			items: [
-				{ item: 'Funk originel' },
-				{ item: 'P-Funk' },
-				{ item: 'Funk rock' },
-			],
-		},
-		{
-			section: 'Disco',
-			items: [
-				{ item: 'Disco originel' },
-				{ item: 'Euro disco' },
-				{ item: 'Italo disco' },
-			],
-		},
-		{
-			section: 'Hip-hop / Rap',
-			items: [
-				{ item: 'Old school rap' },
-				{ item: 'Golden age hip-hop' },
-				{ item: 'East coast rap' },
-			],
-		},
-		{
-			section: 'Rhythm and Blues (R&B)',
-			items: [
-				{ item: 'Doo-wop' },
-				{ item: 'Motown' },
-				{ item: 'New jack swing' },
-			],
-		},
-		{
-			section: 'Swing',
-			items: [{ item: 'Swing' }, { item: 'Swing revival' }],
-		},
-		{
-			section: 'Rock and roll',
-			items: [
-				{ item: 'Rockabilly' },
-				{ item: 'Doo-wop' },
-				{ item: 'Surf rock' },
-			],
-		},
-		{
-			section: 'Country',
-			items: [
-				{ item: 'Bluegrass' },
-				{ item: 'Outlaw country' },
-				{ item: 'Western swing' },
-			],
-		},
-		{
 			section: 'Électronique',
 			items: [
 				{ item: 'Acid jazz' },
@@ -388,6 +270,197 @@ function Step02Component() {
 				{ item: 'Trap' },
 				{ item: 'Reggae fusion' },
 			],
+		},
+		{
+			section: 'Rock and roll',
+			items: [
+				{ item: 'Rock & Roll' },
+				{ item: 'Rockabilly' },
+				{ item: 'Classic Rock' },
+				{ item: 'Garage Rock' },
+				{ item: 'Punk Rock' },
+				{ item: 'Hard Rock' },
+				{ item: 'Progressive Rock' },
+				{ item: 'Glam Rock' },
+				{ item: 'Alternative Rock' },
+				{ item: 'Indie Rock' },
+				{ item: 'Folk Rock' },
+				{ item: 'Psychedelic Rock' },
+				{ item: 'Blues Rock' },
+				{ item: 'Southern Rock' },
+				{ item: 'Rock Fusion' },
+				{ item: 'Rock en Español' },
+				{ item: 'Rock Noir' },
+				{ item: 'Rock Instrumental' },
+				{ item: 'Rock Électronique' },
+				{ item: 'Rockabilly' },
+				{ item: 'Doo-wop' },
+				{ item: 'Surf rock' },
+				{ item: 'Rock psychédélique' },
+				{ item: 'Rock progressif' },
+			],
+		},
+		{
+			section: 'Métal',
+			items: [
+				{ item: 'Heavy Metal' },
+				{ item: 'Thrash Metal' },
+				{ item: 'Death Metal' },
+				{ item: 'Black Metal' },
+				{ item: 'Power Metal' },
+				{ item: 'Progressive Metal' },
+				{ item: 'Doom Metal' },
+				{ item: 'Gothic Metal' },
+				{ item: 'Symphonic Metal' },
+				{ item: 'Nu Metal' },
+				{ item: 'Metalcore' },
+				{ item: 'Industrial Metal' },
+				{ item: 'Folk Metal' },
+				{ item: 'Sludge Metal' },
+				{ item: 'Alternative Metal' },
+				{ item: 'Post-Metal' },
+				{ item: 'Grindcore' },
+				{ item: 'Melodic Metal' },
+				{ item: 'Technical Metal' },
+				{ item: 'Crossover Thrash' },
+			],
+		},
+		{
+			section: 'Classique',
+			items: [
+				{ item: 'Classique' },
+				{ item: 'Baroque' },
+				{ item: 'Classique période préclassique' },
+				{ item: 'Classique période classique' },
+				{ item: 'Romantique' },
+				{ item: 'Impressionniste' },
+				{ item: 'Moderne' },
+				{ item: 'Contemporain' },
+				{ item: 'Opéra' },
+				{ item: 'Musique de chambre' },
+				{ item: 'Symphonique' },
+				{ item: 'Concerto' },
+				{ item: 'Sonate' },
+				{ item: 'Chorale' },
+				{ item: 'Ballet' },
+				{ item: 'Oratorio' },
+				{ item: 'Musique sacrée' },
+				{ item: 'Musique de film classique' },
+				{ item: 'Minimalisme' },
+				{ item: 'Néoclassicisme' },
+			],
+		},
+		{
+			section: 'Jazz',
+			items: [
+				{ item: 'Dixieland' },
+				{ item: 'Swing' },
+				{ item: 'Bebop' },
+				{ item: 'Cool jazz' },
+			],
+		},
+		{
+			section: 'Blues',
+			items: [
+				{ item: 'Delta blues' },
+				{ item: 'Chicago blues' },
+				{ item: 'Jump blues' },
+			],
+		},
+		{
+			section: 'Rock',
+			items: [],
+		},
+		{
+			section: 'Musique traditionnelle',
+			items: [
+				{ item: 'Musique celtique' },
+				{ item: 'Musique folklorique' },
+				{ item: 'Musique du monde' },
+			],
+		},
+		{
+			section: 'Soul',
+			items: [
+				{ item: 'Motown' },
+				{ item: 'Northern soul' },
+				{ item: 'Southern soul' },
+			],
+		},
+		{
+			section: 'Country',
+			items: [
+				{ item: 'Country western' },
+				{ item: 'Country pop' },
+				{ item: 'Honky-tonk' },
+				{ item: 'Bluegrass' },
+				{ item: 'Outlaw country' },
+				{ item: 'Western swing' },
+			],
+		},
+		{
+			section: 'Reggae',
+			items: [
+				{ item: 'Roots reggae' },
+				{ item: 'Dub' },
+				{ item: 'Rocksteady' },
+			],
+		},
+		{
+			section: 'Funk',
+			items: [
+				{ item: 'Funk originel' },
+				{ item: 'P-Funk' },
+				{ item: 'Funk rock' },
+			],
+		},
+		{
+			section: 'Disco',
+			items: [
+				{ item: 'Disco originel' },
+				{ item: 'Euro disco' },
+				{ item: 'Italo disco' },
+			],
+		},
+		{
+			section: 'Rap / Hip-Hop',
+			items: [
+				{ item: 'Gangsta' },
+				{ item: 'Conscious' },
+				{ item: 'Trap' },
+				{ item: 'Old School' },
+				{ item: 'Mumble' },
+				{ item: 'Crunk' },
+				{ item: 'Hardcore' },
+				{ item: 'Lyrical' },
+				{ item: 'Alternative' },
+				{ item: 'Drill' },
+				{ item: 'Hybride' },
+				{ item: 'Cloud Rap' },
+				{ item: 'Horrorcore' },
+				{ item: 'Pop Rap' },
+				{ item: 'Reggaeton Rap' },
+				{ item: 'Experimental' },
+				{ item: 'Dirty South' },
+				{ item: 'West Coast' },
+				{ item: 'East Coast' },
+				{ item: 'Midwest' },
+				{ item: 'Old school rap' },
+				{ item: 'Golden age hip-hop' },
+				{ item: 'East coast rap' },
+			],
+		},
+		{
+			section: 'Rhythm and Blues (R&B)',
+			items: [
+				{ item: 'Doo-wop' },
+				{ item: 'Motown' },
+				{ item: 'New jack swing' },
+			],
+		},
+		{
+			section: 'Swing',
+			items: [{ item: 'Swing' }, { item: 'Swing revival' }],
 		},
 	]
 
@@ -637,6 +710,59 @@ function Step02Component() {
 		{ id: 93, langue: 'Yiddish' },
 		{ id: 94, langue: 'Yoruba' },
 		{ id: 95, langue: 'Zoulou' },
+	]
+
+	const stylesVocaux = [
+		{
+			section: 'Type de Chant',
+			items: [
+				{ item: 'Chant principal' },
+				{ item: 'Chant en duo' },
+				{ item: 'Chant en groupe' },
+				{ item: 'Chant solo' },
+				{ item: 'Chant choral' },
+			],
+		},
+		{
+			section: 'Technique Vocale',
+			items: [
+				{ item: 'Vibrato' },
+				{ item: 'Falsetto' },
+				{ item: 'Scat' },
+				{ item: 'Belting' },
+				{ item: 'Legato' },
+				{ item: 'Staccato' },
+				{ item: 'Riffs' },
+				{ item: 'Runs' },
+			],
+		},
+		{
+			section: 'Expression Vocale',
+			items: [
+				{ item: 'Puissance' },
+				{ item: 'Douceur' },
+				{ item: 'Émotion' },
+				{ item: 'Agressivité' },
+				{ item: 'Sensualité' },
+				{ item: 'Mélancolie' },
+				{ item: 'Joie' },
+				{ item: 'Colère' },
+				{ item: 'Passion' },
+			],
+		},
+		{
+			section: 'Narration Vocale',
+			items: [{ item: 'Parlé' }, { item: 'Narratif' }, { item: 'Poétique' }],
+		},
+		{
+			section: "Utilisation d'Effets Vocaux",
+			items: [
+				{ item: 'Auto-Tune' },
+				{ item: 'Écho' },
+				{ item: 'Réverbération' },
+				{ item: 'Distorsion' },
+			],
+		},
 	]
 	return (
 		<>
@@ -1097,7 +1223,6 @@ function Step02Component() {
 
 										<Slider
 											label="Popularité"
-											showTooltip={true}
 											step={1}
 											showSteps={true}
 											size={'sm'}
@@ -1238,20 +1363,116 @@ function Step02Component() {
 							</Card>
 						</Tab>
 						<Tab key="second" title="Options secondaires">
-							<Card radius={'lg'}>
+							<Card radius={'lg'} className={'bg-white bg-opacity-40'}>
 								<CardBody>
-									Ut enim ad minim veniam, quis nostrud exercitation ullamco
-									laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-									irure dolor in reprehenderit in voluptate velit esse cillum
-									dolore eu fugiat nulla pariatur.
+									<h4>
+										Ici tu vas pouvoir choisir des paramètres complémentaires
+										plus précis si tu sais exactement ce que tu souhaites ! Tout
+										est optionnel, mais garde en tête que plus tu aura défini d
+										{"'"}otions plus la playlist répondra a tes besoins
+									</h4>
+									<p>
+										Rassure toi, tu pourra ajouter ou supprimer des titres une
+										fois ta playlist générée
+									</p>
+									<div className={'h-full border-2 border-mainaccent-500 p-5'}>
+										<Select
+											items={stylesVocaux}
+											label="Options liés au styles de vocalisation"
+											variant="underlined"
+											isMultiline={true}
+											selectionMode="multiple"
+											placeholder="technique vocale, effets vocaux, etc.."
+											labelPlacement="outside"
+											classNames={{
+												base: 'max-w-xs px-5 py-5',
+												trigger: 'min-h-unit-12 py-2',
+											}}
+											// fonctionnement du visuel du select
+											renderValue={items => {
+												return (
+													<div className="flex flex-wrap gap-2">
+														{items.map(item => {
+															return (
+																<Chip key={item.key}>{item.textValue}</Chip>
+															)
+														})}
+													</div>
+												)
+											}}
+										>
+											{/*fonctionnement du select*/}
+											{/*// affichage des genres musicaux en sections*/}
+											{/*{sousGenresMusicaux.map(section => {*/}
+											{/*	console.log(section)*/}
+											{/*})}*/}
+											{stylesVocaux.map(section => {
+												return (
+													<SelectSection
+														showDivider
+														key={section[0]}
+														title={section.section}
+														color={'primary'}
+													>
+														{/*affichage des sous genres musicaux*/}
+														{section.items.map(elem => {
+															return (
+																<SelectItem key={elem.id} title={elem.item}>
+																	<div className="flex items-center gap-2">
+																		<div className="flex flex-col">
+																			<span className="text-small">
+																				{elem.item}
+																			</span>
+																		</div>
+																	</div>
+																</SelectItem>
+															)
+														})}
+													</SelectSection>
+												)
+											})}
+										</Select>
+										<Slider
+											label="Type de son"
+											step={1}
+											showSteps={true}
+											hideValue={true}
+											size={'sm'}
+											color={'secondary'}
+											maxValue={3}
+											minValue={1}
+											marks={[
+												{ value: 1, label: 'Son studio' },
+												{ value: 2, label: 'Peu importe' },
+												{ value: 3, label: 'Son live' },
+											]}
+											defaultValue={2}
+											className="max-w-md px-5 py-5"
+										/>
+										<Slider
+											label="Type de son"
+											step={1}
+											showSteps={true}
+											hideValue={true}
+											size={'sm'}
+											color={'secondary'}
+											maxValue={3}
+											minValue={1}
+											marks={[
+												{ value: 1, label: 'Acapella' },
+												{ value: 2, label: 'Peu importe' },
+												{ value: 3, label: 'Instrumentation' },
+											]}
+											defaultValue={2}
+											className="max-w-md px-5 py-5"
+										/>
+										=======================
+									</div>
 								</CardBody>
 							</Card>
 						</Tab>
 					</Tabs>
 				</div>
-				{/*Vrai questionnaire */}
-
-				<h2 className={'text-2xl font-bold'}>Options secondaires </h2>
 			</section>
 		</>
 	)
