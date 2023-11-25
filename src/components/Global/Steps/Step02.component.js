@@ -368,10 +368,6 @@ function Step02Component() {
 			],
 		},
 		{
-			section: 'Rock',
-			items: [],
-		},
-		{
 			section: 'Musique traditionnelle',
 			items: [
 				{ item: 'Musique celtique' },
@@ -764,6 +760,50 @@ function Step02Component() {
 			],
 		},
 	]
+
+	const instrumentation = [
+		{
+			section: 'Instrument Principal',
+			items: [
+				{ item: 'Guitare' },
+				{ item: 'Piano' },
+				{ item: 'Violon' },
+				{ item: 'Violoncelle' },
+				{ item: 'Flûte' },
+				{ item: 'Saxophone' },
+				{ item: 'Trompette' },
+				{ item: 'Clarinette' },
+				{ item: 'Synthétiseur' },
+				{ item: 'Orgue' },
+				{ item: 'Harmonica' },
+				{ item: 'Accordéon' },
+				{ item: 'Harpe' },
+				{ item: 'Mandoline' },
+				{ item: 'Banjo' },
+				{ item: 'Batterie' },
+				{ item: 'Basse' },
+				{ item: 'Voix (chant)' },
+				{ item: 'Clavier électrique' },
+				{ item: 'Trombone' },
+			],
+		},
+		{
+			section: 'Section Instrumentale Dominante',
+			items: [
+				{ item: 'Orchestre symphonique' },
+				{ item: 'Quatuor à cordes' },
+				{ item: 'Ensemble de cuivres' },
+				{ item: 'Ensemble de bois' },
+				{ item: 'Ensemble de percussions' },
+				{ item: 'Big Band de Jazz' },
+				{ item: 'Brass Band' },
+				{ item: 'Chœur classique' },
+				{ item: 'Ensemble de jazz' },
+				{ item: 'Trio à cordes' },
+			],
+		},
+	]
+
 	return (
 		<>
 			<div></div>
@@ -1466,6 +1506,62 @@ function Step02Component() {
 											defaultValue={2}
 											className="max-w-md px-5 py-5"
 										/>
+										<Select
+											items={instrumentation}
+											label="Instrumentation"
+											variant="underlined"
+											isMultiline={true}
+											selectionMode="multiple"
+											placeholder="Guitare, ensemble de percussions, etc..."
+											labelPlacement="outside"
+											classNames={{
+												base: 'max-w-xs px-5 py-5',
+												trigger: 'min-h-unit-12 py-2',
+											}}
+											// fonctionnement du visuel du select
+											renderValue={items => {
+												return (
+													<div className="flex flex-wrap gap-2">
+														{items.map(item => {
+															return (
+																<Chip key={item.key}>{item.textValue}</Chip>
+															)
+														})}
+													</div>
+												)
+											}}
+										>
+											{/*fonctionnement du select*/}
+											{/*// affichage des genres musicaux en sections*/}
+											{/*{sousGenresMusicaux.map(section => {*/}
+											{/*	console.log(section)*/}
+											{/*})}*/}
+											{instrumentation.map(section => {
+												return (
+													<SelectSection
+														showDivider
+														key={section[0]}
+														title={section.section}
+														color={'primary'}
+													>
+														{/*affichage des sous genres musicaux*/}
+														{section.items.map(elem => {
+															return (
+																<SelectItem key={elem.id} title={elem.item}>
+																	<div className="flex items-center gap-2">
+																		<div className="flex flex-col">
+																			<span className="text-small">
+																				{elem.item}
+																			</span>
+																		</div>
+																	</div>
+																</SelectItem>
+															)
+														})}
+													</SelectSection>
+												)
+											})}
+										</Select>
 										=======================
 									</div>
 								</CardBody>
