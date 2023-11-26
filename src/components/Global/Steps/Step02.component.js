@@ -804,6 +804,22 @@ function Step02Component() {
 		},
 	]
 
+	const emotion = [
+		{ id: 1, emotion: 'Joyeuse' },
+		{ id: 2, emotion: 'Triste' },
+		{ id: 3, emotion: 'Motivante' },
+		{ id: 4, emotion: 'Romantique' },
+		{ id: 5, emotion: 'Calme' },
+		{ id: 6, emotion: 'Épique' },
+		{ id: 7, emotion: 'Étrange' },
+		{ id: 8, emotion: 'Colérique' },
+		{ id: 9, emotion: 'Anxieuse' },
+		{ id: 10, emotion: 'Réconfortante' },
+		{ id: 11, emotion: 'Festive' },
+		{ id: 12, emotion: 'Déterminée' },
+		{ id: 13, emotion: 'Sereine' },
+	]
+
 	return (
 		<>
 			<div></div>
@@ -1561,6 +1577,39 @@ function Step02Component() {
 													</SelectSection>
 												)
 											})}
+										</Select>
+										<Select
+											items={emotion}
+											label="Emotion dominante de ta playlist"
+											variant="underlined"
+											size={'lg'}
+											isMultiline={true}
+											selectionMode="multiple"
+											placeholder="Triste, motivante, etc..."
+											labelPlacement="outside"
+											classNames={{
+												base: 'max-w-md px-5 py-5',
+												trigger: 'min-h-unit-12 py-2',
+											}}
+											renderValue={items => {
+												return (
+													<div className="flex flex-wrap gap-2">
+														{items.map(item => (
+															<Chip key={item.key}>{item.data.emotion}</Chip>
+														))}
+													</div>
+												)
+											}}
+										>
+											{user => (
+												<SelectItem key={user.id} textValue={user.emotion}>
+													<div className="flex items-center gap-2">
+														<div className="flex flex-col">
+															<span className="text-small">{user.emotion}</span>
+														</div>
+													</div>
+												</SelectItem>
+											)}
 										</Select>
 										=======================
 									</div>
