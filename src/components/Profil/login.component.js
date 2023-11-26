@@ -1,7 +1,19 @@
 import React from 'react'
 import Image from 'next/image'
+import {
+	Tabs,
+	Tab,
+	Input,
+	Link,
+	Button,
+	Card,
+	CardBody,
+	CardHeader,
+} from '@nextui-org/react'
 
 function LoginComponent(props) {
+	const [selected, setSelected] = React.useState('login')
+
 	return (
 		<>
 			<div className="flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8">
@@ -154,6 +166,130 @@ function LoginComponent(props) {
 						</a>
 					</p>
 				</div>
+			</div>
+			================================
+			<div className="flex min-h-full w-full flex-1 flex-col items-center justify-center py-12 sm:px-6 lg:px-8">
+				<Card className=" max-w-full">
+					<CardBody className="w-full overflow-hidden bg-mainorange-500 px-6 py-12 shadow sm:rounded-lg sm:px-12">
+						<Tabs
+							fullWidth
+							size="md"
+							aria-label="Tabs form"
+							selectedKey={selected}
+							onSelectionChange={setSelected}
+						>
+							<Tab key="login" title="Login">
+								<form className="space-y-6" action="#" method="POST">
+									<div>
+										<label
+											htmlFor="email"
+											className="block font-sans text-lg font-bold leading-6 text-black"
+										>
+											Adresse Email
+										</label>
+										<div className="mt-2">
+											<input
+												id="email"
+												name="email"
+												type="email"
+												autoComplete="email"
+												required={true}
+												className="block w-full rounded-md border-0 py-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-black sm:text-sm sm:leading-6"
+											/>
+										</div>
+									</div>
+
+									<div>
+										<label
+											htmlFor="password"
+											className="block font-sans text-lg font-bold leading-6 text-black"
+										>
+											Mot de passe
+										</label>
+										<div className="mt-2">
+											<input
+												id="password"
+												name="password"
+												type="password"
+												autoComplete="current-password"
+												required={true}
+												className="block w-full rounded-md border-0 py-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-black sm:text-sm sm:leading-6"
+											/>
+										</div>
+									</div>
+
+									<div className="flex items-center justify-between">
+										<div className="flex items-center">
+											<input
+												id="remember-me"
+												name="remember-me"
+												type="checkbox"
+												className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+											/>
+											<label
+												htmlFor="remember-me"
+												className="ml-3 block font-oswald text-sm leading-6 text-black"
+											>
+												Se souvenir de moi
+											</label>
+										</div>
+
+										<div className="text-sm leading-6">
+											<a
+												href="#"
+												className="font-semibold text-mainorange-900 hover:text-white"
+											>
+												Mot de passe oublié ?
+											</a>
+										</div>
+									</div>
+
+									<div>
+										<button
+											type="submit"
+											className="flex w-full justify-center rounded-md bg-mainorange-900 px-3 py-1.5 text-lg font-bold leading-6 text-black shadow-sm hover:bg-mainaccent-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+										>
+											S{"'"}enregistrer
+										</button>
+									</div>
+								</form>
+							</Tab>
+							<Tab key="sign-up" title="Sign up">
+								<form className="flex h-[300px] flex-col gap-4">
+									<Input
+										isRequired
+										label="Name"
+										placeholder="Enter your name"
+										type="password"
+									/>
+									<Input
+										isRequired
+										label="Email"
+										placeholder="Enter your email"
+										type="email"
+									/>
+									<Input
+										isRequired
+										label="Password"
+										placeholder="Enter your password"
+										type="password"
+									/>
+									<p className="text-center text-small">
+										Already have an account?{' '}
+										<Link size="sm" onPress={() => setSelected('login')}>
+											Login
+										</Link>
+									</p>
+									<div className="flex justify-end gap-2">
+										<Button fullWidth color="primary">
+											Sign up
+										</Button>
+									</div>
+								</form>
+							</Tab>
+						</Tabs>
+					</CardBody>
+				</Card>
 			</div>
 		</>
 	)

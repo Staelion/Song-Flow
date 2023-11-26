@@ -2,7 +2,7 @@ import React from 'react'
 import { Head } from 'next/document'
 import NavComponent from '@/components/Global/Landing page/Nav.component'
 import FooterComponent from '@/components/Global/Landing page/Footer.component'
-import LoginComponent from '@/components/Global/login.component'
+import LoginComponent from '@/components/Profil/login.component'
 
 function Login(props) {
 	return (

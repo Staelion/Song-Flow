@@ -1,6 +1,6 @@
 import FooterComponent from '@/components/Global/Landing page/Footer.component'
 import NavComponent from '@/components/Global/Landing page/Nav.component'
-import StepsComponent from '@/components/Global/Steps.component'
+import StepsComponent from '@/components/Global/Steps/Steps.component'
 import React, { useContext } from 'react'
 import { StepsContext } from '@/providers/stepsContext'
 import Step01Component from '@/components/Global/Steps/Step01.component'
