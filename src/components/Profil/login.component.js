@@ -168,12 +168,12 @@ function LoginComponent(props) {
 				</div>
 			</div>
 			================================
-			<div className="flex min-h-full w-full flex-1 flex-col items-center justify-center py-12 sm:px-6 lg:px-8">
+			<div className="flex min-h-full w-full flex-col items-center justify-center py-12 sm:px-6 lg:px-8">
 				<Card className=" max-w-full">
-					<CardBody className="w-full overflow-hidden bg-mainorange-500 px-6 py-12 shadow sm:rounded-lg sm:px-12">
+					<CardBody className="w-full overflow-hidden bg-mainorange-500 px-6 py-6 shadow sm:rounded-lg sm:px-12">
 						<Tabs
-							fullWidth
-							size="md"
+							fullWidth={true}
+							size="lg"
 							aria-label="Tabs form"
 							selectedKey={selected}
 							onSelectionChange={setSelected}
@@ -183,7 +183,7 @@ function LoginComponent(props) {
 									<div>
 										<label
 											htmlFor="email"
-											className="block font-sans text-lg font-bold leading-6 text-black"
+											className="block pt-6 font-sans text-lg font-bold leading-6 text-black"
 										>
 											Adresse Email
 										</label>
@@ -252,6 +252,12 @@ function LoginComponent(props) {
 											S{"'"}enregistrer
 										</button>
 									</div>
+									<p className="text-center text-small">
+										Need to create an account?{' '}
+										<Link size="sm" onPress={() => setSelected('sign-up')}>
+											Sign up
+										</Link>
+									</p>
 								</form>
 							</Tab>
 							<Tab key="sign-up" title="Sign up">
