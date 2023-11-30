@@ -32,7 +32,7 @@ const flashcard_data = [
 	},
 	{
 		image: '/images/album_cover_3.jpg',
-		title: 'Gère ta playlist avant de la récupérery',
+		title: 'Gère ta playlist avant de la récupérer',
 		description:
 			'Utilise les options d’ecoute d’un extrait du son et les option de remplacement afin de séléctionner les titres que tu veux garder ou non dans ta playlist customisée.',
 		isBtnVisible: false,
